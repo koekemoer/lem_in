@@ -10,8 +10,15 @@ void	error()
 int	main()
 {
 	t_main		g;
+	//t_input_list	i;
 
 	g.data = save_input(&g);
-	//ft_putendl("AG LEKKER!");
+	ft_putendl("SAVE INPUT DONE\nMAIN func");
+	while (g.data->next)
+	{
+		ft_putendl(g.data->str);
+		g.data = g.data->next;
+	}
+	ft_putendl("AG LEKKER!");
 	return (0);
 }
