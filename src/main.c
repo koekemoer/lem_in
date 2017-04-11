@@ -19,7 +19,7 @@ void	init(t_main *g)
 int	main()
 {
 	t_main		g;
-//	t_rooms_list	r;
+	//t_rooms_list	r;
 	//int		test;
 	//t_input_list	i;
 
@@ -39,7 +39,12 @@ int	main()
 	printf("\nNUMBER OF ANTS: %d\n", g.num_ants);
 	printf("NUMBER OF ROOMS: %d\n", g.num_rooms);
 	printf("START-ROOM: %s\n", g.start_room);
-	printf("END-ROOM: %s\n'n", g.end_room);
+	printf("END-ROOM: %s\n\n", g.end_room);
+	while (g.rooms->next)
+	{
+		ft_putendl(g.rooms->name);
+		g.rooms = g.rooms->next;
+	}
 	//ft_putendl("END OF GET_MAPS in MAIN");
 	return (0);
 }

@@ -14,26 +14,25 @@ char	*save_room(char *str/*, t_main *g*/)
 	return (room);
 }
 
-void	add_room(char *str, t_rooms_list *r)
+t_rooms_list	*add_room(char *str, t_rooms_list *node, t_main *g)
 {
-	//t_rooms_list	*head;
-	//t_rooms_list	*r;
+	t_rooms_list	*head;
 
-	if (r == NULL)
+	if (node == NULL)
 	{
-		r = (t_rooms_list *)malloc(sizeof(t_rooms_list));
-		r->name = save_room(str);
-		r->next = NULL;
-	//	ft_putendl(r->name);
+		head = (t_rooms_list *)malloc(sizeof(t_rooms_list));
+		node = head;
 	}
-//	node = head;
-	while (r->next)
-		r = r->next;
-	r->next = (t_rooms_list *)malloc(sizeof(t_rooms_list));
-	r = r->next;
-	r->name = save_room(str);
-	ft_putendl(r->name);
-	r->next = NULL;
+	while (node->next != NULL)
+		node = node->next;
+	node->next = (t_rooms_list *)malloc(sizeof(t_rooms_list));
+	node->name = save_room(str);
+	g->num_rooms++;
+	node = node->next;
+	node->next = NULL;
+	node = NULL;
+	free(node);
+	return (head);
 }
 
 void		get_start_end(char* str, t_main *g)
@@ -71,9 +70,10 @@ int		get_map(t_main *g)
 		// DETERMINE NUMBER OF ROOMS
 		else if (ft_strchr(node->str, ' ') != NULL)
 			//g->num_rooms++;		
-			add_room(node->str, rooms);
+			rooms = add_room(node->str, rooms, g);
 		node = node->next;
 	}
+	g->rooms = rooms;
 	free(node);
 	return (0);
 }

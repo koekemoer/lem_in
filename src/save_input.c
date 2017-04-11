@@ -19,7 +19,7 @@ t_input_list			*save_input(t_main *g)
 		if (node->str == NULL || (ft_strcmp(node->str, "\0") == 0))
 			error();
 		node = node->next;
-		ft_putendl(g->gnl);
+		ft_putendl(g->gnl); // REMOVE
 	}
 	node->next = NULL;
 	node = NULL;
