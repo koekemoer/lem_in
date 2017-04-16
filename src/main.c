@@ -70,6 +70,7 @@ int	main()
 //		test = get_link(&g, "END");
 //		ft_putstr("TEST: ");
 //		ft_putendl(test);
+		//
 		g.links = g.links->next;
 	}
 	ft_putchar('\n');
