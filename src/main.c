@@ -20,12 +20,13 @@ void	init(t_main *g)
 int	main()
 {
 	t_main		g;
-	//t_rooms_list	r;
+	//t_rooms_list	*r;
 	//int		test;
 	//t_input_list	i;
 
 	g.data = save_input(&g);
 	init(&g);
+	//r = g.rooms;
 
 	//ft_putendl("SAVE INPUT DONE\nMAIN func");
 	/*while (g.data->next)
@@ -41,10 +42,14 @@ int	main()
 	//{
 		printf("\nNUMBER OF ANTS: %d\n", g.num_ants);
 		printf("NUMBER OF ROOMS: %d\n", g.num_rooms);
+		printf("NUMBER OF LINKS: %d\n", g.num_links);
 		printf("START-ROOM: %s\n", g.start_room);
 		printf("END-ROOM: %s\n\n", g.end_room);
 	//}
-	printf("ROOMS:\n");
+	t_rooms_list *r = g.rooms;
+//	fill_start_room(&g/*, g.rooms*/);
+//	g.rooms = r;
+	printf("\nROOMS:\n");
 	while (g.rooms->next)
 	{
 		ft_putendl(g.rooms->name);
@@ -56,6 +61,8 @@ int	main()
 		ft_putendl(g.links->link);
 		g.links = g.links->next;
 	}
-	//ft_putendl("END OF GET_MAPS in MAIN");
+	ft_putchar('\n');
+	g.rooms = r;
+//	fill_start_room(&g);
 	return (0);
 }

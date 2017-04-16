@@ -17,6 +17,7 @@ typedef	struct			s_input_list
 typedef struct			s_rooms_list
 {
 	char			*name;
+	int			in_room;
 	struct s_rooms_list	*next;
 }				t_rooms_list;
 
@@ -44,6 +45,7 @@ typedef	struct			s_main
 void				error();
 t_input_list			*save_input(t_main *g);
 int				get_map(t_main *g);
+void				fill_start_room(t_main *g/*, t_rooms_list *r*/);
 
 
 #endif

@@ -93,8 +93,10 @@ int		get_map(t_main *g)
 			links = add_link(node->str, links, g);
 		node = node->next;
 	}
+
 	//sort_rooms(rooms, g);
 	g->rooms = rooms;
+	fill_start_room(g);
 	g->links = links;
 	free(node);
 	return (0);

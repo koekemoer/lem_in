@@ -8,7 +8,7 @@ SRC_DIR = ./src/
 
 PATH_HD = -I includes/
 
-SRCS = main.c save_input.c get_map.c
+SRCS = main.c save_input.c get_map.c fill_start.c
 
 SRC = $(addprefix $(SRC_DIR), $(SRCS))
 
@@ -35,5 +35,12 @@ fclean:
 	@rm -f $(NAME)
 	@make -C libft/ fclean
 	@echo "F-Cleaned!\n"
+
+push:	fclean
+	@echo "Pushing"
+	@git add .
+	@git commit -m "Push with Makefile"
+	@git push
+	@echo "Pushed!"
 
 re: fclean all
