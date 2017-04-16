@@ -46,7 +46,7 @@ int	main()
 		printf("START-ROOM: %s\n", g.start_room);
 		printf("END-ROOM: %s\n\n", g.end_room);
 	//}
-	t_rooms_list *r = g.rooms;
+//	t_rooms_list *r = g.rooms;
 //	fill_start_room(&g/*, g.rooms*/);
 //	g.rooms = r;
 	printf("\nROOMS:\n");
@@ -56,13 +56,24 @@ int	main()
 		g.rooms = g.rooms->next;
 	}
 	printf("LINKS:\n");
+//	char	*test;
+	int	i = 0;
 	while (g.links->next)
 	{
+		i = 0;
 		ft_putendl(g.links->link);
+		while (g.links->arr[i])
+		{
+			printf("NUMBER %d: %s\n", i, g.links->arr[i]);
+			i++;
+		}
+//		test = get_link(&g, "END");
+//		ft_putstr("TEST: ");
+//		ft_putendl(test);
 		g.links = g.links->next;
 	}
 	ft_putchar('\n');
-	g.rooms = r;
+//	g.rooms = r;
 //	fill_start_room(&g);
 	return (0);
 }

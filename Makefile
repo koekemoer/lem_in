@@ -39,7 +39,7 @@ fclean:
 push:	fclean
 	@echo "Pushing"
 	@git add .
-	@git commit -m "Push with Makefile"
+	@git commit -m $(ARGS)
 	@git push
 	@echo "Pushed!"
 

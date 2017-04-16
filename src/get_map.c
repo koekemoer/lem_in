@@ -45,6 +45,7 @@ t_links_list	*add_link(char *str, t_links_list *node, t_main *g)
 		node = node->next;
 	node->next = (t_links_list *)malloc(sizeof(t_links_list));
 	node->link = str;
+	node->arr = ft_strsplit(str, '-');
 	g->num_links++;
 	node = node->next;
 	node->next = NULL;
