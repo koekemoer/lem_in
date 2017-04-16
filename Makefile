@@ -36,11 +36,4 @@ fclean:
 	@make -C libft/ fclean
 	@echo "F-Cleaned!\n"
 
-push:	fclean
-	@echo "Pushing"
-	@git add .
-	@git commit -m "Makefile Push"
-	@git push
-	@echo "Pushed!"
-
 re: fclean all
