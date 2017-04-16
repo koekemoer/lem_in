@@ -1,16 +1,13 @@
 
 #include "../includes/lem_in.h"
 
-char	*save_room(char *str/*, t_main *g*/)
+char	*save_room(char *str)
 {
 	char	**line;
 	char	*room;
 
 	line = ft_strsplit(str, ' ');
 	room = line[0];
-	//g->num_rooms++;
-	//ft_putstr("ROOM NAME: ");
-	//ft_putendl(room);
 	return (room);
 }
 
@@ -28,6 +25,27 @@ t_rooms_list	*add_room(char *str, t_rooms_list *node, t_main *g)
 	node->next = (t_rooms_list *)malloc(sizeof(t_rooms_list));
 	node->name = save_room(str);
 	g->num_rooms++;
+	node = node->next;
+	node->next = NULL;
+	node = NULL;
+	free(node);
+	return (head);
+}
+
+t_links_list	*add_link(char *str, t_links_list *node, t_main *g)
+{
+	t_links_list	*head;
+
+	if (node == NULL)
+	{
+		head = (t_links_list *)malloc(sizeof(t_links_list));
+		node = head;
+	}
+	while (node->next != NULL)
+		node = node->next;
+	node->next = (t_links_list *)malloc(sizeof(t_links_list));
+	node->link = str;
+	g->num_links++;
 	node = node->next;
 	node->next = NULL;
 	node = NULL;
@@ -53,11 +71,11 @@ void		get_start_end(char* str, t_main *g)
 		g->end_flag = 1;
 }
 
-
 int		get_map(t_main *g)
 {
 	t_input_list	*node;
 	t_rooms_list	*rooms;
+	t_links_list	*links;
 
 	node = g->data;
 	rooms = NULL;
@@ -71,9 +89,13 @@ int		get_map(t_main *g)
 		else if (ft_strchr(node->str, ' ') != NULL)
 			//g->num_rooms++;		
 			rooms = add_room(node->str, rooms, g);
+		else if (ft_strchr(node->str, '-') != NULL)
+			links = add_link(node->str, links, g);
 		node = node->next;
 	}
+	//sort_rooms(rooms, g);
 	g->rooms = rooms;
+	g->links = links;
 	free(node);
 	return (0);
 }
