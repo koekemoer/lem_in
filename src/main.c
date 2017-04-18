@@ -28,24 +28,12 @@ int	main()
 	init(&g);
 	//r = g.rooms;
 
-	//ft_putendl("SAVE INPUT DONE\nMAIN func");
-	/*while (g.data->next)
-	{
-		ft_putendl(g.data->str);
-		g.data = g.data->next;
-	}*/
-	//ft_putendl("SAVE_INPUT WORKS");
-
-	//ft_putendl("START OF GET_MAPS");
-	//if (get_map(&g))
 	get_map(&g);	
-	//{
-		printf("\nNUMBER OF ANTS: %d\n", g.num_ants);
-		printf("NUMBER OF ROOMS: %d\n", g.num_rooms);
-		printf("NUMBER OF LINKS: %d\n", g.num_links);
-		printf("START-ROOM: %s\n", g.start_room);
-		printf("END-ROOM: %s\n\n", g.end_room);
-	//}
+	printf("\nNUMBER OF ANTS: %d\n", g.num_ants);
+	printf("NUMBER OF ROOMS: %d\n", g.num_rooms);
+	printf("NUMBER OF LINKS: %d\n", g.num_links);
+	printf("START-ROOM: %s\n", g.start_room);
+	printf("END-ROOM: %s\n\n", g.end_room);
 //	t_rooms_list *r = g.rooms;
 //	fill_start_room(&g/*, g.rooms*/);
 //	g.rooms = r;
@@ -55,12 +43,12 @@ int	main()
 		ft_putendl(g.rooms->name);
 		g.rooms = g.rooms->next;
 	}
-	printf("LINKS:\n");
+//	printf("LINKS:\n");
 //	char	*test;
-	int	i = 0;
-	while (g.links->next)
+//	int	i = 0;
+/*	while (g.links->next)
 	{
-		i = 0;
+		//i = 0;
 		ft_putendl(g.links->link);
 		while (g.links->arr[i])
 		{
@@ -72,8 +60,22 @@ int	main()
 //		ft_putendl(test);
 		//
 		g.links = g.links->next;
-	}
+	}*/
 	ft_putchar('\n');
+	printf("VALID LINKS: \n");
+//	char *tmp = get_link(&g, "S");
+//	char *tmp2 = get_link(&g, "E");
+	char **tmp;
+	tmp = links(&g, "S");
+	int i = 0;
+	while (tmp[i])
+	{
+		ft_putendl(tmp[i]);
+		i++;
+	}
+//	ft_putendl(tmp);
+	//ft_putendl(tmp);
+	//ft_putendl(tmp2);
 //	g.rooms = r;
 //	fill_start_room(&g);
 	return (0);

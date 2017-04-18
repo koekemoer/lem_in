@@ -21,27 +21,54 @@ void		fill_start_room(t_main *g/*, t_rooms_list *r*/)
 
 char		*get_link(t_main *g, char *str)
 {
-	char		**link_arr;
-	t_links_list	*head;
+//	t_links_list	*head;
 
-	head = g->links;
-	while (g->links->next)
+//	head = g->links;
+
+	char	*ret = NULL;
+
+	while (g->links->next && ret == NULL)
 	{
-		link_arr = ft_strsplit(g->links->link, '-');
-		if (ft_strcmp(link_arr[0], str) == 0)
-		{
-			g->links = head;
-			return (link_arr[1]);
-		}
-		else if (ft_strcmp(link_arr[1], str) == 0)
-		{
-			g->links = head;
-			return (link_arr[0]);
-		}
+		if (ft_strcmp(str, g->links->arr[0]) == 0)
+			ret = g->links->arr[1];
+		if (ft_strcmp(str, g->links->arr[1]) == 0)
+			ret = g->links->arr[0];
+	//	if (ret != NULL)
+	//		return (ret);
+		//ft_putstr(g->links->arr[0]);
+		//ft_putstr("<->");
+		//ft_putendl(g->links->arr[1]);
 		g->links = g->links->next;
-		free_args(link_arr);
 	}
-	g->links = head;
-	return (NULL);
+//	g->links = head; // RESET LIST TO START
+	return (ret);
 }
 
+char		**links(t_main *g, char *test)
+{
+	char		**arr;
+	char		*tmp;
+	t_links_list	*head;
+	int		i;
+
+	tmp = NULL;
+	i = 0;
+	head = g->links;
+	while ((tmp = get_link(g, test)))
+	{
+//		ft_putendl(tmp);
+		i++;
+	}
+	g->links = head;
+	if (!(arr = (char **)malloc(sizeof(*arr) * i + 1)))
+		return NULL;
+	i = 0;
+	while ((tmp = get_link(g, test)))
+	{
+		arr[i] = tmp;
+		i++;
+	}
+	arr[i] = 0;
+	g->links = head;
+	return (arr);
+}

@@ -48,6 +48,6 @@ t_input_list			*save_input(t_main *g);
 int				get_map(t_main *g);
 void				fill_start_room(t_main *g);
 char				*get_link(t_main *g, char *str);
-
+char				**links(t_main *g, char *test);
 
 #endif
