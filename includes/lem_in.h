@@ -39,6 +39,7 @@ typedef	struct			s_main
 	t_links_list		*links;
 	char			*start_room;
 	char			*end_room;
+	int			nr_end;
 	int			start_flag;
 	int			end_flag;
 }				t_main;
@@ -49,5 +50,6 @@ int				get_map(t_main *g);
 void				fill_start_room(t_main *g);
 char				*get_link(t_main *g, char *str);
 char				**links(t_main *g, char *test);
+void				travel(t_main *g);
 
 #endif

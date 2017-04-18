@@ -15,6 +15,7 @@ void	init(t_main *g)
 	g->num_links = 0;
 	g->start_flag = 0;
 	g->end_flag = 0;
+	g->nr_end = 0;
 }
 
 int	main()
@@ -62,21 +63,10 @@ int	main()
 		g.links = g.links->next;
 	}*/
 	ft_putchar('\n');
-	printf("VALID LINKS: \n");
-//	char *tmp = get_link(&g, "S");
-//	char *tmp2 = get_link(&g, "E");
-	char **tmp;
-	tmp = links(&g, "S");
-	int i = 0;
-	while (tmp[i])
-	{
-		ft_putendl(tmp[i]);
-		i++;
-	}
-//	ft_putendl(tmp);
-	//ft_putendl(tmp);
-	//ft_putendl(tmp2);
-//	g.rooms = r;
-//	fill_start_room(&g);
+
+	travel(&g);
+
+
+
 	return (0);
 }

@@ -10,10 +10,10 @@ void		fill_start_room(t_main *g/*, t_rooms_list *r*/)
 	{
 		if (ft_strcmp(g->rooms->name, g->start_room) == 0)
 			g->rooms->in_room = g->num_ants;
-//		ft_putstr("ROOM NAME: ");
-//		ft_putendl(g->rooms->name);
-//		ft_putstr("ANTS IN ROOM: ");
-//		ft_putendl(ft_itoa(g->rooms->in_room));
+		ft_putstr("ROOM NAME: ");
+		ft_putendl(g->rooms->name);
+		ft_putstr("ANTS IN ROOM: ");
+		ft_putendl(ft_itoa(g->rooms->in_room));
 		g->rooms = g->rooms->next;
 	}
 	g->rooms = tmp;
@@ -55,10 +55,7 @@ char		**links(t_main *g, char *test)
 	i = 0;
 	head = g->links;
 	while ((tmp = get_link(g, test)))
-	{
-//		ft_putendl(tmp);
 		i++;
-	}
 	g->links = head;
 	if (!(arr = (char **)malloc(sizeof(*arr) * i + 1)))
 		return NULL;
