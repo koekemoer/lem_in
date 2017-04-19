@@ -21,15 +21,16 @@ void	init(t_main *g)
 int	main()
 {
 	t_main		g;
-	//t_rooms_list	*r;
+//	t_rooms_list	*r;
 	//int		test;
 	//t_input_list	i;
 
 	g.data = save_input(&g);
 	init(&g);
-	//r = g.rooms;
+//	r = g.rooms;
 
-	get_map(&g);	
+	get_map(&g);
+//	r = g.rooms;
 	printf("\nNUMBER OF ANTS: %d\n", g.num_ants);
 	printf("NUMBER OF ROOMS: %d\n", g.num_rooms);
 	printf("NUMBER OF LINKS: %d\n", g.num_links);
@@ -38,12 +39,12 @@ int	main()
 //	t_rooms_list *r = g.rooms;
 //	fill_start_room(&g/*, g.rooms*/);
 //	g.rooms = r;
-	printf("\nROOMS:\n");
-	while (g.rooms->next)
+//	printf("\nROOMS:\n");
+/*	while (g.rooms->next)
 	{
 		ft_putendl(g.rooms->name);
 		g.rooms = g.rooms->next;
-	}
+	}*/
 //	printf("LINKS:\n");
 //	char	*test;
 //	int	i = 0;
@@ -62,6 +63,7 @@ int	main()
 		//
 		g.links = g.links->next;
 	}*/
+//	g.rooms = r;
 	ft_putchar('\n');
 
 	travel(&g);
