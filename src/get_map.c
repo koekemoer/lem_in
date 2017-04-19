@@ -96,6 +96,7 @@ int		get_map(t_main *g)
 	}
 
 	//sort_rooms(rooms, g);
+	g->ants = save_ants(g);
 	g->rooms = rooms;
 	fill_start_room(g);
 	g->links = links;

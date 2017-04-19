@@ -28,6 +28,13 @@ typedef struct			s_links_list
 	struct s_links_list	*next;
 }				t_links_list;
 
+typedef struct			s_ants_list
+{
+	char			*name;
+	char			*room;
+	struct s_ants_list	*next;
+}				t_ants_list;
+
 typedef	struct			s_main
 {
 	t_input_list		*data;
@@ -37,6 +44,7 @@ typedef	struct			s_main
 	int			num_links;
 	t_rooms_list		*rooms;
 	t_links_list		*links;
+	t_ants_list		*ants;
 	char			*start_room;
 	char			*end_room;
 	int			nr_end;
@@ -47,6 +55,7 @@ typedef	struct			s_main
 void				error();
 t_input_list			*save_input(t_main *g);
 int				get_map(t_main *g);
+t_ants_list			*save_ants(t_main *g);
 void				fill_start_room(t_main *g);
 char				*get_link(t_main *g, char *str);
 char				**links(t_main *g, char *test);
