@@ -99,6 +99,9 @@ int		get_map(t_main *g)
 	g->ants = save_ants(g);
 	g->rooms = rooms;
 	fill_start_room(g);
+//	char	*test;
+//	test = ft_strjoin3("sannie ", "sleep ", "sout");
+//	ft_putendl(test);
 	g->links = links;
 	free(node);
 	return (0);

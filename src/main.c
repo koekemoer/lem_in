@@ -36,6 +36,10 @@ int	main()
 	printf("NUMBER OF LINKS: %d\n", g.num_links);
 	printf("START-ROOM: %s\n", g.start_room);
 	printf("END-ROOM: %s\n\n", g.end_room);
+	char	*test;
+	test = ft_strjoin3("SANNIE ", "SLEEP ", "SOUT");
+	ft_putendl(test);
+	free(test);
 //	t_rooms_list *r = g.rooms;
 //	fill_start_room(&g/*, g.rooms*/);
 //	g.rooms = r;
