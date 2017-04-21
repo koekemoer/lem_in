@@ -96,9 +96,10 @@ int		get_map(t_main *g)
 	}
 
 	//sort_rooms(rooms, g);
-	g->ants = save_ants(g);
 	g->rooms = rooms;
 	fill_start_room(g);
+	g->ants = save_ants(g);
+	g->ants = assign_rooms(g);
 //	char	*test;
 //	test = ft_strjoin3("sannie ", "sleep ", "sout");
 //	ft_putendl(test);

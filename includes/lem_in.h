@@ -56,9 +56,11 @@ void				error();
 t_input_list			*save_input(t_main *g);
 int				get_map(t_main *g);
 t_ants_list			*save_ants(t_main *g);
+t_ants_list			*assign_rooms(t_main *g);
 void				fill_start_room(t_main *g);
 char				*get_link(t_main *g, char *str);
 char				**links(t_main *g, char *test);
 void				travel(t_main *g);
+t_rooms_list			*go_to_start(t_main *g, t_rooms_list *r);
 
 #endif

@@ -17,6 +17,8 @@ void		fill_start_room(t_main *g/*, t_rooms_list *r*/)
 		g->rooms = g->rooms->next;
 	}
 	g->rooms = tmp;
+//	ft_putstr("AFTER FILL START: ");
+//	ft_putendl(g->rooms->name);
 }
 
 char		*get_link(t_main *g, char *str)
