@@ -65,7 +65,7 @@ int	main()
 	}*/
 //	g.rooms = r;
 	ft_putchar('\n');
-
+	printf("#####END_ROOM: %s\n", g.end_room);
 	travel(&g);
 
 
