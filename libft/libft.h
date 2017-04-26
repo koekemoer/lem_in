@@ -74,5 +74,6 @@ void		ft_putendl_fd(char const *s, int fd);
 void		ft_putnbr_fd(int n, int fd);
 int		get_next_line(int const fd, char **line);
 void		free_args(char **arr);
+void		ft_debug(char *s1, char *s2);
 
 #endif
