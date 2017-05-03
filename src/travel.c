@@ -100,35 +100,47 @@ void	travel(t_main *g)
 	t_rooms_list	*r;
 	//t_rooms_list	*head;
 	t_ants_list	*a;
+	int		test = 0;
 
 	r = g->rooms;
 	a = g->ants;
 	while ((ants_in_room(g, r, g->end_room) != g->num_ants))
 	{
-		g->rooms = r;
-		ft_debug("### OUTER LOOP", g->rooms->name);
-		int test = ants_in_room(g, r, g->end_room);
+		ft_putendl("\n ### OUTER LOOP ###");
+		a = g->ants;
+//		ft_debug("STARTING_ANT", a->name);
+		test = ants_in_room(g, r, g->end_room); 
 		ft_debug("ANTS IN END", ft_itoa(test));
-		while (g->rooms->next)
+		while (a->next)
 		{
-			ft_debug("# INNER LOOP", g->rooms->name);
-			if (ft_strcmp(g->rooms->name, g->ants->room) == 0)
+			ft_putendl("\n # START OF LOOP #");
+			ft_debug("ANT_NAME", a->name);
+			ft_debug("ANT_ROOM", a->room);
+			arr = links(g, a->room);
+			while (*arr)
 			{
-				arr = links(g, g->rooms->name);
-				while (*arr)
+				ft_debug("LINK", *arr);
+				if ((ft_strcmp(*arr, g->end_room) == 0 || ants_in_room(g, r, *arr) == 0)
+						&& ft_strcmp(g->end_room, a->room) != 0 && /* quick fix -> */ft_strcmp(g->start_room, *arr) != 0)
 				{
-					ft_debug("TESTING LINK", *arr);
-					if ((ants_in_room(g, r, arr) == 0))
-					{
-						
-					}
-					arr++;
+					/* KORT FUNCTION OM RECORD TE HOU VAN WATTER ROOMS ELKE MIER AL IN WAS.
+					 quick fix WERK NET OP MAP 2 */
+					ft_debug("ANT_ROOM BEFORE SWITCH", a->room);
+					//free(a->room);
+					g->rooms = move_from_to(g, r, a->room, *arr); 
+					a->room = *arr;
+					ft_debug("ANT_ROOM AFTER SWITCH", a->room);
+					//a = a->next;
+					break;
 				}
+				else
+					ft_debug(*arr, "NOT EMPTY");
+				arr++;
 			}
-
-			g->rooms = g->rooms->next;
-
+			a = a->next;
 		}
-		
+
 	}
+	test = ants_in_room(g, r, g->end_room);
+	ft_debug("ANTS AT END OUTSIDE OF OUTER WHILE", ft_itoa(test));
 }
