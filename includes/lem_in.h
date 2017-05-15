@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   lem_in.h                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lkoekemo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/05/15 13:57:32 by lkoekemo          #+#    #+#             */
+/*   Updated: 2017/05/15 13:57:40 by lkoekemo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef LEM_IN_H
 # define LEM_IN_H
 
@@ -5,70 +17,70 @@
 # include <fcntl.h>
 
 /*
-	STILL HAVE TO CHECK FOR 'L' AND '#'
+   STILL HAVE TO CHECK FOR 'L' AND '#'
    */
 
 typedef	struct			s_input_list
 {
-	char			*str;
+	char				*str;
 	struct s_input_list	*next;
-}				t_input_list;
+}						t_input_list;
 
 typedef struct			s_rooms_list
 {
-	char			*name;
-	int			in_room;
+	char				*name;
+	int					in_room;
 	struct s_rooms_list	*next;
-}				t_rooms_list;
+}						t_rooms_list;
 
 typedef struct			s_links_list
 {
-	char			*link;
-	char			**arr;
+	char				*link;
+	char				**arr;
 	struct s_links_list	*next;
-}				t_links_list;
+}						t_links_list;
 
-typedef struct			s_visited
+/*typedef struct			s_visited
 {
-	char			*room;
+	char				*room;
 	struct s_visited	*next;
-}				t_visited;
+}						t_visited;*/
 
 typedef struct			s_ants_list
 {
-	char			*name;
-	char			*room;
-	struct s_visited	*v;
+	char				*name;
+	char				*room;
+	//struct s_visited	*v;
 	struct s_ants_list	*next;
-}				t_ants_list;
+}						t_ants_list;
 
 typedef	struct			s_main
 {
 	t_input_list		*data;
-	char			*gnl;
-	int			num_ants;
-	int			num_rooms;
-	int			num_links;
+	char				*gnl;
+	int					num_ants;
+	int					num_rooms;
+	int					num_links;
 	t_rooms_list		*rooms;
 	t_links_list		*links;
-	t_ants_list		*ants;
-	char			*start_room;
-	char			*end_room;
-	int			nr_end;
-	int			start_flag;
-	int			end_flag;
-}				t_main;
+	t_ants_list			*ants;
+	char				*start_room;
+	char				*end_room;
+	int					nr_end;
+	int					start_flag;
+	int					end_flag;
+}						t_main;
 
-void				error();
+void					error();
 t_input_list			*save_input(t_main *g);
-int				get_map(t_main *g);
-t_ants_list			*save_ants(t_main *g);
-t_ants_list			*assign_rooms(t_main *g);
-void				fill_start_room(t_main *g);
-char				*get_link(t_main *g, char *str);
-char				**links(t_main *g, char *test);
-void				travel(t_main *g);
+int						get_map(t_main *g);
+t_ants_list				*save_ants(t_main *g);
+t_ants_list				*assign_rooms(t_main *g);
+void					fill_start_room(t_main *g);
+char					*get_link(t_main *g, char *str);
+char					**links(t_main *g, char *test);
+void					travel(t_main *g);
 t_rooms_list			*go_to_start(t_main *g, t_rooms_list *r);
-t_visited			*add_visited(t_visited *node, char *room);
+//t_visited				*add_visited(t_visited *node, char *room);
 
 #endif

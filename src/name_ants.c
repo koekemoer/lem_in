@@ -2,9 +2,9 @@
 
 t_ants_list		*save_ants(t_main *g)
 {
-	t_ants_list	*head;
-	t_ants_list	*node;
-	int		i;
+	t_ants_list		*head;
+	t_ants_list		*node;
+	int				i;
 
 	head = NULL;
 	i = 1;
@@ -66,7 +66,7 @@ t_ants_list		*assign_rooms(t_main *g)
 	return (head);
 }
 
-t_visited	*add_visited(t_visited *node, char *room)
+/*t_visited	*add_visited(t_visited *node, char *room)
 {
 	t_visited	*head;
 
@@ -88,9 +88,9 @@ t_visited	*add_visited(t_visited *node, char *room)
 	node = NULL;
 	free(node);
 	return (head);
-}
+}*/
 
-			
-			
-		
-	
+
+
+
+

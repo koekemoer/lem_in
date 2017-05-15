@@ -75,6 +75,7 @@ int	ants_in_room(t_main *g, t_rooms_list *r, char *str)
 	//t_rooms_list	*r;
 
 	g->rooms = r;
+	ret = 0;
 	//ft_putstr("CURRENT ROOM BEFORE FUNC: ");
 	//ft_putendl(g->rooms->name);
 	while (g->rooms->next) // CONCIDER go_to_room
@@ -99,7 +100,7 @@ int	ants_in_room(t_main *g, t_rooms_list *r, char *str)
 void		travel(t_main *g)
 {
 	char		**arr;
-//	char		*tmp;
+	char		*tmp;
 	t_rooms_list	*r;
 	//t_rooms_list	*head;
 	t_ants_list	*a;
@@ -124,13 +125,13 @@ void		travel(t_main *g)
 			{
 				ft_debug("LINK", *arr);
 				if ((ft_strcmp(*arr, g->end_room) == 0 || ants_in_room(g, r, *arr) == 0)
-						&& ft_strcmp(g->end_room, a->room) != 0)
+						&& ft_strcmp(g->end_room, a->room) != 0 && ft_strcmp(tmp, *arr) != 0)
 				{
 					/* KORT FUNCTION OM RECORD TE HOU VAN WATTER ROOMS ELKE MIER AL IN WAS.
 					 quick fix WERK NET OP MAP 2 */
 					ft_debug("ANT_ROOM BEFORE SWITCH", a->room);
-					//free(a->room);
-					a->v = add_visited(a->v, *arr);
+				//	a->v = add_visited(a->v, *arr);
+					tmp = a->room;
 					g->rooms = move_from_to(g, r, a->room, *arr); 
 					a->room = *arr;
 					ft_debug("ANT_ROOM AFTER SWITCH", a->room);

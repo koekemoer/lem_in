@@ -27,9 +27,11 @@ int	main()
 
 	g.data = save_input(&g);
 	init(&g);
+	ft_putendl("init");
 //	r = g.rooms;
 
 	get_map(&g);
+	ft_putendl("get_map");
 //	r = g.rooms;
 	printf("\nNUMBER OF ANTS: %d\n", g.num_ants);
 	printf("NUMBER OF ROOMS: %d\n", g.num_rooms);
