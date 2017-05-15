@@ -6,7 +6,7 @@
 /*   By: lkoekemo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 13:57:32 by lkoekemo          #+#    #+#             */
-/*   Updated: 2017/05/15 13:57:40 by lkoekemo         ###   ########.fr       */
+/*   Updated: 2017/05/15 16:32:27 by lkoekemo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,17 +40,17 @@ typedef struct			s_links_list
 	struct s_links_list	*next;
 }						t_links_list;
 
-/*typedef struct			s_visited
+typedef struct			s_visited
 {
 	char				*room;
 	struct s_visited	*next;
-}						t_visited;*/
+}						t_visited;
 
 typedef struct			s_ants_list
 {
 	char				*name;
 	char				*room;
-	//struct s_visited	*v;
+	struct s_visited	*v;
 	struct s_ants_list	*next;
 }						t_ants_list;
 
