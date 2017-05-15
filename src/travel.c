@@ -55,12 +55,12 @@ t_rooms_list	*move_from_to(t_main *g, t_rooms_list *r, char *from, char *to)
 	g->rooms = r;
 	while (g->rooms->next) // CONCIDER USING go_to_room
 	{
-		ft_putstr("CHECKING ROOM NR: ");
-		ft_putendl(g->rooms->name);
+		//ft_putstr("CHECKING ROOM NR: ");
+		//ft_putendl(g->rooms->name);
 		if (ft_strcmp(g->rooms->name, to) == 0)
 		{
-			ft_putstr("TO: ");
-			ft_putendl(to);
+		//	ft_putstr("TO: ");
+		//	ft_putendl(to);
 			g->rooms->in_room++;
 			break;
 		}
@@ -93,7 +93,10 @@ int	ants_in_room(t_main *g, t_rooms_list *r, char *str)
 	return (ret);
 }
 
-void	travel(t_main *g)
+/* SKRYF 'N FUNCTION WAT KYK OF EEN VAN DIE LINKS 'END' IS, DAT AS DIT IS, DAT HY ONMIDDELIK SOONTOE MOET GAAN 
+   EN... DALK KAN JY IETS SKRYF WAT 'n FIXED ARRAY IS, SOOS 'n SIZE VAN DIE HOEVEELHEID ROOMS WAT DAAR IS */
+
+void		travel(t_main *g)
 {
 	char		**arr;
 //	char		*tmp;
@@ -115,18 +118,19 @@ void	travel(t_main *g)
 		{
 			ft_putendl("\n # START OF LOOP #");
 			ft_debug("ANT_NAME", a->name);
-			ft_debug("ANT_ROOM", a->room);
+			ft_debug("ANT_ROOM", a->room);	
 			arr = links(g, a->room);
 			while (*arr)
 			{
 				ft_debug("LINK", *arr);
 				if ((ft_strcmp(*arr, g->end_room) == 0 || ants_in_room(g, r, *arr) == 0)
-						&& ft_strcmp(g->end_room, a->room) != 0 && /* quick fix -> */ft_strcmp(g->start_room, *arr) != 0)
+						&& ft_strcmp(g->end_room, a->room) != 0)
 				{
 					/* KORT FUNCTION OM RECORD TE HOU VAN WATTER ROOMS ELKE MIER AL IN WAS.
 					 quick fix WERK NET OP MAP 2 */
 					ft_debug("ANT_ROOM BEFORE SWITCH", a->room);
 					//free(a->room);
+					a->v = add_visited(a->v, *arr);
 					g->rooms = move_from_to(g, r, a->room, *arr); 
 					a->room = *arr;
 					ft_debug("ANT_ROOM AFTER SWITCH", a->room);

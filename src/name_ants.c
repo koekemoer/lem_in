@@ -65,6 +65,31 @@ t_ants_list		*assign_rooms(t_main *g)
 	g->rooms = tmp;
 	return (head);
 }
+
+t_visited	*add_visited(t_visited *node, char *room)
+{
+	t_visited	*head;
+
+	if (node == NULL)
+	{
+		head = (t_visited *)malloc(sizeof(t_visited));
+		node = head;
+	}
+	ft_debug("ADD_VISITED: AFTER IF", "1");
+	while (node->next != NULL)
+		node = node->next;
+	ft_debug("ADD_VISITED: AFTER WHILE", "2");
+	node->next = (t_visited *)malloc(sizeof(t_visited));
+	ft_debug("ADD_VISITED: AFTER MALLOC", "3");
+	node->room = room;
+	ft_debug("ADD_VISITED: AFTER WHATEVER", "4");
+	node = node->next;
+	node->next = NULL;
+	node = NULL;
+	free(node);
+	return (head);
+}
+
 			
 			
 		

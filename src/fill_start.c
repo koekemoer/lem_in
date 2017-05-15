@@ -71,3 +71,5 @@ char		**links(t_main *g, char *test)
 	g->links = head;
 	return (arr);
 }
+
+/* 'N FUNCTION WAT SEKER MAAK DAT DIE ANT NA DIE END ROOM TOE SKUIF AS HY BESTAAN IN DIE LINK */
