@@ -6,7 +6,7 @@
 /*   By: lkoekemo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 15:06:13 by lkoekemo          #+#    #+#             */
-/*   Updated: 2017/05/15 15:22:18 by lkoekemo         ###   ########.fr       */
+/*   Updated: 2017/05/17 12:23:26 by lkoekemo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,6 +121,8 @@ void		travel(t_main *g)
 	a = g->ants;
 	while ((ants_in_room(g, r, g->end_room) != g->num_ants))
 	{
+		test++;
+		ft_debug("NUMBER OF LOOPS", ft_itoa(test));
 		ft_putendl("\n ### OUTER LOOP ###");
 		a = g->ants;
 //		ft_debug("STARTING_ANT", a->name);
@@ -132,14 +134,16 @@ void		travel(t_main *g)
 			ft_debug("ANT_NAME", a->name);
 			ft_debug("ANT_ROOM", a->room);	
 			arr = links(g, a->room);
-			while (*arr)
+			test_end(g, a, r, arr);
+			/*while (*arr)
 			{
 				ft_debug("LINK", *arr);
+
 				if ((ft_strcmp(*arr, g->end_room) == 0 || ants_in_room(g, r, *arr) == 0)
 						&& ft_strcmp(g->end_room, a->room) != 0 && ft_strcmp(tmp, *arr) != 0)
 				{
-					/* KORT FUNCTION OM RECORD TE HOU VAN WATTER ROOMS ELKE MIER AL IN WAS.
-					 quick fix WERK NET OP MAP 2 */
+					// KORT FUNCTION OM RECORD TE HOU VAN WATTER ROOMS ELKE MIER AL IN WAS.
+					// quick fix WERK NET OP MAP 2 
 					ft_debug("ANT_ROOM BEFORE SWITCH", a->room);
 				//	a->v = add_visited(a->v, *arr);
 					tmp = a->room;
@@ -152,11 +156,12 @@ void		travel(t_main *g)
 				else
 					ft_debug(*arr, "NOT EMPTY");
 				arr++;
-			}
+			}*/
 			a = a->next;
 		}
 
 	}
 	test = ants_in_room(g, r, g->end_room);
 	ft_debug("ANTS AT END OUTSIDE OF OUTER WHILE", ft_itoa(test));
+	ft_debug("NUMBER OF LOOPS", ft_itoa(test));
 }

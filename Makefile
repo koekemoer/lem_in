@@ -2,14 +2,14 @@ NAME = lem_in
 
 CC = gcc
 
-CFLAGS = -Wall -Werror -Wextra -g
+CFLAGS = -Wall -Wextra -g
 
 SRC_DIR = ./src/
 
 PATH_HD = -I includes/
 
 SRCS = main.c save_input.c get_map.c fill_start.c travel.c \
-       name_ants.c
+       name_ants.c travel_functions.c
 
 SRC = $(addprefix $(SRC_DIR), $(SRCS))
 

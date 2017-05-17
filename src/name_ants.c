@@ -66,7 +66,8 @@ t_ants_list		*assign_rooms(t_main *g)
 	return (head);
 }
 
-/*t_visited	*add_visited(t_visited *node, char *room)
+/* NOT IN WORKING CONDITION */
+t_visited	*add_visited(t_visited *node, char *room)
 {
 	t_visited	*head;
 
@@ -88,7 +89,7 @@ t_ants_list		*assign_rooms(t_main *g)
 	node = NULL;
 	free(node);
 	return (head);
-}*/
+}
 
 
 

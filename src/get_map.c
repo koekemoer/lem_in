@@ -6,7 +6,7 @@
 /*   By: lkoekemo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 14:31:31 by lkoekemo          #+#    #+#             */
-/*   Updated: 2017/05/15 15:14:05 by lkoekemo         ###   ########.fr       */
+/*   Updated: 2017/05/16 13:23:13 by lkoekemo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*save_room(char *str)
 	char	*room;
 
 	line = ft_strsplit(str, ' ');
-	room = line[0];
+	room = line[0]; // strdup dalk en free
 	return (room);
 }
 
