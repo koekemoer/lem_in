@@ -6,7 +6,7 @@
 /*   By: lkoekemo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 15:06:13 by lkoekemo          #+#    #+#             */
-/*   Updated: 2017/05/17 14:15:49 by lkoekemo         ###   ########.fr       */
+/*   Updated: 2017/05/17 17:59:39 by lkoekemo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,6 +111,7 @@ void		travel(t_main *g)
 
 	r = g->rooms;
 	a = g->ants;
+	find_path(g);
 	while ((ants_in_room(g, r, g->end_room) != g->num_ants))
 	{
 		test++;

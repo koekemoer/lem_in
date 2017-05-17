@@ -6,7 +6,7 @@
 /*   By: lkoekemo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/17 11:14:42 by lkoekemo          #+#    #+#             */
-/*   Updated: 2017/05/17 13:54:06 by lkoekemo         ###   ########.fr       */
+/*   Updated: 2017/05/17 17:59:21 by lkoekemo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,6 @@ void		test_end(t_main *g, t_ants_list *a, t_rooms_list *r, char **arr)
 		ft_debug("TEST_END", "END_ROOM NOT FOUND");
 		while (*arr)
 		{
-			//tmp = a->room;
-			
 			if ((ft_strcmp(*arr, g->end_room) == 0 || 
 					ants_in_room(g, r, *arr) == 0) && 
 					ft_strcmp(g->end_room, a->room) != 0 && 
@@ -65,3 +63,14 @@ void		test_end(t_main *g, t_ants_list *a, t_rooms_list *r, char **arr)
 	}
 }
 
+void		find_path(t_main *g)
+{
+	t_rooms_list	*r;
+
+	r = g->rooms;
+	while (r->next)
+	{
+		ft_debug("FIND PATH", r->name);
+		r = r->next;
+	}
+}

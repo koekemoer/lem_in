@@ -6,7 +6,7 @@
 /*   By: lkoekemo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 13:57:32 by lkoekemo          #+#    #+#             */
-/*   Updated: 2017/05/17 13:35:53 by lkoekemo         ###   ########.fr       */
+/*   Updated: 2017/05/17 17:59:26 by lkoekemo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,12 +39,6 @@ typedef struct			s_links_list
 	char				**arr;
 	struct s_links_list	*next;
 }						t_links_list;
-
-typedef struct			s_visited
-{
-	char				*room;
-	struct s_visited	*next;
-}						t_visited;
 
 typedef struct			s_ants_list
 {
@@ -85,5 +79,7 @@ t_rooms_list			*go_to_start(t_main *g, t_rooms_list *r);
 void					test_end(t_main *g, t_ants_list *a, t_rooms_list *r, char **arr);
 int						ants_in_room(t_main *g, t_rooms_list *r, char *str);
 t_rooms_list			*move_from_to(t_main *g, t_rooms_list *r, char *from, char *to);
+char					**links(t_main *g, char *test);
+void					find_path(t_main *g);
 
 #endif
