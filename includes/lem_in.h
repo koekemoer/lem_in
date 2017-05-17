@@ -6,7 +6,7 @@
 /*   By: lkoekemo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 13:57:32 by lkoekemo          #+#    #+#             */
-/*   Updated: 2017/05/17 12:15:01 by lkoekemo         ###   ########.fr       */
+/*   Updated: 2017/05/17 13:35:53 by lkoekemo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ typedef struct			s_ants_list
 {
 	char				*name;
 	char				*room;
-	struct s_visited	*v;
+	char				*last;
 	struct s_ants_list	*next;
 }						t_ants_list;
 

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   name_ants.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lkoekemo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/05/17 13:54:17 by lkoekemo          #+#    #+#             */
+/*   Updated: 2017/05/17 13:54:23 by lkoekemo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/lem_in.h"
 
 t_ants_list		*save_ants(t_main *g)
@@ -50,6 +62,7 @@ t_ants_list		*assign_rooms(t_main *g)
 			while (g->ants->next)
 			{
 				g->ants->room = g->rooms->name;
+				g->ants->last = NULL;
 				ft_putstr("WILLIE: ");
 				ft_putstr(g->ants->name);
 				ft_putstr("-");
@@ -67,7 +80,7 @@ t_ants_list		*assign_rooms(t_main *g)
 }
 
 /* NOT IN WORKING CONDITION */
-t_visited	*add_visited(t_visited *node, char *room)
+/*t_visited	*add_visited(t_visited *node, char *room)
 {
 	t_visited	*head;
 
@@ -89,9 +102,4 @@ t_visited	*add_visited(t_visited *node, char *room)
 	node = NULL;
 	free(node);
 	return (head);
-}
-
-
-
-
-
+}*/

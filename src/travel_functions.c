@@ -6,35 +6,62 @@
 /*   By: lkoekemo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/17 11:14:42 by lkoekemo          #+#    #+#             */
-/*   Updated: 2017/05/17 12:25:31 by lkoekemo         ###   ########.fr       */
+/*   Updated: 2017/05/17 13:54:06 by lkoekemo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/lem_in.h"
 
-void		test_end(t_main *g, t_ants_list *a, t_rooms_list *r, char **arr)
+int			check_for_end(t_main *g, char **arr)
 {
-	char	*tmp;
-
-	tmp = g->start_room;
-	ft_putendl("1");
 	while (*arr)
 	{
-		ft_putendl("2");
-		//tmp = a->room;
-		if ((ft_strcmp(*arr, g->end_room) == 0 || ants_in_room(g, r, *arr) == 0)
-					&& ft_strcmp(g->end_room, a->room) != 0 && ft_strcmp(tmp, *arr) != 0)
-		
-		{
-			ft_putendl("3");
-			tmp = a->room;
-			g->rooms = move_from_to(g, r, a->room, *arr);
-			a->room = *arr;
-			break;
-		}
-		else
-			ft_debug(*arr, "not empty");
+		if (ft_strcmp(*arr, g->end_room) == 0)
+			return (1);
 		arr++;
+	}
+	return (0);
+}
+
+void		test_end(t_main *g, t_ants_list *a, t_rooms_list *r, char **arr)
+{
+	if (check_for_end(g, arr) == 1)
+	{
+		ft_debug("TEST_END", "END_ROOM FOUND");
+		ft_debug("ANT_ROOM BEFORE SWITCH", a->room);
+		g->rooms = move_from_to(g, r, a->room, g->end_room);
+		a->last = a->room;
+		a->room = g->end_room;
+		ft_debug("ANT->CURRENT", a->room);
+		ft_debug("ANT->LAST", a->last != NULL ? a->last : "NUL OU BUL");
+		ft_debug("ANT_ROOM AFTER SWITCH", a->room);
+	}
+	else	
+	{
+		ft_debug("TEST_END", "END_ROOM NOT FOUND");
+		while (*arr)
+		{
+			//tmp = a->room;
+			
+			if ((ft_strcmp(*arr, g->end_room) == 0 || 
+					ants_in_room(g, r, *arr) == 0) && 
+					ft_strcmp(g->end_room, a->room) != 0 && 
+					ft_strcmp(a->last, *arr) != 0 &&
+					ft_strcmp(*arr, g->start_room) != 0)
+			{
+				ft_debug("ANT_ROOM BEFORE SWITCH", a->room);
+				g->rooms = move_from_to(g, r, a->room, *arr);
+				a->last = a->room;
+				a->room = *arr;
+				ft_debug("ANT->CURRENT", a->room);
+				ft_debug("ANT->LAST", a->last != NULL ? a->last : "NUL OU BUL");
+				ft_debug("ANT_ROOM AFTER SWITCH", a->room);
+				break;
+			}
+			else
+				ft_debug(*arr, "not empty");
+			arr++;
+		}
 	}
 }
 

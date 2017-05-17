@@ -6,7 +6,7 @@
 /*   By: lkoekemo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 15:06:13 by lkoekemo          #+#    #+#             */
-/*   Updated: 2017/05/17 12:23:26 by lkoekemo         ###   ########.fr       */
+/*   Updated: 2017/05/17 14:15:49 by lkoekemo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,6 @@ t_rooms_list	*go_to_room(t_main *g, char *str)
 
 t_rooms_list	*move_from_to(t_main *g, t_rooms_list *r, char *from, char *to)
 {
-//	t_rooms_list	*r;
-
 	g->rooms = r;
 	while (g->rooms->next) // CONCIDER USING go_to_room
 	{
@@ -66,12 +64,8 @@ t_rooms_list	*move_from_to(t_main *g, t_rooms_list *r, char *from, char *to)
 	g->rooms = r;
 	while (g->rooms->next) // CONCIDER USING go_to_room
 	{
-		//ft_putstr("CHECKING ROOM NR: ");
-		//ft_putendl(g->rooms->name);
 		if (ft_strcmp(g->rooms->name, to) == 0)
 		{
-		//	ft_putstr("TO: ");
-		//	ft_putendl(to);
 			g->rooms->in_room++;
 			break;
 		}
@@ -111,11 +105,9 @@ int	ants_in_room(t_main *g, t_rooms_list *r, char *str)
 void		travel(t_main *g)
 {
 	char		**arr;
-	char		*tmp;
 	t_rooms_list	*r;
-	//t_rooms_list	*head;
 	t_ants_list	*a;
-	int		test = 0;
+	int			test = 0;
 
 	r = g->rooms;
 	a = g->ants;
@@ -135,28 +127,6 @@ void		travel(t_main *g)
 			ft_debug("ANT_ROOM", a->room);	
 			arr = links(g, a->room);
 			test_end(g, a, r, arr);
-			/*while (*arr)
-			{
-				ft_debug("LINK", *arr);
-
-				if ((ft_strcmp(*arr, g->end_room) == 0 || ants_in_room(g, r, *arr) == 0)
-						&& ft_strcmp(g->end_room, a->room) != 0 && ft_strcmp(tmp, *arr) != 0)
-				{
-					// KORT FUNCTION OM RECORD TE HOU VAN WATTER ROOMS ELKE MIER AL IN WAS.
-					// quick fix WERK NET OP MAP 2 
-					ft_debug("ANT_ROOM BEFORE SWITCH", a->room);
-				//	a->v = add_visited(a->v, *arr);
-					tmp = a->room;
-					g->rooms = move_from_to(g, r, a->room, *arr); 
-					a->room = *arr;
-					ft_debug("ANT_ROOM AFTER SWITCH", a->room);
-					//a = a->next;
-					break;
-				}
-				else
-					ft_debug(*arr, "NOT EMPTY");
-				arr++;
-			}*/
 			a = a->next;
 		}
 
