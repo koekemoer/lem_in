@@ -6,7 +6,7 @@
 /*   By: lkoekemo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/17 11:14:42 by lkoekemo          #+#    #+#             */
-/*   Updated: 2017/05/18 14:41:35 by lkoekemo         ###   ########.fr       */
+/*   Updated: 2017/05/18 14:50:59 by lkoekemo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,11 +67,13 @@ void		test_end(t_main *g, t_ants_list *a, t_rooms_list *r, char **arr)
 void		find_path(t_main *g)
 {
 	t_rooms_list		*r;
+	t_rooms_list		*head;
 	t_links_list		*l;
 	char				**arr;
 	int					i;
 
 	r = g->rooms;
+	head = g->rooms;
 	l = g->links;
 	while (r->next)
 	{
@@ -88,13 +90,11 @@ void		find_path(t_main *g)
 			arr++;
 		}
 		if (i == 1 && ft_strcmp(r->name, g->start_room) != 0 && 
-				ft_strcmp(r->name, g->end_room) != 0 && r->valid == 0 /* &&
-				ft_strcmp(arr[0], g->end_room) != 0*/)
+				ft_strcmp(r->name, g->end_room) != 0 && r->valid == 0)
 		{
 			r->valid = -1;
 			ft_debug("VALID AFTER", ft_itoa(r->valid));
-			//r = go_to_start(g, g->rooms);
-			r = g->rooms;
+			r = head;
 		}
 		//ft_debug("VALID AFTER", ft_itoa(r->valid));
 		r = r->next;

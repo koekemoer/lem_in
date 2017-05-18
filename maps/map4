@@ -11,12 +11,20 @@ G 1 1
 H 1 1
 I 1 1
 J 1 1
+Z 1 1
+X 1 1
+Y 1 1
+W 1 1
 ##end
 END 1 1
 START-A
 START-D
 START-B
 A-C
+D-Z
+Z-X
+X-Y
+Y-W
 B-E
 B-H
 B-G
