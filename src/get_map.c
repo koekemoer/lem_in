@@ -6,14 +6,13 @@
 /*   By: lkoekemo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 14:31:31 by lkoekemo          #+#    #+#             */
-/*   Updated: 2017/05/16 13:23:13 by lkoekemo         ###   ########.fr       */
+/*   Updated: 2017/05/18 11:19:45 by lkoekemo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/lem_in.h"
 
 char	*save_room(char *str)
-//	ft_putendl("add_room 3");
 {
 	char	**line;
 	char	*room;

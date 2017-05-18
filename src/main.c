@@ -6,7 +6,7 @@
 /*   By: lkoekemo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 15:05:21 by lkoekemo          #+#    #+#             */
-/*   Updated: 2017/05/17 12:48:42 by lkoekemo         ###   ########.fr       */
+/*   Updated: 2017/05/18 11:16:51 by lkoekemo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,26 +32,11 @@ void	init(t_main *g)
 int	main()
 {
 	t_main		g;
-//	t_rooms_list	*r;
-	//int		test;
-	//t_input_list	i;
 
 	g.data = save_input(&g);
 	init(&g);
-	ft_putendl("init");
-//	r = g.rooms;
 
 	get_map(&g);
-	ft_putendl("get_map");
-//	r = g.rooms;
-//	printf("\nNUMBER OF ANTS: %d\n", g.num_ants);
-//	printf("NUMBER OF ROOMS: %d\n", g.num_rooms);
-//	printf("NUMBER OF LINKS: %d\n", g.num_links);
-//	printf("START-ROOM: %s\n", g.start_room);
-//	printf("END-ROOM: %s\n\n", g.end_room);
-//	t_rooms_list *r = g.rooms;
-//	fill_start_room(&g/*, g.rooms*/);
-//	g.rooms = r;
 //	printf("\nROOMS:\n");
 /*	while (g.rooms->next)
 	{

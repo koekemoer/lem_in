@@ -1,90 +1,178 @@
-38
+25
 ##start
-start 1 1
+START 1 1
 A 1 1
 B 1 1
-C 1 1
 D 1 1
+C 1 1
+E 1 1
+F 1 1
+G 1 1
+H 1 1
+I 1 1
+J 1 1
 ##end
-end 1 1
-start-A
-start-B
-start-D
-A-end
-D-C
-B-C
-B-end
-init
-ROOM NAME: start
-ANTS IN ROOM: 38
+END 1 1
+START-A
+START-D
+START-B
+A-C
+B-E
+B-H
+B-G
+C-E
+E-F
+F-H
+F-G
+G-END
+H-END
+H-I
+END-J
+ROOM NAME: START
+ANTS IN ROOM: 25
 ROOM NAME: A
 ANTS IN ROOM: 0
 ROOM NAME: B
 ANTS IN ROOM: 0
-ROOM NAME: C
-ANTS IN ROOM: 0
 ROOM NAME: D
 ANTS IN ROOM: 0
-ROOM NAME: end
+ROOM NAME: C
 ANTS IN ROOM: 0
-ASSIGN ROOMS IS AT: start
-ANTS IN ROOM: 38
-WILLIE: L1-start
-WILLIE: L2-start
-WILLIE: L3-start
-WILLIE: L4-start
-WILLIE: L5-start
-WILLIE: L6-start
-WILLIE: L7-start
-WILLIE: L8-start
-WILLIE: L9-start
-WILLIE: L10-start
-WILLIE: L11-start
-WILLIE: L12-start
-WILLIE: L13-start
-WILLIE: L14-start
-WILLIE: L15-start
-WILLIE: L16-start
-WILLIE: L17-start
-WILLIE: L18-start
-WILLIE: L19-start
-WILLIE: L20-start
-WILLIE: L21-start
-WILLIE: L22-start
-WILLIE: L23-start
-WILLIE: L24-start
-WILLIE: L25-start
-WILLIE: L26-start
-WILLIE: L27-start
-WILLIE: L28-start
-WILLIE: L29-start
-WILLIE: L30-start
-WILLIE: L31-start
-WILLIE: L32-start
-WILLIE: L33-start
-WILLIE: L34-start
-WILLIE: L35-start
-WILLIE: L36-start
-WILLIE: L37-start
-WILLIE: L38-start
+ROOM NAME: E
+ANTS IN ROOM: 0
+ROOM NAME: F
+ANTS IN ROOM: 0
+ROOM NAME: G
+ANTS IN ROOM: 0
+ROOM NAME: H
+ANTS IN ROOM: 0
+ROOM NAME: I
+ANTS IN ROOM: 0
+ROOM NAME: J
+ANTS IN ROOM: 0
+ROOM NAME: END
+ANTS IN ROOM: 0
+ASSIGN ROOMS IS AT: START
+ANTS IN ROOM: 25
+WILLIE: L1-START
+WILLIE: L2-START
+WILLIE: L3-START
+WILLIE: L4-START
+WILLIE: L5-START
+WILLIE: L6-START
+WILLIE: L7-START
+WILLIE: L8-START
+WILLIE: L9-START
+WILLIE: L10-START
+WILLIE: L11-START
+WILLIE: L12-START
+WILLIE: L13-START
+WILLIE: L14-START
+WILLIE: L15-START
+WILLIE: L16-START
+WILLIE: L17-START
+WILLIE: L18-START
+WILLIE: L19-START
+WILLIE: L20-START
+WILLIE: L21-START
+WILLIE: L22-START
+WILLIE: L23-START
+WILLIE: L24-START
+WILLIE: L25-START
 ASSIGN ROOMS IS AT: A
 ANTS IN ROOM: 0
 ASSIGN ROOMS IS AT: B
 ANTS IN ROOM: 0
-ASSIGN ROOMS IS AT: C
-ANTS IN ROOM: 0
 ASSIGN ROOMS IS AT: D
 ANTS IN ROOM: 0
-ASSIGN ROOMS IS AT: end
+ASSIGN ROOMS IS AT: C
 ANTS IN ROOM: 0
-get_map
+ASSIGN ROOMS IS AT: E
+ANTS IN ROOM: 0
+ASSIGN ROOMS IS AT: F
+ANTS IN ROOM: 0
+ASSIGN ROOMS IS AT: G
+ANTS IN ROOM: 0
+ASSIGN ROOMS IS AT: H
+ANTS IN ROOM: 0
+ASSIGN ROOMS IS AT: I
+ANTS IN ROOM: 0
+ASSIGN ROOMS IS AT: J
+ANTS IN ROOM: 0
+ASSIGN ROOMS IS AT: END
+ANTS IN ROOM: 0
 
-FIND PATH: start
+FIND PATH: START
+VALID BEFORE: 0
+START: A
+START: D
+START: B
 FIND PATH: A
+VALID BEFORE: 0
+A: START
+A: C
 FIND PATH: B
-FIND PATH: C
+VALID BEFORE: 0
+B: START
+B: E
+B: H
+B: G
 FIND PATH: D
-FIND PATH: end
+VALID BEFORE: 0
+D: START
+VALID AFTER: -1
+FIND PATH: C
+VALID BEFORE: 0
+C: A
+C: E
+FIND PATH: E
+VALID BEFORE: 0
+E: B
+E: C
+E: F
+FIND PATH: F
+VALID BEFORE: 0
+F: E
+F: H
+F: G
+FIND PATH: G
+VALID BEFORE: 0
+G: B
+G: F
+G: END
+FIND PATH: H
+VALID BEFORE: 0
+H: B
+H: F
+H: END
+H: I
+FIND PATH: I
+VALID BEFORE: 0
+I: H
+VALID AFTER: -1
+FIND PATH: J
+VALID BEFORE: 0
+J: END
+FIND PATH: END
+VALID BEFORE: 0
+END: G
+END: H
+END: J
+LINKS: START-A
+LINKS: START-D
+LINKS: START-B
+LINKS: A-C
+LINKS: B-E
+LINKS: B-H
+LINKS: B-G
+LINKS: C-E
+LINKS: E-F
+LINKS: F-H
+LINKS: F-G
+LINKS: G-END
+LINKS: H-END
+LINKS: H-I
+LINKS: END-J
 NUMBER OF LOOPS: 1
 
  ### OUTER LOOP ###
@@ -92,313 +180,207 @@ ANTS IN END: 0
 
  # START OF LOOP #
 ANT_NAME: L1
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
-ANT_ROOM BEFORE SWITCH: start
+ANT_ROOM BEFORE SWITCH: START
 ANT->CURRENT: A
-ANT->LAST: start
+ANT->LAST: START
 ANT_ROOM AFTER SWITCH: A
 
  # START OF LOOP #
 ANT_NAME: L2
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-ANT_ROOM BEFORE SWITCH: start
+D: not empty
+ANT_ROOM BEFORE SWITCH: START
 ANT->CURRENT: B
-ANT->LAST: start
+ANT->LAST: START
 ANT_ROOM AFTER SWITCH: B
 
  # START OF LOOP #
 ANT_NAME: L3
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
+D: not empty
 B: not empty
-ANT_ROOM BEFORE SWITCH: start
-ANT->CURRENT: D
-ANT->LAST: start
-ANT_ROOM AFTER SWITCH: D
 
  # START OF LOOP #
 ANT_NAME: L4
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L5
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L6
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L7
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L8
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L9
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L10
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L11
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L12
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L13
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L14
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L15
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L16
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L17
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L18
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L19
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L20
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L21
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L22
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L23
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L24
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L25
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
-
- # START OF LOOP #
-ANT_NAME: L26
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
 B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L27
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L28
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L29
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L30
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L31
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L32
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L33
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L34
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L35
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L36
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L37
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L38
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
 NUMBER OF LOOPS: 1
 
  ### OUTER LOOP ###
@@ -407,6116 +389,6136 @@ ANTS IN END: 0
  # START OF LOOP #
 ANT_NAME: L1
 ANT_ROOM: A
-TEST_END: END_ROOM FOUND
+TEST_END: END_ROOM NOT FOUND
+START: not empty
 ANT_ROOM BEFORE SWITCH: A
-ANT->CURRENT: end
+ANT->CURRENT: C
 ANT->LAST: A
-ANT_ROOM AFTER SWITCH: end
+ANT_ROOM AFTER SWITCH: C
 
  # START OF LOOP #
 ANT_NAME: L2
 ANT_ROOM: B
-TEST_END: END_ROOM FOUND
+TEST_END: END_ROOM NOT FOUND
+START: not empty
 ANT_ROOM BEFORE SWITCH: B
-ANT->CURRENT: end
+ANT->CURRENT: E
 ANT->LAST: B
-ANT_ROOM AFTER SWITCH: end
+ANT_ROOM AFTER SWITCH: E
 
  # START OF LOOP #
 ANT_NAME: L3
-ANT_ROOM: D
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
-start: not empty
-ANT_ROOM BEFORE SWITCH: D
-ANT->CURRENT: C
-ANT->LAST: D
-ANT_ROOM AFTER SWITCH: C
-
- # START OF LOOP #
-ANT_NAME: L4
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-ANT_ROOM BEFORE SWITCH: start
+ANT_ROOM BEFORE SWITCH: START
 ANT->CURRENT: A
-ANT->LAST: start
+ANT->LAST: START
 ANT_ROOM AFTER SWITCH: A
 
  # START OF LOOP #
-ANT_NAME: L5
-ANT_ROOM: start
+ANT_NAME: L4
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-ANT_ROOM BEFORE SWITCH: start
+D: not empty
+ANT_ROOM BEFORE SWITCH: START
 ANT->CURRENT: B
-ANT->LAST: start
+ANT->LAST: START
+ANT_ROOM AFTER SWITCH: B
+
+ # START OF LOOP #
+ANT_NAME: L5
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L6
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L7
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L8
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L9
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L10
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L11
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L12
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L13
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L14
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L15
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L16
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L17
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L18
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L19
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L20
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L21
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L22
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L23
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L24
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L25
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+NUMBER OF LOOPS: 1
+
+ ### OUTER LOOP ###
+ANTS IN END: 0
+
+ # START OF LOOP #
+ANT_NAME: L1
+ANT_ROOM: C
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+E: not empty
+
+ # START OF LOOP #
+ANT_NAME: L2
+ANT_ROOM: E
+TEST_END: END_ROOM NOT FOUND
+B: not empty
+C: not empty
+ANT_ROOM BEFORE SWITCH: E
+ANT->CURRENT: F
+ANT->LAST: E
+ANT_ROOM AFTER SWITCH: F
+
+ # START OF LOOP #
+ANT_NAME: L3
+ANT_ROOM: A
+TEST_END: END_ROOM NOT FOUND
+START: not empty
+C: not empty
+
+ # START OF LOOP #
+ANT_NAME: L4
+ANT_ROOM: B
+TEST_END: END_ROOM NOT FOUND
+START: not empty
+ANT_ROOM BEFORE SWITCH: B
+ANT->CURRENT: E
+ANT->LAST: B
+ANT_ROOM AFTER SWITCH: E
+
+ # START OF LOOP #
+ANT_NAME: L5
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+ANT_ROOM BEFORE SWITCH: START
+ANT->CURRENT: B
+ANT->LAST: START
 ANT_ROOM AFTER SWITCH: B
 
  # START OF LOOP #
 ANT_NAME: L6
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
+D: not empty
 B: not empty
-ANT_ROOM BEFORE SWITCH: start
-ANT->CURRENT: D
-ANT->LAST: start
-ANT_ROOM AFTER SWITCH: D
 
  # START OF LOOP #
 ANT_NAME: L7
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L8
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L9
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L10
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L11
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L12
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L13
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L14
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L15
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L16
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L17
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L18
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L19
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L20
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L21
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L22
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L23
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L24
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L25
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
-
- # START OF LOOP #
-ANT_NAME: L26
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
 B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L27
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L28
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L29
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L30
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L31
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L32
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L33
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L34
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L35
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L36
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L37
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L38
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
 NUMBER OF LOOPS: 1
+
+ ### OUTER LOOP ###
+ANTS IN END: 0
+
+ # START OF LOOP #
+ANT_NAME: L1
+ANT_ROOM: C
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+E: not empty
+
+ # START OF LOOP #
+ANT_NAME: L2
+ANT_ROOM: F
+TEST_END: END_ROOM NOT FOUND
+E: not empty
+ANT_ROOM BEFORE SWITCH: F
+ANT->CURRENT: H
+ANT->LAST: F
+ANT_ROOM AFTER SWITCH: H
+
+ # START OF LOOP #
+ANT_NAME: L3
+ANT_ROOM: A
+TEST_END: END_ROOM NOT FOUND
+START: not empty
+C: not empty
+
+ # START OF LOOP #
+ANT_NAME: L4
+ANT_ROOM: E
+TEST_END: END_ROOM NOT FOUND
+B: not empty
+C: not empty
+ANT_ROOM BEFORE SWITCH: E
+ANT->CURRENT: F
+ANT->LAST: E
+ANT_ROOM AFTER SWITCH: F
+
+ # START OF LOOP #
+ANT_NAME: L5
+ANT_ROOM: B
+TEST_END: END_ROOM NOT FOUND
+START: not empty
+ANT_ROOM BEFORE SWITCH: B
+ANT->CURRENT: E
+ANT->LAST: B
+ANT_ROOM AFTER SWITCH: E
+
+ # START OF LOOP #
+ANT_NAME: L6
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+ANT_ROOM BEFORE SWITCH: START
+ANT->CURRENT: B
+ANT->LAST: START
+ANT_ROOM AFTER SWITCH: B
+
+ # START OF LOOP #
+ANT_NAME: L7
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L8
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L9
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L10
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L11
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L12
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L13
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L14
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L15
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L16
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L17
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L18
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L19
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L20
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L21
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L22
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L23
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L24
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L25
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+NUMBER OF LOOPS: 1
+
+ ### OUTER LOOP ###
+ANTS IN END: 0
+
+ # START OF LOOP #
+ANT_NAME: L1
+ANT_ROOM: C
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+E: not empty
+
+ # START OF LOOP #
+ANT_NAME: L2
+ANT_ROOM: H
+TEST_END: END_ROOM FOUND
+ANT_ROOM BEFORE SWITCH: H
+ANT->CURRENT: END
+ANT->LAST: H
+ANT_ROOM AFTER SWITCH: END
+
+ # START OF LOOP #
+ANT_NAME: L3
+ANT_ROOM: A
+TEST_END: END_ROOM NOT FOUND
+START: not empty
+C: not empty
+
+ # START OF LOOP #
+ANT_NAME: L4
+ANT_ROOM: F
+TEST_END: END_ROOM NOT FOUND
+E: not empty
+ANT_ROOM BEFORE SWITCH: F
+ANT->CURRENT: H
+ANT->LAST: F
+ANT_ROOM AFTER SWITCH: H
+
+ # START OF LOOP #
+ANT_NAME: L5
+ANT_ROOM: E
+TEST_END: END_ROOM NOT FOUND
+B: not empty
+C: not empty
+ANT_ROOM BEFORE SWITCH: E
+ANT->CURRENT: F
+ANT->LAST: E
+ANT_ROOM AFTER SWITCH: F
+
+ # START OF LOOP #
+ANT_NAME: L6
+ANT_ROOM: B
+TEST_END: END_ROOM NOT FOUND
+START: not empty
+ANT_ROOM BEFORE SWITCH: B
+ANT->CURRENT: E
+ANT->LAST: B
+ANT_ROOM AFTER SWITCH: E
+
+ # START OF LOOP #
+ANT_NAME: L7
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+ANT_ROOM BEFORE SWITCH: START
+ANT->CURRENT: B
+ANT->LAST: START
+ANT_ROOM AFTER SWITCH: B
+
+ # START OF LOOP #
+ANT_NAME: L8
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L9
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L10
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L11
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L12
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L13
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L14
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L15
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L16
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L17
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L18
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L19
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L20
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L21
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L22
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L23
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L24
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L25
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+NUMBER OF LOOPS: 1
+
+ ### OUTER LOOP ###
+ANTS IN END: 1
+
+ # START OF LOOP #
+ANT_NAME: L1
+ANT_ROOM: C
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+E: not empty
+
+ # START OF LOOP #
+ANT_NAME: L2
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L3
+ANT_ROOM: A
+TEST_END: END_ROOM NOT FOUND
+START: not empty
+C: not empty
+
+ # START OF LOOP #
+ANT_NAME: L4
+ANT_ROOM: H
+TEST_END: END_ROOM FOUND
+ANT_ROOM BEFORE SWITCH: H
+ANT->CURRENT: END
+ANT->LAST: H
+ANT_ROOM AFTER SWITCH: END
+
+ # START OF LOOP #
+ANT_NAME: L5
+ANT_ROOM: F
+TEST_END: END_ROOM NOT FOUND
+E: not empty
+ANT_ROOM BEFORE SWITCH: F
+ANT->CURRENT: H
+ANT->LAST: F
+ANT_ROOM AFTER SWITCH: H
+
+ # START OF LOOP #
+ANT_NAME: L6
+ANT_ROOM: E
+TEST_END: END_ROOM NOT FOUND
+B: not empty
+C: not empty
+ANT_ROOM BEFORE SWITCH: E
+ANT->CURRENT: F
+ANT->LAST: E
+ANT_ROOM AFTER SWITCH: F
+
+ # START OF LOOP #
+ANT_NAME: L7
+ANT_ROOM: B
+TEST_END: END_ROOM NOT FOUND
+START: not empty
+ANT_ROOM BEFORE SWITCH: B
+ANT->CURRENT: E
+ANT->LAST: B
+ANT_ROOM AFTER SWITCH: E
+
+ # START OF LOOP #
+ANT_NAME: L8
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+ANT_ROOM BEFORE SWITCH: START
+ANT->CURRENT: B
+ANT->LAST: START
+ANT_ROOM AFTER SWITCH: B
+
+ # START OF LOOP #
+ANT_NAME: L9
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L10
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L11
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L12
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L13
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L14
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L15
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L16
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L17
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L18
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L19
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L20
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L21
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L22
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L23
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L24
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L25
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+NUMBER OF LOOPS: 2
 
  ### OUTER LOOP ###
 ANTS IN END: 2
 
  # START OF LOOP #
 ANT_NAME: L1
-ANT_ROOM: end
+ANT_ROOM: C
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
+E: not empty
 
  # START OF LOOP #
 ANT_NAME: L2
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L3
-ANT_ROOM: C
-TEST_END: END_ROOM NOT FOUND
-D: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L4
 ANT_ROOM: A
-TEST_END: END_ROOM FOUND
-ANT_ROOM BEFORE SWITCH: A
-ANT->CURRENT: end
-ANT->LAST: A
-ANT_ROOM AFTER SWITCH: end
-
- # START OF LOOP #
-ANT_NAME: L5
-ANT_ROOM: B
-TEST_END: END_ROOM FOUND
-ANT_ROOM BEFORE SWITCH: B
-ANT->CURRENT: end
-ANT->LAST: B
-ANT_ROOM AFTER SWITCH: end
-
- # START OF LOOP #
-ANT_NAME: L6
-ANT_ROOM: D
 TEST_END: END_ROOM NOT FOUND
-start: not empty
+START: not empty
 C: not empty
 
  # START OF LOOP #
-ANT_NAME: L7
-ANT_ROOM: start
+ANT_NAME: L4
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-ANT_ROOM BEFORE SWITCH: start
-ANT->CURRENT: A
-ANT->LAST: start
-ANT_ROOM AFTER SWITCH: A
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L5
+ANT_ROOM: H
+TEST_END: END_ROOM FOUND
+ANT_ROOM BEFORE SWITCH: H
+ANT->CURRENT: END
+ANT->LAST: H
+ANT_ROOM AFTER SWITCH: END
+
+ # START OF LOOP #
+ANT_NAME: L6
+ANT_ROOM: F
+TEST_END: END_ROOM NOT FOUND
+E: not empty
+ANT_ROOM BEFORE SWITCH: F
+ANT->CURRENT: H
+ANT->LAST: F
+ANT_ROOM AFTER SWITCH: H
+
+ # START OF LOOP #
+ANT_NAME: L7
+ANT_ROOM: E
+TEST_END: END_ROOM NOT FOUND
+B: not empty
+C: not empty
+ANT_ROOM BEFORE SWITCH: E
+ANT->CURRENT: F
+ANT->LAST: E
+ANT_ROOM AFTER SWITCH: F
 
  # START OF LOOP #
 ANT_NAME: L8
-ANT_ROOM: start
+ANT_ROOM: B
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-ANT_ROOM BEFORE SWITCH: start
-ANT->CURRENT: B
-ANT->LAST: start
-ANT_ROOM AFTER SWITCH: B
+START: not empty
+ANT_ROOM BEFORE SWITCH: B
+ANT->CURRENT: E
+ANT->LAST: B
+ANT_ROOM AFTER SWITCH: E
 
  # START OF LOOP #
 ANT_NAME: L9
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+ANT_ROOM BEFORE SWITCH: START
+ANT->CURRENT: B
+ANT->LAST: START
+ANT_ROOM AFTER SWITCH: B
 
  # START OF LOOP #
 ANT_NAME: L10
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L11
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L12
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L13
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L14
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L15
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L16
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L17
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L18
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L19
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L20
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L21
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L22
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L23
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L24
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L25
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
-
- # START OF LOOP #
-ANT_NAME: L26
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
 B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L27
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L28
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L29
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L30
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L31
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L32
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L33
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L34
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L35
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L36
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L37
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L38
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
 NUMBER OF LOOPS: 3
+
+ ### OUTER LOOP ###
+ANTS IN END: 3
+
+ # START OF LOOP #
+ANT_NAME: L1
+ANT_ROOM: C
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+E: not empty
+
+ # START OF LOOP #
+ANT_NAME: L2
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L3
+ANT_ROOM: A
+TEST_END: END_ROOM NOT FOUND
+START: not empty
+C: not empty
+
+ # START OF LOOP #
+ANT_NAME: L4
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L5
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L6
+ANT_ROOM: H
+TEST_END: END_ROOM FOUND
+ANT_ROOM BEFORE SWITCH: H
+ANT->CURRENT: END
+ANT->LAST: H
+ANT_ROOM AFTER SWITCH: END
+
+ # START OF LOOP #
+ANT_NAME: L7
+ANT_ROOM: F
+TEST_END: END_ROOM NOT FOUND
+E: not empty
+ANT_ROOM BEFORE SWITCH: F
+ANT->CURRENT: H
+ANT->LAST: F
+ANT_ROOM AFTER SWITCH: H
+
+ # START OF LOOP #
+ANT_NAME: L8
+ANT_ROOM: E
+TEST_END: END_ROOM NOT FOUND
+B: not empty
+C: not empty
+ANT_ROOM BEFORE SWITCH: E
+ANT->CURRENT: F
+ANT->LAST: E
+ANT_ROOM AFTER SWITCH: F
+
+ # START OF LOOP #
+ANT_NAME: L9
+ANT_ROOM: B
+TEST_END: END_ROOM NOT FOUND
+START: not empty
+ANT_ROOM BEFORE SWITCH: B
+ANT->CURRENT: E
+ANT->LAST: B
+ANT_ROOM AFTER SWITCH: E
+
+ # START OF LOOP #
+ANT_NAME: L10
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+ANT_ROOM BEFORE SWITCH: START
+ANT->CURRENT: B
+ANT->LAST: START
+ANT_ROOM AFTER SWITCH: B
+
+ # START OF LOOP #
+ANT_NAME: L11
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L12
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L13
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L14
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L15
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L16
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L17
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L18
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L19
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L20
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L21
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L22
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L23
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L24
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L25
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+NUMBER OF LOOPS: 4
 
  ### OUTER LOOP ###
 ANTS IN END: 4
 
  # START OF LOOP #
 ANT_NAME: L1
-ANT_ROOM: end
+ANT_ROOM: C
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
+E: not empty
 
  # START OF LOOP #
 ANT_NAME: L2
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L3
-ANT_ROOM: C
+ANT_ROOM: A
 TEST_END: END_ROOM NOT FOUND
-D: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L4
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L5
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L6
-ANT_ROOM: D
-TEST_END: END_ROOM NOT FOUND
-start: not empty
+START: not empty
 C: not empty
 
  # START OF LOOP #
+ANT_NAME: L4
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L5
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L6
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
 ANT_NAME: L7
-ANT_ROOM: A
+ANT_ROOM: H
 TEST_END: END_ROOM FOUND
-ANT_ROOM BEFORE SWITCH: A
-ANT->CURRENT: end
-ANT->LAST: A
-ANT_ROOM AFTER SWITCH: end
+ANT_ROOM BEFORE SWITCH: H
+ANT->CURRENT: END
+ANT->LAST: H
+ANT_ROOM AFTER SWITCH: END
 
  # START OF LOOP #
 ANT_NAME: L8
-ANT_ROOM: B
-TEST_END: END_ROOM FOUND
-ANT_ROOM BEFORE SWITCH: B
-ANT->CURRENT: end
-ANT->LAST: B
-ANT_ROOM AFTER SWITCH: end
+ANT_ROOM: F
+TEST_END: END_ROOM NOT FOUND
+E: not empty
+ANT_ROOM BEFORE SWITCH: F
+ANT->CURRENT: H
+ANT->LAST: F
+ANT_ROOM AFTER SWITCH: H
 
  # START OF LOOP #
 ANT_NAME: L9
-ANT_ROOM: start
+ANT_ROOM: E
 TEST_END: END_ROOM NOT FOUND
-ANT_ROOM BEFORE SWITCH: start
-ANT->CURRENT: A
-ANT->LAST: start
-ANT_ROOM AFTER SWITCH: A
+B: not empty
+C: not empty
+ANT_ROOM BEFORE SWITCH: E
+ANT->CURRENT: F
+ANT->LAST: E
+ANT_ROOM AFTER SWITCH: F
 
  # START OF LOOP #
 ANT_NAME: L10
-ANT_ROOM: start
+ANT_ROOM: B
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-ANT_ROOM BEFORE SWITCH: start
-ANT->CURRENT: B
-ANT->LAST: start
-ANT_ROOM AFTER SWITCH: B
+START: not empty
+ANT_ROOM BEFORE SWITCH: B
+ANT->CURRENT: E
+ANT->LAST: B
+ANT_ROOM AFTER SWITCH: E
 
  # START OF LOOP #
 ANT_NAME: L11
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+ANT_ROOM BEFORE SWITCH: START
+ANT->CURRENT: B
+ANT->LAST: START
+ANT_ROOM AFTER SWITCH: B
 
  # START OF LOOP #
 ANT_NAME: L12
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L13
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L14
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L15
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L16
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L17
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L18
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L19
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L20
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L21
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L22
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L23
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L24
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L25
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
-
- # START OF LOOP #
-ANT_NAME: L26
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
 B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L27
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L28
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L29
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L30
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L31
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L32
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L33
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L34
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L35
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L36
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L37
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L38
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
 NUMBER OF LOOPS: 5
+
+ ### OUTER LOOP ###
+ANTS IN END: 5
+
+ # START OF LOOP #
+ANT_NAME: L1
+ANT_ROOM: C
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+E: not empty
+
+ # START OF LOOP #
+ANT_NAME: L2
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L3
+ANT_ROOM: A
+TEST_END: END_ROOM NOT FOUND
+START: not empty
+C: not empty
+
+ # START OF LOOP #
+ANT_NAME: L4
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L5
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L6
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L7
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L8
+ANT_ROOM: H
+TEST_END: END_ROOM FOUND
+ANT_ROOM BEFORE SWITCH: H
+ANT->CURRENT: END
+ANT->LAST: H
+ANT_ROOM AFTER SWITCH: END
+
+ # START OF LOOP #
+ANT_NAME: L9
+ANT_ROOM: F
+TEST_END: END_ROOM NOT FOUND
+E: not empty
+ANT_ROOM BEFORE SWITCH: F
+ANT->CURRENT: H
+ANT->LAST: F
+ANT_ROOM AFTER SWITCH: H
+
+ # START OF LOOP #
+ANT_NAME: L10
+ANT_ROOM: E
+TEST_END: END_ROOM NOT FOUND
+B: not empty
+C: not empty
+ANT_ROOM BEFORE SWITCH: E
+ANT->CURRENT: F
+ANT->LAST: E
+ANT_ROOM AFTER SWITCH: F
+
+ # START OF LOOP #
+ANT_NAME: L11
+ANT_ROOM: B
+TEST_END: END_ROOM NOT FOUND
+START: not empty
+ANT_ROOM BEFORE SWITCH: B
+ANT->CURRENT: E
+ANT->LAST: B
+ANT_ROOM AFTER SWITCH: E
+
+ # START OF LOOP #
+ANT_NAME: L12
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+ANT_ROOM BEFORE SWITCH: START
+ANT->CURRENT: B
+ANT->LAST: START
+ANT_ROOM AFTER SWITCH: B
+
+ # START OF LOOP #
+ANT_NAME: L13
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L14
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L15
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L16
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L17
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L18
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L19
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L20
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L21
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L22
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L23
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L24
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L25
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+NUMBER OF LOOPS: 6
 
  ### OUTER LOOP ###
 ANTS IN END: 6
 
  # START OF LOOP #
 ANT_NAME: L1
-ANT_ROOM: end
+ANT_ROOM: C
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
+E: not empty
 
  # START OF LOOP #
 ANT_NAME: L2
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L3
-ANT_ROOM: C
+ANT_ROOM: A
 TEST_END: END_ROOM NOT FOUND
-D: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L4
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L5
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L6
-ANT_ROOM: D
-TEST_END: END_ROOM NOT FOUND
-start: not empty
+START: not empty
 C: not empty
 
  # START OF LOOP #
-ANT_NAME: L7
-ANT_ROOM: end
+ANT_NAME: L4
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L5
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L6
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L7
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L8
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L9
-ANT_ROOM: A
+ANT_ROOM: H
 TEST_END: END_ROOM FOUND
-ANT_ROOM BEFORE SWITCH: A
-ANT->CURRENT: end
-ANT->LAST: A
-ANT_ROOM AFTER SWITCH: end
+ANT_ROOM BEFORE SWITCH: H
+ANT->CURRENT: END
+ANT->LAST: H
+ANT_ROOM AFTER SWITCH: END
 
  # START OF LOOP #
 ANT_NAME: L10
-ANT_ROOM: B
-TEST_END: END_ROOM FOUND
-ANT_ROOM BEFORE SWITCH: B
-ANT->CURRENT: end
-ANT->LAST: B
-ANT_ROOM AFTER SWITCH: end
+ANT_ROOM: F
+TEST_END: END_ROOM NOT FOUND
+E: not empty
+ANT_ROOM BEFORE SWITCH: F
+ANT->CURRENT: H
+ANT->LAST: F
+ANT_ROOM AFTER SWITCH: H
 
  # START OF LOOP #
 ANT_NAME: L11
-ANT_ROOM: start
+ANT_ROOM: E
 TEST_END: END_ROOM NOT FOUND
-ANT_ROOM BEFORE SWITCH: start
-ANT->CURRENT: A
-ANT->LAST: start
-ANT_ROOM AFTER SWITCH: A
+B: not empty
+C: not empty
+ANT_ROOM BEFORE SWITCH: E
+ANT->CURRENT: F
+ANT->LAST: E
+ANT_ROOM AFTER SWITCH: F
 
  # START OF LOOP #
 ANT_NAME: L12
-ANT_ROOM: start
+ANT_ROOM: B
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-ANT_ROOM BEFORE SWITCH: start
-ANT->CURRENT: B
-ANT->LAST: start
-ANT_ROOM AFTER SWITCH: B
+START: not empty
+ANT_ROOM BEFORE SWITCH: B
+ANT->CURRENT: E
+ANT->LAST: B
+ANT_ROOM AFTER SWITCH: E
 
  # START OF LOOP #
 ANT_NAME: L13
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+ANT_ROOM BEFORE SWITCH: START
+ANT->CURRENT: B
+ANT->LAST: START
+ANT_ROOM AFTER SWITCH: B
 
  # START OF LOOP #
 ANT_NAME: L14
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L15
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L16
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L17
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L18
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L19
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L20
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L21
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L22
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L23
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L24
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L25
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
-
- # START OF LOOP #
-ANT_NAME: L26
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
 B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L27
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L28
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L29
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L30
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L31
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L32
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L33
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L34
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L35
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L36
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L37
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L38
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
 NUMBER OF LOOPS: 7
+
+ ### OUTER LOOP ###
+ANTS IN END: 7
+
+ # START OF LOOP #
+ANT_NAME: L1
+ANT_ROOM: C
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+E: not empty
+
+ # START OF LOOP #
+ANT_NAME: L2
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L3
+ANT_ROOM: A
+TEST_END: END_ROOM NOT FOUND
+START: not empty
+C: not empty
+
+ # START OF LOOP #
+ANT_NAME: L4
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L5
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L6
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L7
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L8
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L9
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L10
+ANT_ROOM: H
+TEST_END: END_ROOM FOUND
+ANT_ROOM BEFORE SWITCH: H
+ANT->CURRENT: END
+ANT->LAST: H
+ANT_ROOM AFTER SWITCH: END
+
+ # START OF LOOP #
+ANT_NAME: L11
+ANT_ROOM: F
+TEST_END: END_ROOM NOT FOUND
+E: not empty
+ANT_ROOM BEFORE SWITCH: F
+ANT->CURRENT: H
+ANT->LAST: F
+ANT_ROOM AFTER SWITCH: H
+
+ # START OF LOOP #
+ANT_NAME: L12
+ANT_ROOM: E
+TEST_END: END_ROOM NOT FOUND
+B: not empty
+C: not empty
+ANT_ROOM BEFORE SWITCH: E
+ANT->CURRENT: F
+ANT->LAST: E
+ANT_ROOM AFTER SWITCH: F
+
+ # START OF LOOP #
+ANT_NAME: L13
+ANT_ROOM: B
+TEST_END: END_ROOM NOT FOUND
+START: not empty
+ANT_ROOM BEFORE SWITCH: B
+ANT->CURRENT: E
+ANT->LAST: B
+ANT_ROOM AFTER SWITCH: E
+
+ # START OF LOOP #
+ANT_NAME: L14
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+ANT_ROOM BEFORE SWITCH: START
+ANT->CURRENT: B
+ANT->LAST: START
+ANT_ROOM AFTER SWITCH: B
+
+ # START OF LOOP #
+ANT_NAME: L15
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L16
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L17
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L18
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L19
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L20
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L21
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L22
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L23
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L24
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L25
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+NUMBER OF LOOPS: 8
 
  ### OUTER LOOP ###
 ANTS IN END: 8
 
  # START OF LOOP #
 ANT_NAME: L1
-ANT_ROOM: end
+ANT_ROOM: C
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
+E: not empty
 
  # START OF LOOP #
 ANT_NAME: L2
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L3
-ANT_ROOM: C
+ANT_ROOM: A
 TEST_END: END_ROOM NOT FOUND
-D: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L4
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L5
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L6
-ANT_ROOM: D
-TEST_END: END_ROOM NOT FOUND
-start: not empty
+START: not empty
 C: not empty
 
  # START OF LOOP #
-ANT_NAME: L7
-ANT_ROOM: end
+ANT_NAME: L4
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L5
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L6
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L7
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L8
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L9
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L10
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L11
-ANT_ROOM: A
+ANT_ROOM: H
 TEST_END: END_ROOM FOUND
-ANT_ROOM BEFORE SWITCH: A
-ANT->CURRENT: end
-ANT->LAST: A
-ANT_ROOM AFTER SWITCH: end
+ANT_ROOM BEFORE SWITCH: H
+ANT->CURRENT: END
+ANT->LAST: H
+ANT_ROOM AFTER SWITCH: END
 
  # START OF LOOP #
 ANT_NAME: L12
-ANT_ROOM: B
-TEST_END: END_ROOM FOUND
-ANT_ROOM BEFORE SWITCH: B
-ANT->CURRENT: end
-ANT->LAST: B
-ANT_ROOM AFTER SWITCH: end
+ANT_ROOM: F
+TEST_END: END_ROOM NOT FOUND
+E: not empty
+ANT_ROOM BEFORE SWITCH: F
+ANT->CURRENT: H
+ANT->LAST: F
+ANT_ROOM AFTER SWITCH: H
 
  # START OF LOOP #
 ANT_NAME: L13
-ANT_ROOM: start
+ANT_ROOM: E
 TEST_END: END_ROOM NOT FOUND
-ANT_ROOM BEFORE SWITCH: start
-ANT->CURRENT: A
-ANT->LAST: start
-ANT_ROOM AFTER SWITCH: A
+B: not empty
+C: not empty
+ANT_ROOM BEFORE SWITCH: E
+ANT->CURRENT: F
+ANT->LAST: E
+ANT_ROOM AFTER SWITCH: F
 
  # START OF LOOP #
 ANT_NAME: L14
-ANT_ROOM: start
+ANT_ROOM: B
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-ANT_ROOM BEFORE SWITCH: start
-ANT->CURRENT: B
-ANT->LAST: start
-ANT_ROOM AFTER SWITCH: B
+START: not empty
+ANT_ROOM BEFORE SWITCH: B
+ANT->CURRENT: E
+ANT->LAST: B
+ANT_ROOM AFTER SWITCH: E
 
  # START OF LOOP #
 ANT_NAME: L15
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+ANT_ROOM BEFORE SWITCH: START
+ANT->CURRENT: B
+ANT->LAST: START
+ANT_ROOM AFTER SWITCH: B
 
  # START OF LOOP #
 ANT_NAME: L16
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L17
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L18
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L19
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L20
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L21
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L22
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L23
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L24
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L25
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
-
- # START OF LOOP #
-ANT_NAME: L26
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
 B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L27
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L28
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L29
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L30
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L31
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L32
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L33
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L34
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L35
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L36
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L37
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L38
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
 NUMBER OF LOOPS: 9
+
+ ### OUTER LOOP ###
+ANTS IN END: 9
+
+ # START OF LOOP #
+ANT_NAME: L1
+ANT_ROOM: C
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+E: not empty
+
+ # START OF LOOP #
+ANT_NAME: L2
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L3
+ANT_ROOM: A
+TEST_END: END_ROOM NOT FOUND
+START: not empty
+C: not empty
+
+ # START OF LOOP #
+ANT_NAME: L4
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L5
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L6
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L7
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L8
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L9
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L10
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L11
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L12
+ANT_ROOM: H
+TEST_END: END_ROOM FOUND
+ANT_ROOM BEFORE SWITCH: H
+ANT->CURRENT: END
+ANT->LAST: H
+ANT_ROOM AFTER SWITCH: END
+
+ # START OF LOOP #
+ANT_NAME: L13
+ANT_ROOM: F
+TEST_END: END_ROOM NOT FOUND
+E: not empty
+ANT_ROOM BEFORE SWITCH: F
+ANT->CURRENT: H
+ANT->LAST: F
+ANT_ROOM AFTER SWITCH: H
+
+ # START OF LOOP #
+ANT_NAME: L14
+ANT_ROOM: E
+TEST_END: END_ROOM NOT FOUND
+B: not empty
+C: not empty
+ANT_ROOM BEFORE SWITCH: E
+ANT->CURRENT: F
+ANT->LAST: E
+ANT_ROOM AFTER SWITCH: F
+
+ # START OF LOOP #
+ANT_NAME: L15
+ANT_ROOM: B
+TEST_END: END_ROOM NOT FOUND
+START: not empty
+ANT_ROOM BEFORE SWITCH: B
+ANT->CURRENT: E
+ANT->LAST: B
+ANT_ROOM AFTER SWITCH: E
+
+ # START OF LOOP #
+ANT_NAME: L16
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+ANT_ROOM BEFORE SWITCH: START
+ANT->CURRENT: B
+ANT->LAST: START
+ANT_ROOM AFTER SWITCH: B
+
+ # START OF LOOP #
+ANT_NAME: L17
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L18
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L19
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L20
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L21
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L22
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L23
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L24
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L25
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+NUMBER OF LOOPS: 10
 
  ### OUTER LOOP ###
 ANTS IN END: 10
 
  # START OF LOOP #
 ANT_NAME: L1
-ANT_ROOM: end
+ANT_ROOM: C
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
+E: not empty
 
  # START OF LOOP #
 ANT_NAME: L2
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L3
-ANT_ROOM: C
+ANT_ROOM: A
 TEST_END: END_ROOM NOT FOUND
-D: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L4
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L5
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L6
-ANT_ROOM: D
-TEST_END: END_ROOM NOT FOUND
-start: not empty
+START: not empty
 C: not empty
 
  # START OF LOOP #
-ANT_NAME: L7
-ANT_ROOM: end
+ANT_NAME: L4
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L5
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L6
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L7
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L8
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L9
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L10
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L11
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L12
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L13
-ANT_ROOM: A
+ANT_ROOM: H
 TEST_END: END_ROOM FOUND
-ANT_ROOM BEFORE SWITCH: A
-ANT->CURRENT: end
-ANT->LAST: A
-ANT_ROOM AFTER SWITCH: end
+ANT_ROOM BEFORE SWITCH: H
+ANT->CURRENT: END
+ANT->LAST: H
+ANT_ROOM AFTER SWITCH: END
 
  # START OF LOOP #
 ANT_NAME: L14
-ANT_ROOM: B
-TEST_END: END_ROOM FOUND
-ANT_ROOM BEFORE SWITCH: B
-ANT->CURRENT: end
-ANT->LAST: B
-ANT_ROOM AFTER SWITCH: end
+ANT_ROOM: F
+TEST_END: END_ROOM NOT FOUND
+E: not empty
+ANT_ROOM BEFORE SWITCH: F
+ANT->CURRENT: H
+ANT->LAST: F
+ANT_ROOM AFTER SWITCH: H
 
  # START OF LOOP #
 ANT_NAME: L15
-ANT_ROOM: start
+ANT_ROOM: E
 TEST_END: END_ROOM NOT FOUND
-ANT_ROOM BEFORE SWITCH: start
-ANT->CURRENT: A
-ANT->LAST: start
-ANT_ROOM AFTER SWITCH: A
+B: not empty
+C: not empty
+ANT_ROOM BEFORE SWITCH: E
+ANT->CURRENT: F
+ANT->LAST: E
+ANT_ROOM AFTER SWITCH: F
 
  # START OF LOOP #
 ANT_NAME: L16
-ANT_ROOM: start
+ANT_ROOM: B
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-ANT_ROOM BEFORE SWITCH: start
-ANT->CURRENT: B
-ANT->LAST: start
-ANT_ROOM AFTER SWITCH: B
+START: not empty
+ANT_ROOM BEFORE SWITCH: B
+ANT->CURRENT: E
+ANT->LAST: B
+ANT_ROOM AFTER SWITCH: E
 
  # START OF LOOP #
 ANT_NAME: L17
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+ANT_ROOM BEFORE SWITCH: START
+ANT->CURRENT: B
+ANT->LAST: START
+ANT_ROOM AFTER SWITCH: B
 
  # START OF LOOP #
 ANT_NAME: L18
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L19
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L20
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L21
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L22
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L23
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L24
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L25
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
-
- # START OF LOOP #
-ANT_NAME: L26
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
 B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L27
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L28
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L29
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L30
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L31
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L32
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L33
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L34
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L35
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L36
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L37
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L38
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
 NUMBER OF LOOPS: 11
+
+ ### OUTER LOOP ###
+ANTS IN END: 11
+
+ # START OF LOOP #
+ANT_NAME: L1
+ANT_ROOM: C
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+E: not empty
+
+ # START OF LOOP #
+ANT_NAME: L2
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L3
+ANT_ROOM: A
+TEST_END: END_ROOM NOT FOUND
+START: not empty
+C: not empty
+
+ # START OF LOOP #
+ANT_NAME: L4
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L5
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L6
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L7
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L8
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L9
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L10
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L11
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L12
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L13
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L14
+ANT_ROOM: H
+TEST_END: END_ROOM FOUND
+ANT_ROOM BEFORE SWITCH: H
+ANT->CURRENT: END
+ANT->LAST: H
+ANT_ROOM AFTER SWITCH: END
+
+ # START OF LOOP #
+ANT_NAME: L15
+ANT_ROOM: F
+TEST_END: END_ROOM NOT FOUND
+E: not empty
+ANT_ROOM BEFORE SWITCH: F
+ANT->CURRENT: H
+ANT->LAST: F
+ANT_ROOM AFTER SWITCH: H
+
+ # START OF LOOP #
+ANT_NAME: L16
+ANT_ROOM: E
+TEST_END: END_ROOM NOT FOUND
+B: not empty
+C: not empty
+ANT_ROOM BEFORE SWITCH: E
+ANT->CURRENT: F
+ANT->LAST: E
+ANT_ROOM AFTER SWITCH: F
+
+ # START OF LOOP #
+ANT_NAME: L17
+ANT_ROOM: B
+TEST_END: END_ROOM NOT FOUND
+START: not empty
+ANT_ROOM BEFORE SWITCH: B
+ANT->CURRENT: E
+ANT->LAST: B
+ANT_ROOM AFTER SWITCH: E
+
+ # START OF LOOP #
+ANT_NAME: L18
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+ANT_ROOM BEFORE SWITCH: START
+ANT->CURRENT: B
+ANT->LAST: START
+ANT_ROOM AFTER SWITCH: B
+
+ # START OF LOOP #
+ANT_NAME: L19
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L20
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L21
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L22
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L23
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L24
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L25
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+NUMBER OF LOOPS: 12
 
  ### OUTER LOOP ###
 ANTS IN END: 12
 
  # START OF LOOP #
 ANT_NAME: L1
-ANT_ROOM: end
+ANT_ROOM: C
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
+E: not empty
 
  # START OF LOOP #
 ANT_NAME: L2
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L3
-ANT_ROOM: C
+ANT_ROOM: A
 TEST_END: END_ROOM NOT FOUND
-D: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L4
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L5
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L6
-ANT_ROOM: D
-TEST_END: END_ROOM NOT FOUND
-start: not empty
+START: not empty
 C: not empty
 
  # START OF LOOP #
-ANT_NAME: L7
-ANT_ROOM: end
+ANT_NAME: L4
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L5
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L6
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L7
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L8
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L9
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L10
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L11
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L12
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L13
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L14
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L15
-ANT_ROOM: A
+ANT_ROOM: H
 TEST_END: END_ROOM FOUND
-ANT_ROOM BEFORE SWITCH: A
-ANT->CURRENT: end
-ANT->LAST: A
-ANT_ROOM AFTER SWITCH: end
+ANT_ROOM BEFORE SWITCH: H
+ANT->CURRENT: END
+ANT->LAST: H
+ANT_ROOM AFTER SWITCH: END
 
  # START OF LOOP #
 ANT_NAME: L16
-ANT_ROOM: B
-TEST_END: END_ROOM FOUND
-ANT_ROOM BEFORE SWITCH: B
-ANT->CURRENT: end
-ANT->LAST: B
-ANT_ROOM AFTER SWITCH: end
+ANT_ROOM: F
+TEST_END: END_ROOM NOT FOUND
+E: not empty
+ANT_ROOM BEFORE SWITCH: F
+ANT->CURRENT: H
+ANT->LAST: F
+ANT_ROOM AFTER SWITCH: H
 
  # START OF LOOP #
 ANT_NAME: L17
-ANT_ROOM: start
+ANT_ROOM: E
 TEST_END: END_ROOM NOT FOUND
-ANT_ROOM BEFORE SWITCH: start
-ANT->CURRENT: A
-ANT->LAST: start
-ANT_ROOM AFTER SWITCH: A
+B: not empty
+C: not empty
+ANT_ROOM BEFORE SWITCH: E
+ANT->CURRENT: F
+ANT->LAST: E
+ANT_ROOM AFTER SWITCH: F
 
  # START OF LOOP #
 ANT_NAME: L18
-ANT_ROOM: start
+ANT_ROOM: B
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-ANT_ROOM BEFORE SWITCH: start
-ANT->CURRENT: B
-ANT->LAST: start
-ANT_ROOM AFTER SWITCH: B
+START: not empty
+ANT_ROOM BEFORE SWITCH: B
+ANT->CURRENT: E
+ANT->LAST: B
+ANT_ROOM AFTER SWITCH: E
 
  # START OF LOOP #
 ANT_NAME: L19
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+ANT_ROOM BEFORE SWITCH: START
+ANT->CURRENT: B
+ANT->LAST: START
+ANT_ROOM AFTER SWITCH: B
 
  # START OF LOOP #
 ANT_NAME: L20
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L21
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L22
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L23
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L24
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L25
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
-
- # START OF LOOP #
-ANT_NAME: L26
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
 B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L27
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L28
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L29
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L30
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L31
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L32
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L33
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L34
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L35
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L36
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L37
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L38
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
 NUMBER OF LOOPS: 13
+
+ ### OUTER LOOP ###
+ANTS IN END: 13
+
+ # START OF LOOP #
+ANT_NAME: L1
+ANT_ROOM: C
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+E: not empty
+
+ # START OF LOOP #
+ANT_NAME: L2
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L3
+ANT_ROOM: A
+TEST_END: END_ROOM NOT FOUND
+START: not empty
+C: not empty
+
+ # START OF LOOP #
+ANT_NAME: L4
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L5
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L6
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L7
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L8
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L9
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L10
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L11
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L12
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L13
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L14
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L15
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L16
+ANT_ROOM: H
+TEST_END: END_ROOM FOUND
+ANT_ROOM BEFORE SWITCH: H
+ANT->CURRENT: END
+ANT->LAST: H
+ANT_ROOM AFTER SWITCH: END
+
+ # START OF LOOP #
+ANT_NAME: L17
+ANT_ROOM: F
+TEST_END: END_ROOM NOT FOUND
+E: not empty
+ANT_ROOM BEFORE SWITCH: F
+ANT->CURRENT: H
+ANT->LAST: F
+ANT_ROOM AFTER SWITCH: H
+
+ # START OF LOOP #
+ANT_NAME: L18
+ANT_ROOM: E
+TEST_END: END_ROOM NOT FOUND
+B: not empty
+C: not empty
+ANT_ROOM BEFORE SWITCH: E
+ANT->CURRENT: F
+ANT->LAST: E
+ANT_ROOM AFTER SWITCH: F
+
+ # START OF LOOP #
+ANT_NAME: L19
+ANT_ROOM: B
+TEST_END: END_ROOM NOT FOUND
+START: not empty
+ANT_ROOM BEFORE SWITCH: B
+ANT->CURRENT: E
+ANT->LAST: B
+ANT_ROOM AFTER SWITCH: E
+
+ # START OF LOOP #
+ANT_NAME: L20
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+ANT_ROOM BEFORE SWITCH: START
+ANT->CURRENT: B
+ANT->LAST: START
+ANT_ROOM AFTER SWITCH: B
+
+ # START OF LOOP #
+ANT_NAME: L21
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L22
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L23
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L24
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L25
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+NUMBER OF LOOPS: 14
 
  ### OUTER LOOP ###
 ANTS IN END: 14
 
  # START OF LOOP #
 ANT_NAME: L1
-ANT_ROOM: end
+ANT_ROOM: C
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
+E: not empty
 
  # START OF LOOP #
 ANT_NAME: L2
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L3
-ANT_ROOM: C
+ANT_ROOM: A
 TEST_END: END_ROOM NOT FOUND
-D: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L4
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L5
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L6
-ANT_ROOM: D
-TEST_END: END_ROOM NOT FOUND
-start: not empty
+START: not empty
 C: not empty
 
  # START OF LOOP #
-ANT_NAME: L7
-ANT_ROOM: end
+ANT_NAME: L4
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L5
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L6
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L7
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L8
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L9
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L10
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L11
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L12
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L13
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L14
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L15
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L16
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L17
-ANT_ROOM: A
+ANT_ROOM: H
 TEST_END: END_ROOM FOUND
-ANT_ROOM BEFORE SWITCH: A
-ANT->CURRENT: end
-ANT->LAST: A
-ANT_ROOM AFTER SWITCH: end
+ANT_ROOM BEFORE SWITCH: H
+ANT->CURRENT: END
+ANT->LAST: H
+ANT_ROOM AFTER SWITCH: END
 
  # START OF LOOP #
 ANT_NAME: L18
-ANT_ROOM: B
-TEST_END: END_ROOM FOUND
-ANT_ROOM BEFORE SWITCH: B
-ANT->CURRENT: end
-ANT->LAST: B
-ANT_ROOM AFTER SWITCH: end
+ANT_ROOM: F
+TEST_END: END_ROOM NOT FOUND
+E: not empty
+ANT_ROOM BEFORE SWITCH: F
+ANT->CURRENT: H
+ANT->LAST: F
+ANT_ROOM AFTER SWITCH: H
 
  # START OF LOOP #
 ANT_NAME: L19
-ANT_ROOM: start
+ANT_ROOM: E
 TEST_END: END_ROOM NOT FOUND
-ANT_ROOM BEFORE SWITCH: start
-ANT->CURRENT: A
-ANT->LAST: start
-ANT_ROOM AFTER SWITCH: A
+B: not empty
+C: not empty
+ANT_ROOM BEFORE SWITCH: E
+ANT->CURRENT: F
+ANT->LAST: E
+ANT_ROOM AFTER SWITCH: F
 
  # START OF LOOP #
 ANT_NAME: L20
-ANT_ROOM: start
+ANT_ROOM: B
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-ANT_ROOM BEFORE SWITCH: start
-ANT->CURRENT: B
-ANT->LAST: start
-ANT_ROOM AFTER SWITCH: B
+START: not empty
+ANT_ROOM BEFORE SWITCH: B
+ANT->CURRENT: E
+ANT->LAST: B
+ANT_ROOM AFTER SWITCH: E
 
  # START OF LOOP #
 ANT_NAME: L21
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+ANT_ROOM BEFORE SWITCH: START
+ANT->CURRENT: B
+ANT->LAST: START
+ANT_ROOM AFTER SWITCH: B
 
  # START OF LOOP #
 ANT_NAME: L22
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L23
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L24
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L25
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
-
- # START OF LOOP #
-ANT_NAME: L26
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
 B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L27
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L28
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L29
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L30
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L31
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L32
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L33
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L34
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L35
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L36
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L37
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L38
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
 NUMBER OF LOOPS: 15
+
+ ### OUTER LOOP ###
+ANTS IN END: 15
+
+ # START OF LOOP #
+ANT_NAME: L1
+ANT_ROOM: C
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+E: not empty
+
+ # START OF LOOP #
+ANT_NAME: L2
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L3
+ANT_ROOM: A
+TEST_END: END_ROOM NOT FOUND
+START: not empty
+C: not empty
+
+ # START OF LOOP #
+ANT_NAME: L4
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L5
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L6
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L7
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L8
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L9
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L10
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L11
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L12
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L13
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L14
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L15
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L16
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L17
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L18
+ANT_ROOM: H
+TEST_END: END_ROOM FOUND
+ANT_ROOM BEFORE SWITCH: H
+ANT->CURRENT: END
+ANT->LAST: H
+ANT_ROOM AFTER SWITCH: END
+
+ # START OF LOOP #
+ANT_NAME: L19
+ANT_ROOM: F
+TEST_END: END_ROOM NOT FOUND
+E: not empty
+ANT_ROOM BEFORE SWITCH: F
+ANT->CURRENT: H
+ANT->LAST: F
+ANT_ROOM AFTER SWITCH: H
+
+ # START OF LOOP #
+ANT_NAME: L20
+ANT_ROOM: E
+TEST_END: END_ROOM NOT FOUND
+B: not empty
+C: not empty
+ANT_ROOM BEFORE SWITCH: E
+ANT->CURRENT: F
+ANT->LAST: E
+ANT_ROOM AFTER SWITCH: F
+
+ # START OF LOOP #
+ANT_NAME: L21
+ANT_ROOM: B
+TEST_END: END_ROOM NOT FOUND
+START: not empty
+ANT_ROOM BEFORE SWITCH: B
+ANT->CURRENT: E
+ANT->LAST: B
+ANT_ROOM AFTER SWITCH: E
+
+ # START OF LOOP #
+ANT_NAME: L22
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+ANT_ROOM BEFORE SWITCH: START
+ANT->CURRENT: B
+ANT->LAST: START
+ANT_ROOM AFTER SWITCH: B
+
+ # START OF LOOP #
+ANT_NAME: L23
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L24
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+
+ # START OF LOOP #
+ANT_NAME: L25
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+NUMBER OF LOOPS: 16
 
  ### OUTER LOOP ###
 ANTS IN END: 16
 
  # START OF LOOP #
 ANT_NAME: L1
-ANT_ROOM: end
+ANT_ROOM: C
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
+E: not empty
 
  # START OF LOOP #
 ANT_NAME: L2
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L3
-ANT_ROOM: C
+ANT_ROOM: A
 TEST_END: END_ROOM NOT FOUND
-D: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L4
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L5
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L6
-ANT_ROOM: D
-TEST_END: END_ROOM NOT FOUND
-start: not empty
+START: not empty
 C: not empty
 
  # START OF LOOP #
-ANT_NAME: L7
-ANT_ROOM: end
+ANT_NAME: L4
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L5
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L6
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L7
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L8
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L9
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L10
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L11
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L12
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L13
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L14
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L15
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L16
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L17
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L18
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L19
-ANT_ROOM: A
+ANT_ROOM: H
 TEST_END: END_ROOM FOUND
-ANT_ROOM BEFORE SWITCH: A
-ANT->CURRENT: end
-ANT->LAST: A
-ANT_ROOM AFTER SWITCH: end
+ANT_ROOM BEFORE SWITCH: H
+ANT->CURRENT: END
+ANT->LAST: H
+ANT_ROOM AFTER SWITCH: END
 
  # START OF LOOP #
 ANT_NAME: L20
-ANT_ROOM: B
-TEST_END: END_ROOM FOUND
-ANT_ROOM BEFORE SWITCH: B
-ANT->CURRENT: end
-ANT->LAST: B
-ANT_ROOM AFTER SWITCH: end
+ANT_ROOM: F
+TEST_END: END_ROOM NOT FOUND
+E: not empty
+ANT_ROOM BEFORE SWITCH: F
+ANT->CURRENT: H
+ANT->LAST: F
+ANT_ROOM AFTER SWITCH: H
 
  # START OF LOOP #
 ANT_NAME: L21
-ANT_ROOM: start
+ANT_ROOM: E
 TEST_END: END_ROOM NOT FOUND
-ANT_ROOM BEFORE SWITCH: start
-ANT->CURRENT: A
-ANT->LAST: start
-ANT_ROOM AFTER SWITCH: A
+B: not empty
+C: not empty
+ANT_ROOM BEFORE SWITCH: E
+ANT->CURRENT: F
+ANT->LAST: E
+ANT_ROOM AFTER SWITCH: F
 
  # START OF LOOP #
 ANT_NAME: L22
-ANT_ROOM: start
+ANT_ROOM: B
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-ANT_ROOM BEFORE SWITCH: start
-ANT->CURRENT: B
-ANT->LAST: start
-ANT_ROOM AFTER SWITCH: B
+START: not empty
+ANT_ROOM BEFORE SWITCH: B
+ANT->CURRENT: E
+ANT->LAST: B
+ANT_ROOM AFTER SWITCH: E
 
  # START OF LOOP #
 ANT_NAME: L23
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+ANT_ROOM BEFORE SWITCH: START
+ANT->CURRENT: B
+ANT->LAST: START
+ANT_ROOM AFTER SWITCH: B
 
  # START OF LOOP #
 ANT_NAME: L24
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
+B: not empty
 
  # START OF LOOP #
 ANT_NAME: L25
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
-
- # START OF LOOP #
-ANT_NAME: L26
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
 B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L27
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L28
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L29
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L30
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L31
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L32
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L33
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L34
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L35
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L36
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L37
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L38
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
 NUMBER OF LOOPS: 17
+
+ ### OUTER LOOP ###
+ANTS IN END: 17
+
+ # START OF LOOP #
+ANT_NAME: L1
+ANT_ROOM: C
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+E: not empty
+
+ # START OF LOOP #
+ANT_NAME: L2
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L3
+ANT_ROOM: A
+TEST_END: END_ROOM NOT FOUND
+START: not empty
+C: not empty
+
+ # START OF LOOP #
+ANT_NAME: L4
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L5
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L6
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L7
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L8
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L9
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L10
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L11
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L12
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L13
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L14
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L15
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L16
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L17
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L18
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L19
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L20
+ANT_ROOM: H
+TEST_END: END_ROOM FOUND
+ANT_ROOM BEFORE SWITCH: H
+ANT->CURRENT: END
+ANT->LAST: H
+ANT_ROOM AFTER SWITCH: END
+
+ # START OF LOOP #
+ANT_NAME: L21
+ANT_ROOM: F
+TEST_END: END_ROOM NOT FOUND
+E: not empty
+ANT_ROOM BEFORE SWITCH: F
+ANT->CURRENT: H
+ANT->LAST: F
+ANT_ROOM AFTER SWITCH: H
+
+ # START OF LOOP #
+ANT_NAME: L22
+ANT_ROOM: E
+TEST_END: END_ROOM NOT FOUND
+B: not empty
+C: not empty
+ANT_ROOM BEFORE SWITCH: E
+ANT->CURRENT: F
+ANT->LAST: E
+ANT_ROOM AFTER SWITCH: F
+
+ # START OF LOOP #
+ANT_NAME: L23
+ANT_ROOM: B
+TEST_END: END_ROOM NOT FOUND
+START: not empty
+ANT_ROOM BEFORE SWITCH: B
+ANT->CURRENT: E
+ANT->LAST: B
+ANT_ROOM AFTER SWITCH: E
+
+ # START OF LOOP #
+ANT_NAME: L24
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+ANT_ROOM BEFORE SWITCH: START
+ANT->CURRENT: B
+ANT->LAST: START
+ANT_ROOM AFTER SWITCH: B
+
+ # START OF LOOP #
+ANT_NAME: L25
+ANT_ROOM: START
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+D: not empty
+B: not empty
+NUMBER OF LOOPS: 18
 
  ### OUTER LOOP ###
 ANTS IN END: 18
 
  # START OF LOOP #
 ANT_NAME: L1
-ANT_ROOM: end
+ANT_ROOM: C
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
+E: not empty
 
  # START OF LOOP #
 ANT_NAME: L2
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L3
-ANT_ROOM: C
+ANT_ROOM: A
 TEST_END: END_ROOM NOT FOUND
-D: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L4
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L5
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L6
-ANT_ROOM: D
-TEST_END: END_ROOM NOT FOUND
-start: not empty
+START: not empty
 C: not empty
 
  # START OF LOOP #
-ANT_NAME: L7
-ANT_ROOM: end
+ANT_NAME: L4
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L5
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L6
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L7
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L8
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L9
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L10
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L11
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L12
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L13
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L14
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L15
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L16
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L17
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L18
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L19
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L20
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L21
-ANT_ROOM: A
+ANT_ROOM: H
 TEST_END: END_ROOM FOUND
-ANT_ROOM BEFORE SWITCH: A
-ANT->CURRENT: end
-ANT->LAST: A
-ANT_ROOM AFTER SWITCH: end
+ANT_ROOM BEFORE SWITCH: H
+ANT->CURRENT: END
+ANT->LAST: H
+ANT_ROOM AFTER SWITCH: END
 
  # START OF LOOP #
 ANT_NAME: L22
-ANT_ROOM: B
-TEST_END: END_ROOM FOUND
-ANT_ROOM BEFORE SWITCH: B
-ANT->CURRENT: end
-ANT->LAST: B
-ANT_ROOM AFTER SWITCH: end
+ANT_ROOM: F
+TEST_END: END_ROOM NOT FOUND
+E: not empty
+ANT_ROOM BEFORE SWITCH: F
+ANT->CURRENT: H
+ANT->LAST: F
+ANT_ROOM AFTER SWITCH: H
 
  # START OF LOOP #
 ANT_NAME: L23
-ANT_ROOM: start
+ANT_ROOM: E
 TEST_END: END_ROOM NOT FOUND
-ANT_ROOM BEFORE SWITCH: start
-ANT->CURRENT: A
-ANT->LAST: start
-ANT_ROOM AFTER SWITCH: A
+B: not empty
+C: not empty
+ANT_ROOM BEFORE SWITCH: E
+ANT->CURRENT: F
+ANT->LAST: E
+ANT_ROOM AFTER SWITCH: F
 
  # START OF LOOP #
 ANT_NAME: L24
-ANT_ROOM: start
+ANT_ROOM: B
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-ANT_ROOM BEFORE SWITCH: start
-ANT->CURRENT: B
-ANT->LAST: start
-ANT_ROOM AFTER SWITCH: B
+START: not empty
+ANT_ROOM BEFORE SWITCH: B
+ANT->CURRENT: E
+ANT->LAST: B
+ANT_ROOM AFTER SWITCH: E
 
  # START OF LOOP #
 ANT_NAME: L25
-ANT_ROOM: start
+ANT_ROOM: START
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
 D: not empty
-
- # START OF LOOP #
-ANT_NAME: L26
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L27
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L28
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L29
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L30
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L31
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L32
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L33
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L34
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L35
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L36
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L37
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L38
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
+ANT_ROOM BEFORE SWITCH: START
+ANT->CURRENT: B
+ANT->LAST: START
+ANT_ROOM AFTER SWITCH: B
 NUMBER OF LOOPS: 19
+
+ ### OUTER LOOP ###
+ANTS IN END: 19
+
+ # START OF LOOP #
+ANT_NAME: L1
+ANT_ROOM: C
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+E: not empty
+
+ # START OF LOOP #
+ANT_NAME: L2
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L3
+ANT_ROOM: A
+TEST_END: END_ROOM NOT FOUND
+START: not empty
+C: not empty
+
+ # START OF LOOP #
+ANT_NAME: L4
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L5
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L6
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L7
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L8
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L9
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L10
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L11
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L12
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L13
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L14
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L15
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L16
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L17
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L18
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L19
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L20
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L21
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L22
+ANT_ROOM: H
+TEST_END: END_ROOM FOUND
+ANT_ROOM BEFORE SWITCH: H
+ANT->CURRENT: END
+ANT->LAST: H
+ANT_ROOM AFTER SWITCH: END
+
+ # START OF LOOP #
+ANT_NAME: L23
+ANT_ROOM: F
+TEST_END: END_ROOM NOT FOUND
+E: not empty
+ANT_ROOM BEFORE SWITCH: F
+ANT->CURRENT: H
+ANT->LAST: F
+ANT_ROOM AFTER SWITCH: H
+
+ # START OF LOOP #
+ANT_NAME: L24
+ANT_ROOM: E
+TEST_END: END_ROOM NOT FOUND
+B: not empty
+C: not empty
+ANT_ROOM BEFORE SWITCH: E
+ANT->CURRENT: F
+ANT->LAST: E
+ANT_ROOM AFTER SWITCH: F
+
+ # START OF LOOP #
+ANT_NAME: L25
+ANT_ROOM: B
+TEST_END: END_ROOM NOT FOUND
+START: not empty
+ANT_ROOM BEFORE SWITCH: B
+ANT->CURRENT: E
+ANT->LAST: B
+ANT_ROOM AFTER SWITCH: E
+NUMBER OF LOOPS: 20
 
  ### OUTER LOOP ###
 ANTS IN END: 20
 
  # START OF LOOP #
 ANT_NAME: L1
-ANT_ROOM: end
+ANT_ROOM: C
 TEST_END: END_ROOM NOT FOUND
 A: not empty
-B: not empty
+E: not empty
 
  # START OF LOOP #
 ANT_NAME: L2
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L3
-ANT_ROOM: C
+ANT_ROOM: A
 TEST_END: END_ROOM NOT FOUND
-D: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L4
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L5
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L6
-ANT_ROOM: D
-TEST_END: END_ROOM NOT FOUND
-start: not empty
+START: not empty
 C: not empty
 
  # START OF LOOP #
-ANT_NAME: L7
-ANT_ROOM: end
+ANT_NAME: L4
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L5
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L6
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L7
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L8
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L9
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L10
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L11
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L12
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L13
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L14
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L15
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L16
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L17
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L18
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L19
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L20
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L21
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L22
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L23
-ANT_ROOM: A
+ANT_ROOM: H
 TEST_END: END_ROOM FOUND
-ANT_ROOM BEFORE SWITCH: A
-ANT->CURRENT: end
-ANT->LAST: A
-ANT_ROOM AFTER SWITCH: end
+ANT_ROOM BEFORE SWITCH: H
+ANT->CURRENT: END
+ANT->LAST: H
+ANT_ROOM AFTER SWITCH: END
 
  # START OF LOOP #
 ANT_NAME: L24
-ANT_ROOM: B
-TEST_END: END_ROOM FOUND
-ANT_ROOM BEFORE SWITCH: B
-ANT->CURRENT: end
-ANT->LAST: B
-ANT_ROOM AFTER SWITCH: end
+ANT_ROOM: F
+TEST_END: END_ROOM NOT FOUND
+E: not empty
+ANT_ROOM BEFORE SWITCH: F
+ANT->CURRENT: H
+ANT->LAST: F
+ANT_ROOM AFTER SWITCH: H
 
  # START OF LOOP #
 ANT_NAME: L25
-ANT_ROOM: start
+ANT_ROOM: E
 TEST_END: END_ROOM NOT FOUND
-ANT_ROOM BEFORE SWITCH: start
-ANT->CURRENT: A
-ANT->LAST: start
-ANT_ROOM AFTER SWITCH: A
-
- # START OF LOOP #
-ANT_NAME: L26
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-ANT_ROOM BEFORE SWITCH: start
-ANT->CURRENT: B
-ANT->LAST: start
-ANT_ROOM AFTER SWITCH: B
-
- # START OF LOOP #
-ANT_NAME: L27
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
 B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L28
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L29
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L30
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L31
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L32
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L33
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L34
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L35
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L36
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L37
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L38
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
+C: not empty
+ANT_ROOM BEFORE SWITCH: E
+ANT->CURRENT: F
+ANT->LAST: E
+ANT_ROOM AFTER SWITCH: F
 NUMBER OF LOOPS: 21
+
+ ### OUTER LOOP ###
+ANTS IN END: 21
+
+ # START OF LOOP #
+ANT_NAME: L1
+ANT_ROOM: C
+TEST_END: END_ROOM NOT FOUND
+A: not empty
+ANT_ROOM BEFORE SWITCH: C
+ANT->CURRENT: E
+ANT->LAST: C
+ANT_ROOM AFTER SWITCH: E
+
+ # START OF LOOP #
+ANT_NAME: L2
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L3
+ANT_ROOM: A
+TEST_END: END_ROOM NOT FOUND
+START: not empty
+ANT_ROOM BEFORE SWITCH: A
+ANT->CURRENT: C
+ANT->LAST: A
+ANT_ROOM AFTER SWITCH: C
+
+ # START OF LOOP #
+ANT_NAME: L4
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L5
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L6
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L7
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L8
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L9
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L10
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L11
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L12
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L13
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L14
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L15
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L16
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L17
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L18
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L19
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L20
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L21
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L22
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L23
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L24
+ANT_ROOM: H
+TEST_END: END_ROOM FOUND
+ANT_ROOM BEFORE SWITCH: H
+ANT->CURRENT: END
+ANT->LAST: H
+ANT_ROOM AFTER SWITCH: END
+
+ # START OF LOOP #
+ANT_NAME: L25
+ANT_ROOM: F
+TEST_END: END_ROOM NOT FOUND
+E: not empty
+ANT_ROOM BEFORE SWITCH: F
+ANT->CURRENT: H
+ANT->LAST: F
+ANT_ROOM AFTER SWITCH: H
+NUMBER OF LOOPS: 22
 
  ### OUTER LOOP ###
 ANTS IN END: 22
 
  # START OF LOOP #
 ANT_NAME: L1
-ANT_ROOM: end
+ANT_ROOM: E
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+ANT_ROOM BEFORE SWITCH: E
+ANT->CURRENT: B
+ANT->LAST: E
+ANT_ROOM AFTER SWITCH: B
 
  # START OF LOOP #
 ANT_NAME: L2
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L3
 ANT_ROOM: C
 TEST_END: END_ROOM NOT FOUND
-D: not empty
-B: not empty
+A: not empty
+ANT_ROOM BEFORE SWITCH: C
+ANT->CURRENT: E
+ANT->LAST: C
+ANT_ROOM AFTER SWITCH: E
 
  # START OF LOOP #
 ANT_NAME: L4
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L5
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L6
-ANT_ROOM: D
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-start: not empty
-C: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L7
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L8
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L9
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L10
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L11
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L12
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L13
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L14
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L15
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L16
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L17
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L18
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L19
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L20
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L21
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L22
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L23
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L24
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L25
-ANT_ROOM: A
+ANT_ROOM: H
 TEST_END: END_ROOM FOUND
-ANT_ROOM BEFORE SWITCH: A
-ANT->CURRENT: end
-ANT->LAST: A
-ANT_ROOM AFTER SWITCH: end
+ANT_ROOM BEFORE SWITCH: H
+ANT->CURRENT: END
+ANT->LAST: H
+ANT_ROOM AFTER SWITCH: END
+NUMBER OF LOOPS: 23
+
+ ### OUTER LOOP ###
+ANTS IN END: 23
 
  # START OF LOOP #
-ANT_NAME: L26
+ANT_NAME: L1
 ANT_ROOM: B
-TEST_END: END_ROOM FOUND
+TEST_END: END_ROOM NOT FOUND
+START: not empty
+E: not empty
 ANT_ROOM BEFORE SWITCH: B
-ANT->CURRENT: end
+ANT->CURRENT: H
 ANT->LAST: B
-ANT_ROOM AFTER SWITCH: end
+ANT_ROOM AFTER SWITCH: H
 
  # START OF LOOP #
-ANT_NAME: L27
-ANT_ROOM: start
+ANT_NAME: L2
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-ANT_ROOM BEFORE SWITCH: start
-ANT->CURRENT: A
-ANT->LAST: start
-ANT_ROOM AFTER SWITCH: A
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
-ANT_NAME: L28
-ANT_ROOM: start
+ANT_NAME: L3
+ANT_ROOM: E
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-ANT_ROOM BEFORE SWITCH: start
+ANT_ROOM BEFORE SWITCH: E
 ANT->CURRENT: B
-ANT->LAST: start
+ANT->LAST: E
 ANT_ROOM AFTER SWITCH: B
 
  # START OF LOOP #
-ANT_NAME: L29
-ANT_ROOM: start
+ANT_NAME: L4
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
-ANT_NAME: L30
-ANT_ROOM: start
+ANT_NAME: L5
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
-ANT_NAME: L31
-ANT_ROOM: start
+ANT_NAME: L6
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
-ANT_NAME: L32
-ANT_ROOM: start
+ANT_NAME: L7
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
-ANT_NAME: L33
-ANT_ROOM: start
+ANT_NAME: L8
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
-ANT_NAME: L34
-ANT_ROOM: start
+ANT_NAME: L9
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
-ANT_NAME: L35
-ANT_ROOM: start
+ANT_NAME: L10
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
-ANT_NAME: L36
-ANT_ROOM: start
+ANT_NAME: L11
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
-ANT_NAME: L37
-ANT_ROOM: start
+ANT_NAME: L12
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
-ANT_NAME: L38
-ANT_ROOM: start
+ANT_NAME: L13
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-NUMBER OF LOOPS: 23
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L14
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L15
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L16
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L17
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L18
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L19
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L20
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L21
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L22
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L23
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L24
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L25
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+NUMBER OF LOOPS: 24
+
+ ### OUTER LOOP ###
+ANTS IN END: 23
+
+ # START OF LOOP #
+ANT_NAME: L1
+ANT_ROOM: H
+TEST_END: END_ROOM FOUND
+ANT_ROOM BEFORE SWITCH: H
+ANT->CURRENT: END
+ANT->LAST: H
+ANT_ROOM AFTER SWITCH: END
+
+ # START OF LOOP #
+ANT_NAME: L2
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L3
+ANT_ROOM: B
+TEST_END: END_ROOM NOT FOUND
+START: not empty
+E: not empty
+ANT_ROOM BEFORE SWITCH: B
+ANT->CURRENT: H
+ANT->LAST: B
+ANT_ROOM AFTER SWITCH: H
+
+ # START OF LOOP #
+ANT_NAME: L4
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L5
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L6
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L7
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L8
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L9
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L10
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L11
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L12
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L13
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L14
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L15
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L16
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L17
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L18
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L19
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L20
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L21
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L22
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L23
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L24
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+
+ # START OF LOOP #
+ANT_NAME: L25
+ANT_ROOM: END
+TEST_END: END_ROOM NOT FOUND
+G: not empty
+H: not empty
+J: not empty
+NUMBER OF LOOPS: 24
 
  ### OUTER LOOP ###
 ANTS IN END: 24
 
  # START OF LOOP #
 ANT_NAME: L1
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L2
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L3
-ANT_ROOM: C
-TEST_END: END_ROOM NOT FOUND
-D: not empty
-B: not empty
+ANT_ROOM: H
+TEST_END: END_ROOM FOUND
+ANT_ROOM BEFORE SWITCH: H
+ANT->CURRENT: END
+ANT->LAST: H
+ANT_ROOM AFTER SWITCH: END
 
  # START OF LOOP #
 ANT_NAME: L4
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L5
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L6
-ANT_ROOM: D
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-start: not empty
-C: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L7
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L8
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L9
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L10
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L11
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L12
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L13
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L14
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L15
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L16
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L17
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L18
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L19
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L20
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L21
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L22
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L23
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L24
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
+G: not empty
+H: not empty
+J: not empty
 
  # START OF LOOP #
 ANT_NAME: L25
-ANT_ROOM: end
+ANT_ROOM: END
 TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L26
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L27
-ANT_ROOM: A
-TEST_END: END_ROOM FOUND
-ANT_ROOM BEFORE SWITCH: A
-ANT->CURRENT: end
-ANT->LAST: A
-ANT_ROOM AFTER SWITCH: end
-
- # START OF LOOP #
-ANT_NAME: L28
-ANT_ROOM: B
-TEST_END: END_ROOM FOUND
-ANT_ROOM BEFORE SWITCH: B
-ANT->CURRENT: end
-ANT->LAST: B
-ANT_ROOM AFTER SWITCH: end
-
- # START OF LOOP #
-ANT_NAME: L29
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-ANT_ROOM BEFORE SWITCH: start
-ANT->CURRENT: A
-ANT->LAST: start
-ANT_ROOM AFTER SWITCH: A
-
- # START OF LOOP #
-ANT_NAME: L30
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-ANT_ROOM BEFORE SWITCH: start
-ANT->CURRENT: B
-ANT->LAST: start
-ANT_ROOM AFTER SWITCH: B
-
- # START OF LOOP #
-ANT_NAME: L31
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L32
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L33
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L34
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L35
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L36
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L37
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L38
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
+G: not empty
+H: not empty
+J: not empty
+ANTS AT END OUTSIDE OF OUTER WHILE: 25
 NUMBER OF LOOPS: 25
-
- ### OUTER LOOP ###
-ANTS IN END: 26
-
- # START OF LOOP #
-ANT_NAME: L1
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L2
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L3
-ANT_ROOM: C
-TEST_END: END_ROOM NOT FOUND
-D: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L4
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L5
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L6
-ANT_ROOM: D
-TEST_END: END_ROOM NOT FOUND
-start: not empty
-C: not empty
-
- # START OF LOOP #
-ANT_NAME: L7
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L8
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L9
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L10
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L11
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L12
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L13
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L14
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L15
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L16
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L17
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L18
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L19
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L20
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L21
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L22
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L23
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L24
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L25
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L26
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L27
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L28
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L29
-ANT_ROOM: A
-TEST_END: END_ROOM FOUND
-ANT_ROOM BEFORE SWITCH: A
-ANT->CURRENT: end
-ANT->LAST: A
-ANT_ROOM AFTER SWITCH: end
-
- # START OF LOOP #
-ANT_NAME: L30
-ANT_ROOM: B
-TEST_END: END_ROOM FOUND
-ANT_ROOM BEFORE SWITCH: B
-ANT->CURRENT: end
-ANT->LAST: B
-ANT_ROOM AFTER SWITCH: end
-
- # START OF LOOP #
-ANT_NAME: L31
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-ANT_ROOM BEFORE SWITCH: start
-ANT->CURRENT: A
-ANT->LAST: start
-ANT_ROOM AFTER SWITCH: A
-
- # START OF LOOP #
-ANT_NAME: L32
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-ANT_ROOM BEFORE SWITCH: start
-ANT->CURRENT: B
-ANT->LAST: start
-ANT_ROOM AFTER SWITCH: B
-
- # START OF LOOP #
-ANT_NAME: L33
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L34
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L35
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L36
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L37
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L38
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-NUMBER OF LOOPS: 27
-
- ### OUTER LOOP ###
-ANTS IN END: 28
-
- # START OF LOOP #
-ANT_NAME: L1
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L2
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L3
-ANT_ROOM: C
-TEST_END: END_ROOM NOT FOUND
-D: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L4
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L5
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L6
-ANT_ROOM: D
-TEST_END: END_ROOM NOT FOUND
-start: not empty
-C: not empty
-
- # START OF LOOP #
-ANT_NAME: L7
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L8
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L9
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L10
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L11
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L12
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L13
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L14
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L15
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L16
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L17
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L18
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L19
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L20
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L21
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L22
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L23
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L24
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L25
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L26
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L27
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L28
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L29
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L30
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L31
-ANT_ROOM: A
-TEST_END: END_ROOM FOUND
-ANT_ROOM BEFORE SWITCH: A
-ANT->CURRENT: end
-ANT->LAST: A
-ANT_ROOM AFTER SWITCH: end
-
- # START OF LOOP #
-ANT_NAME: L32
-ANT_ROOM: B
-TEST_END: END_ROOM FOUND
-ANT_ROOM BEFORE SWITCH: B
-ANT->CURRENT: end
-ANT->LAST: B
-ANT_ROOM AFTER SWITCH: end
-
- # START OF LOOP #
-ANT_NAME: L33
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-ANT_ROOM BEFORE SWITCH: start
-ANT->CURRENT: A
-ANT->LAST: start
-ANT_ROOM AFTER SWITCH: A
-
- # START OF LOOP #
-ANT_NAME: L34
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-ANT_ROOM BEFORE SWITCH: start
-ANT->CURRENT: B
-ANT->LAST: start
-ANT_ROOM AFTER SWITCH: B
-
- # START OF LOOP #
-ANT_NAME: L35
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L36
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L37
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L38
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-NUMBER OF LOOPS: 29
-
- ### OUTER LOOP ###
-ANTS IN END: 30
-
- # START OF LOOP #
-ANT_NAME: L1
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L2
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L3
-ANT_ROOM: C
-TEST_END: END_ROOM NOT FOUND
-D: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L4
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L5
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L6
-ANT_ROOM: D
-TEST_END: END_ROOM NOT FOUND
-start: not empty
-C: not empty
-
- # START OF LOOP #
-ANT_NAME: L7
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L8
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L9
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L10
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L11
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L12
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L13
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L14
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L15
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L16
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L17
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L18
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L19
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L20
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L21
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L22
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L23
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L24
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L25
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L26
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L27
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L28
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L29
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L30
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L31
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L32
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L33
-ANT_ROOM: A
-TEST_END: END_ROOM FOUND
-ANT_ROOM BEFORE SWITCH: A
-ANT->CURRENT: end
-ANT->LAST: A
-ANT_ROOM AFTER SWITCH: end
-
- # START OF LOOP #
-ANT_NAME: L34
-ANT_ROOM: B
-TEST_END: END_ROOM FOUND
-ANT_ROOM BEFORE SWITCH: B
-ANT->CURRENT: end
-ANT->LAST: B
-ANT_ROOM AFTER SWITCH: end
-
- # START OF LOOP #
-ANT_NAME: L35
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-ANT_ROOM BEFORE SWITCH: start
-ANT->CURRENT: A
-ANT->LAST: start
-ANT_ROOM AFTER SWITCH: A
-
- # START OF LOOP #
-ANT_NAME: L36
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-ANT_ROOM BEFORE SWITCH: start
-ANT->CURRENT: B
-ANT->LAST: start
-ANT_ROOM AFTER SWITCH: B
-
- # START OF LOOP #
-ANT_NAME: L37
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-
- # START OF LOOP #
-ANT_NAME: L38
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-D: not empty
-NUMBER OF LOOPS: 31
-
- ### OUTER LOOP ###
-ANTS IN END: 32
-
- # START OF LOOP #
-ANT_NAME: L1
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L2
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L3
-ANT_ROOM: C
-TEST_END: END_ROOM NOT FOUND
-D: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L4
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L5
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L6
-ANT_ROOM: D
-TEST_END: END_ROOM NOT FOUND
-start: not empty
-C: not empty
-
- # START OF LOOP #
-ANT_NAME: L7
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L8
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L9
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L10
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L11
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L12
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L13
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L14
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L15
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L16
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L17
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L18
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L19
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L20
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L21
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L22
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L23
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L24
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L25
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L26
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L27
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L28
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L29
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L30
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L31
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L32
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L33
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L34
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L35
-ANT_ROOM: A
-TEST_END: END_ROOM FOUND
-ANT_ROOM BEFORE SWITCH: A
-ANT->CURRENT: end
-ANT->LAST: A
-ANT_ROOM AFTER SWITCH: end
-
- # START OF LOOP #
-ANT_NAME: L36
-ANT_ROOM: B
-TEST_END: END_ROOM FOUND
-ANT_ROOM BEFORE SWITCH: B
-ANT->CURRENT: end
-ANT->LAST: B
-ANT_ROOM AFTER SWITCH: end
-
- # START OF LOOP #
-ANT_NAME: L37
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-ANT_ROOM BEFORE SWITCH: start
-ANT->CURRENT: A
-ANT->LAST: start
-ANT_ROOM AFTER SWITCH: A
-
- # START OF LOOP #
-ANT_NAME: L38
-ANT_ROOM: start
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-ANT_ROOM BEFORE SWITCH: start
-ANT->CURRENT: B
-ANT->LAST: start
-ANT_ROOM AFTER SWITCH: B
-NUMBER OF LOOPS: 33
-
- ### OUTER LOOP ###
-ANTS IN END: 34
-
- # START OF LOOP #
-ANT_NAME: L1
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L2
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L3
-ANT_ROOM: C
-TEST_END: END_ROOM NOT FOUND
-D: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L4
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L5
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L6
-ANT_ROOM: D
-TEST_END: END_ROOM NOT FOUND
-start: not empty
-C: not empty
-
- # START OF LOOP #
-ANT_NAME: L7
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L8
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L9
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L10
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L11
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L12
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L13
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L14
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L15
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L16
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L17
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L18
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L19
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L20
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L21
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L22
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L23
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L24
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L25
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L26
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L27
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L28
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L29
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L30
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L31
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L32
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L33
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L34
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L35
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L36
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L37
-ANT_ROOM: A
-TEST_END: END_ROOM FOUND
-ANT_ROOM BEFORE SWITCH: A
-ANT->CURRENT: end
-ANT->LAST: A
-ANT_ROOM AFTER SWITCH: end
-
- # START OF LOOP #
-ANT_NAME: L38
-ANT_ROOM: B
-TEST_END: END_ROOM FOUND
-ANT_ROOM BEFORE SWITCH: B
-ANT->CURRENT: end
-ANT->LAST: B
-ANT_ROOM AFTER SWITCH: end
-NUMBER OF LOOPS: 35
-
- ### OUTER LOOP ###
-ANTS IN END: 36
-
- # START OF LOOP #
-ANT_NAME: L1
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L2
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L3
-ANT_ROOM: C
-TEST_END: END_ROOM NOT FOUND
-D: not empty
-ANT_ROOM BEFORE SWITCH: C
-ANT->CURRENT: B
-ANT->LAST: C
-ANT_ROOM AFTER SWITCH: B
-
- # START OF LOOP #
-ANT_NAME: L4
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L5
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L6
-ANT_ROOM: D
-TEST_END: END_ROOM NOT FOUND
-start: not empty
-ANT_ROOM BEFORE SWITCH: D
-ANT->CURRENT: C
-ANT->LAST: D
-ANT_ROOM AFTER SWITCH: C
-
- # START OF LOOP #
-ANT_NAME: L7
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L8
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L9
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L10
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L11
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L12
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L13
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L14
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L15
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L16
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L17
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L18
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L19
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L20
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L21
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L22
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L23
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L24
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L25
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L26
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L27
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L28
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L29
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L30
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L31
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L32
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L33
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L34
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L35
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L36
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L37
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L38
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-NUMBER OF LOOPS: 37
-
- ### OUTER LOOP ###
-ANTS IN END: 36
-
- # START OF LOOP #
-ANT_NAME: L1
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L2
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L3
-ANT_ROOM: B
-TEST_END: END_ROOM FOUND
-ANT_ROOM BEFORE SWITCH: B
-ANT->CURRENT: end
-ANT->LAST: B
-ANT_ROOM AFTER SWITCH: end
-
- # START OF LOOP #
-ANT_NAME: L4
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L5
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L6
-ANT_ROOM: C
-TEST_END: END_ROOM NOT FOUND
-D: not empty
-ANT_ROOM BEFORE SWITCH: C
-ANT->CURRENT: B
-ANT->LAST: C
-ANT_ROOM AFTER SWITCH: B
-
- # START OF LOOP #
-ANT_NAME: L7
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L8
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L9
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L10
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L11
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L12
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L13
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L14
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L15
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L16
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L17
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L18
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L19
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L20
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L21
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L22
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L23
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L24
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L25
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L26
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L27
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L28
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L29
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L30
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L31
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L32
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L33
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L34
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L35
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L36
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L37
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L38
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-NUMBER OF LOOPS: 37
-
- ### OUTER LOOP ###
-ANTS IN END: 37
-
- # START OF LOOP #
-ANT_NAME: L1
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L2
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L3
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L4
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L5
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L6
-ANT_ROOM: B
-TEST_END: END_ROOM FOUND
-ANT_ROOM BEFORE SWITCH: B
-ANT->CURRENT: end
-ANT->LAST: B
-ANT_ROOM AFTER SWITCH: end
-
- # START OF LOOP #
-ANT_NAME: L7
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L8
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L9
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L10
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L11
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L12
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L13
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L14
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L15
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L16
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L17
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L18
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L19
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L20
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L21
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L22
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L23
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L24
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L25
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L26
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L27
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L28
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L29
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L30
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L31
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L32
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L33
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L34
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L35
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L36
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L37
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-
- # START OF LOOP #
-ANT_NAME: L38
-ANT_ROOM: end
-TEST_END: END_ROOM NOT FOUND
-A: not empty
-B: not empty
-ANTS AT END OUTSIDE OF OUTER WHILE: 38
-NUMBER OF LOOPS: 38

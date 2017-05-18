@@ -6,7 +6,7 @@
 /*   By: lkoekemo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 13:57:32 by lkoekemo          #+#    #+#             */
-/*   Updated: 2017/05/17 17:59:26 by lkoekemo         ###   ########.fr       */
+/*   Updated: 2017/05/18 13:17:20 by lkoekemo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ typedef	struct			s_input_list
 typedef struct			s_rooms_list
 {
 	char				*name;
+	int					valid;
 	int					in_room;
 	struct s_rooms_list	*next;
 }						t_rooms_list;
@@ -75,11 +76,14 @@ char					*get_link(t_main *g, char *str);
 char					**links(t_main *g, char *test);
 void					travel(t_main *g);
 t_rooms_list			*go_to_start(t_main *g, t_rooms_list *r);
+t_rooms_list			*go_to_room(t_main *g, char *str);
 //t_visited				*add_visited(t_visited *node, char *room);
 void					test_end(t_main *g, t_ants_list *a, t_rooms_list *r, char **arr);
 int						ants_in_room(t_main *g, t_rooms_list *r, char *str);
 t_rooms_list			*move_from_to(t_main *g, t_rooms_list *r, char *from, char *to);
 char					**links(t_main *g, char *test);
 void					find_path(t_main *g);
+int						all_the_ifs(t_main *g, t_rooms_list *r, t_ants_list *a, char **arr);
+int						is_room_valid(t_main *g, t_rooms_list *r, char *str);
 
 #endif
