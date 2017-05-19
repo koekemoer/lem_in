@@ -27,38 +27,30 @@ void		test_end(t_main *g, t_ants *a, t_rooms *r, char **arr)
 {
 	if (check_for_end(g, arr) == 1)
 	{
-		ft_debug("TEST_END", "END_ROOM FOUND");
-		ft_debug("ANT_ROOM BEFORE SWITCH", a->room);
 		g->rooms = move_from_to(g, r, a->room, g->end_room);
 		a->last = a->room;
 		a->room = g->end_room;
-		ft_debug("ANT->CURRENT", a->room);
-		ft_debug("ANT->LAST", a->last != NULL ? a->last : "NUL OU BUL");
-		ft_debug("ANT_ROOM AFTER SWITCH", a->room);
+        ft_putstr(a->name);
+        ft_putchar('-');
+        ft_putstr(a->room);
+        ft_putchar(' ');
 	}
 	else	
 	{
-		ft_debug("TEST_END", "END_ROOM NOT FOUND");
 		while (*arr)
 		{
-			/*if ((ft_strcmp(*arr, g->end_room) == 0 || 
-					ants_in_room(g, r, *arr) == 0) && 
-					ft_strcmp(g->end_room, a->room) != 0 && 
-					ft_strcmp(a->last, *arr) != 0 &&
-					ft_strcmp(*arr, g->start_room) != 0)*/
 			if (all_the_ifs(g, r, a, arr) == 1)
 			{
-				ft_debug("ANT_ROOM BEFORE SWITCH", a->room);
 				g->rooms = move_from_to(g, r, a->room, *arr);
 				a->last = a->room;
-				a->room = *arr;
-				ft_debug("ANT->CURRENT", a->room);
-				ft_debug("ANT->LAST", a->last != NULL ? a->last : "NUL OU BUL");
-				ft_debug("ANT_ROOM AFTER SWITCH", a->room);
+				a->room = *arr;ft_putstr(a->name);
+                ft_putchar('-');
+                ft_putstr(a->room);
+                ft_putchar(' ');
 				break;
 			}
 			else
-				ft_debug(*arr, "not empty");
+				//ft_debug(*arr, "not empty");
 			arr++;
 		}
 	}
@@ -78,46 +70,19 @@ void		find_path(t_main *g)
 	while (r->next)
 	{
 		i = 0;
-		ft_debug("FIND PATH", r->name);
-		ft_debug("VALID BEFORE", ft_itoa(r->valid));
 		arr = links(g, r->name);
-
         while (*arr)
         {
-            ft_debug(r->name, *arr);
-            if (is_room_valid(g, r, *arr) == 0/* && ft_strcmp(*arr, g->end_room) != 0*//* && ft_strcmp(*arr, g->start_room) != 0*/)
+            if (is_room_valid(g, r, *arr) == 0)
                 i++;
             arr++;
         }
         if (i == 1 && ft_strcmp(r->name, g->start_room) != 0 && ft_strcmp(r->name, g->end_room) != 0 && r->valid == 0)
         {
             r->valid = -1;
-            ft_debug("VALID AFTER", ft_itoa(r->valid));
             r = head;
         }
-
-		/*while (*arr)
-		{
-			ft_debug(r->name, *arr);
-			if (is_room_valid(g, r, *arr) == 0 &&
-					ft_strcmp(*arr, g->end_room) != 0)
-				i++;
-			arr++;
-		}
-		if (i == 1 && ft_strcmp(r->name, g->start_room) != 0 && 
-				ft_strcmp(r->name, g->end_room) != 0 && r->valid == 0)
-		{
-			r->valid = -1;
-			ft_debug("VALID AFTER", ft_itoa(r->valid));
-			r = head;
-		}
-		//ft_debug("VALID AFTER", ft_itoa(r->valid));*/
 		r = r->next;
-	}
-	while (l->next)
-	{
-		ft_debug("LINKS", l->link);
-		l = l->next;
 	}
 }
 

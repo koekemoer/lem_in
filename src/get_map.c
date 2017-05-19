@@ -97,10 +97,8 @@ int		get_map(t_main *g)
 	while (node->next)
 	{
 		get_start_end(node->str, g);
-		// DETERMINE NUMBER OF ANTS
 		if (g->num_ants == 0)
-			g->num_ants = ft_atoi(node->str); // HAVE TO DO ERROR CHECK
-		// DETERMINE NUMBER OF ROOMS
+			g->num_ants = ft_atoi(node->str);
 		else if (ft_strchr(node->str, ' ') != NULL)
 			//g->num_rooms++;		
 			rooms = add_room(node->str, rooms, g);
@@ -112,9 +110,6 @@ int		get_map(t_main *g)
 	fill_start_room(g);
 	g->ants = save_ants(g);
 	g->ants = assign_rooms(g);
-//	char	*test;
-//	test = ft_strjoin3("sannie ", "sleep ", "sout");
-//	ft_putendl(test);
 	g->links = links;
 	free(node);
 	return (0);

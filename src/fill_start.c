@@ -21,23 +21,13 @@ void		fill_start_room(t_main *g/*, t_rooms *r*/)
 	{
 		if (ft_strcmp(g->rooms->name, g->start_room) == 0)
 			g->rooms->in_room = g->num_ants;
-		ft_putstr("ROOM NAME: ");
-		ft_putendl(g->rooms->name);
-		ft_putstr("ANTS IN ROOM: ");
-		ft_putendl(ft_itoa(g->rooms->in_room));
 		g->rooms = g->rooms->next;
 	}
 	g->rooms = tmp;
-//	ft_putstr("AFTER FILL START: ");
-//	ft_putendl(g->rooms->name);
 }
 
 char		*get_link(t_main *g, char *str)
 {
-//	t_links	*head;
-
-//	head = g->links;
-
 	char	*ret = NULL;
 
 	while (g->links->next && ret == NULL)
@@ -46,14 +36,8 @@ char		*get_link(t_main *g, char *str)
 			ret = g->links->arr[1];
 		if (ft_strcmp(str, g->links->arr[1]) == 0)
 			ret = g->links->arr[0];
-	//	if (ret != NULL)
-	//		return (ret);
-		//ft_putstr(g->links->arr[0]);
-		//ft_putstr("<->");
-		//ft_putendl(g->links->arr[1]);
 		g->links = g->links->next;
 	}
-//	g->links = head; // RESET LIST TO START
 	return (ret);
 }
 
@@ -82,5 +66,3 @@ char		**links(t_main *g, char *test)
 	g->links = head;
 	return (arr);
 }
-
-/* 'N FUNCTION WAT SEKER MAAK DAT DIE ANT NA DIE END ROOM TOE SKUIF AS HY BESTAAN IN DIE LINK */

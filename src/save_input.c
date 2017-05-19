@@ -22,11 +22,11 @@ t_input_list			*save_input(t_main *g)
 	{
 		if (head == NULL)
 		{
-			head = (t_input_list *)malloc(sizeof(t_input_list)); // HAVE TO MALLOC EVERYTIME ITEM GETS ADDED TO LIST
+			head = (t_input_list *)malloc(sizeof(t_input_list));
 			node = head;
 		}
 		node->str = g->gnl;
-		node->next = (t_input_list *)malloc(sizeof(t_input_list)); // MALLOC IN ORDER TO BE ABLE TO ADD TO LIST
+		node->next = (t_input_list *)malloc(sizeof(t_input_list));
 		if (node->str == NULL || (ft_strcmp(node->str, "\0") == 0))
 			error();
 		node = node->next;
