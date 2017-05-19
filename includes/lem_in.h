@@ -32,14 +32,14 @@ typedef struct			s_rooms_list
 	int					valid;
 	int					in_room;
 	struct s_rooms_list	*next;
-}						t_rooms_list;
+}						t_rooms;
 
 typedef struct			s_links_list
 {
 	char				*link;
 	char				**arr;
 	struct s_links_list	*next;
-}						t_links_list;
+}						t_links;
 
 typedef struct			s_ants_list
 {
@@ -47,7 +47,7 @@ typedef struct			s_ants_list
 	char				*room;
 	char				*last;
 	struct s_ants_list	*next;
-}						t_ants_list;
+}						t_ants;
 
 typedef	struct			s_main
 {
@@ -56,9 +56,9 @@ typedef	struct			s_main
 	int					num_ants;
 	int					num_rooms;
 	int					num_links;
-	t_rooms_list		*rooms;
-	t_links_list		*links;
-	t_ants_list			*ants;
+	t_rooms				*rooms;
+	t_links				*links;
+	t_ants				*ants;
 	char				*start_room;
 	char				*end_room;
 	int					nr_end;
@@ -69,21 +69,21 @@ typedef	struct			s_main
 void					error();
 t_input_list			*save_input(t_main *g);
 int						get_map(t_main *g);
-t_ants_list				*save_ants(t_main *g);
-t_ants_list				*assign_rooms(t_main *g);
+t_ants					*save_ants(t_main *g);
+t_ants					*assign_rooms(t_main *g);
 void					fill_start_room(t_main *g);
 char					*get_link(t_main *g, char *str);
 char					**links(t_main *g, char *test);
 void					travel(t_main *g);
-t_rooms_list			*go_to_start(t_main *g, t_rooms_list *r);
-t_rooms_list			*go_to_room(t_main *g, char *str);
+t_rooms					*go_to_start(t_main *g, t_rooms *r);
+t_rooms					*go_to_room(t_main *g, char *str);
 //t_visited				*add_visited(t_visited *node, char *room);
-void					test_end(t_main *g, t_ants_list *a, t_rooms_list *r, char **arr);
-int						ants_in_room(t_main *g, t_rooms_list *r, char *str);
-t_rooms_list			*move_from_to(t_main *g, t_rooms_list *r, char *from, char *to);
+void					test_end(t_main *g, t_ants *a, t_rooms *r, char **arr);
+int						ants_in_room(t_main *g, t_rooms *r, char *str);
+t_rooms			*move_from_to(t_main *g, t_rooms *r, char *from, char *to);
 char					**links(t_main *g, char *test);
 void					find_path(t_main *g);
-int						all_the_ifs(t_main *g, t_rooms_list *r, t_ants_list *a, char **arr);
-int						is_room_valid(t_main *g, t_rooms_list *r, char *str);
+int						all_the_ifs(t_main *g, t_rooms *r, t_ants *a, char **arr);
+int						is_room_valid(t_main *g, t_rooms *r, char *str);
 
 #endif

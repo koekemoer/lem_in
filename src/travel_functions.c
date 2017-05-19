@@ -23,7 +23,7 @@ int			check_for_end(t_main *g, char **arr)
 	return (0);
 }
 
-void		test_end(t_main *g, t_ants_list *a, t_rooms_list *r, char **arr)
+void		test_end(t_main *g, t_ants *a, t_rooms *r, char **arr)
 {
 	if (check_for_end(g, arr) == 1)
 	{
@@ -66,11 +66,11 @@ void		test_end(t_main *g, t_ants_list *a, t_rooms_list *r, char **arr)
 
 void		find_path(t_main *g)
 {
-	t_rooms_list		*r;
-	t_rooms_list		*head;
-	t_links_list		*l;
-	char				**arr;
-	int					i;
+	t_rooms 		*r;
+	t_rooms	    	*head;
+	t_links		    *l;
+	char			**arr;
+	int				i;
 
 	r = g->rooms;
 	head = g->rooms;
@@ -81,7 +81,22 @@ void		find_path(t_main *g)
 		ft_debug("FIND PATH", r->name);
 		ft_debug("VALID BEFORE", ft_itoa(r->valid));
 		arr = links(g, r->name);
-		while (*arr)
+
+        while (*arr)
+        {
+            ft_debug(r->name, *arr);
+            if (is_room_valid(g, r, *arr) == 0/* && ft_strcmp(*arr, g->end_room) != 0*//* && ft_strcmp(*arr, g->start_room) != 0*/)
+                i++;
+            arr++;
+        }
+        if (i == 1 && ft_strcmp(r->name, g->start_room) != 0 && ft_strcmp(r->name, g->end_room) != 0 && r->valid == 0)
+        {
+            r->valid = -1;
+            ft_debug("VALID AFTER", ft_itoa(r->valid));
+            r = head;
+        }
+
+		/*while (*arr)
 		{
 			ft_debug(r->name, *arr);
 			if (is_room_valid(g, r, *arr) == 0 &&
@@ -96,7 +111,7 @@ void		find_path(t_main *g)
 			ft_debug("VALID AFTER", ft_itoa(r->valid));
 			r = head;
 		}
-		//ft_debug("VALID AFTER", ft_itoa(r->valid));
+		//ft_debug("VALID AFTER", ft_itoa(r->valid));*/
 		r = r->next;
 	}
 	while (l->next)
@@ -106,7 +121,7 @@ void		find_path(t_main *g)
 	}
 }
 
-int			all_the_ifs(t_main *g, t_rooms_list *r, t_ants_list *a, char **arr)
+int			all_the_ifs(t_main *g, t_rooms *r, t_ants *a, char **arr)
 {
 	if ((ft_strcmp(*arr, g->end_room) == 0 || ants_in_room(g, r, *arr) == 0) && 
 					ft_strcmp(g->end_room, a->room) != 0 && 
@@ -117,7 +132,7 @@ int			all_the_ifs(t_main *g, t_rooms_list *r, t_ants_list *a, char **arr)
 	return (0);
 }
 
-int			is_room_valid(t_main *g, t_rooms_list *r, char *str)
+int			is_room_valid(t_main *g, t_rooms *r, char *str)
 {
 	int		ret;
 

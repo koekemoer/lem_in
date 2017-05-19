@@ -13,7 +13,7 @@
 #include "../includes/lem_in.h"
 #include <stdio.h>  // REMOVE
 
-t_rooms_list	*go_to_start(t_main *g, t_rooms_list *r)
+t_rooms	*go_to_start(t_main *g, t_rooms *r)
 {
 	g->rooms = r;
 	while (g->rooms->next)
@@ -27,9 +27,9 @@ t_rooms_list	*go_to_start(t_main *g, t_rooms_list *r)
 	return (g->rooms);
 }
 
-t_rooms_list	*go_to_room(t_main *g, char *str)
+t_rooms	*go_to_room(t_main *g, char *str)
 {
-	//	t_rooms_list		*ph;
+	//	t_rooms		*ph;
 
 	//	ph = g->rooms;
 	while (g->rooms->next)
@@ -48,7 +48,7 @@ t_rooms_list	*go_to_room(t_main *g, char *str)
 	return (g->rooms);
 }
 
-t_rooms_list	*move_from_to(t_main *g, t_rooms_list *r, char *from, char *to)
+t_rooms	*move_from_to(t_main *g, t_rooms *r, char *from, char *to)
 {
 	g->rooms = r;
 	while (g->rooms->next) // CONCIDER USING go_to_room
@@ -74,10 +74,10 @@ t_rooms_list	*move_from_to(t_main *g, t_rooms_list *r, char *from, char *to)
 	return (r);
 }
 
-int	ants_in_room(t_main *g, t_rooms_list *r, char *str)
+int	ants_in_room(t_main *g, t_rooms *r, char *str)
 {
 	int		ret;
-	//t_rooms_list	*r;
+	//t_rooms	*r;
 
 	g->rooms = r;
 	ret = 0;
@@ -105,8 +105,8 @@ int	ants_in_room(t_main *g, t_rooms_list *r, char *str)
 void		travel(t_main *g)
 {
 	char		**arr;
-	t_rooms_list	*r;
-	t_ants_list	*a;
+	t_rooms		*r;
+	t_ants		*a;
 	int			test = 0;
 
 	r = g->rooms;

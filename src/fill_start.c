@@ -12,9 +12,9 @@
 
 #include "../includes/lem_in.h"
 
-void		fill_start_room(t_main *g/*, t_rooms_list *r*/)
+void		fill_start_room(t_main *g/*, t_rooms *r*/)
 {
-	t_rooms_list		*tmp;
+	t_rooms		*tmp;
 
 	tmp = g->rooms;
 	while (g->rooms->next)
@@ -34,7 +34,7 @@ void		fill_start_room(t_main *g/*, t_rooms_list *r*/)
 
 char		*get_link(t_main *g, char *str)
 {
-//	t_links_list	*head;
+//	t_links	*head;
 
 //	head = g->links;
 
@@ -61,7 +61,7 @@ char		**links(t_main *g, char *test)
 {
 	char		**arr;
 	char		*tmp;
-	t_links_list	*head;
+	t_links	*head;
 	int		i;
 
 	tmp = NULL;

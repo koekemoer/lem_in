@@ -12,10 +12,10 @@
 
 #include "../includes/lem_in.h"
 
-t_ants_list		*save_ants(t_main *g)
+t_ants		*save_ants(t_main *g)
 {
-	t_ants_list		*head;
-	t_ants_list		*node;
+	t_ants		*head;
+	t_ants		*node;
 	int				i;
 
 	head = NULL;
@@ -24,12 +24,12 @@ t_ants_list		*save_ants(t_main *g)
 	{
 		if (head == NULL)
 		{
-			head = (t_ants_list *)malloc(sizeof(t_ants_list));
+			head = (t_ants *)malloc(sizeof(t_ants));
 			node = head;
 		}
 		node->name = ft_strjoin("L", ft_itoa(i));
 		//ft_putendl(node->name);
-		node->next = (t_ants_list *)malloc(sizeof(t_ants_list));
+		node->next = (t_ants *)malloc(sizeof(t_ants));
 		if (node->name == NULL || ft_strcmp("\0", node->name) == 0)
 			error();
 		i++;
@@ -42,10 +42,10 @@ t_ants_list		*save_ants(t_main *g)
 	return (head);
 }
 
-t_ants_list		*assign_rooms(t_main *g)
+t_ants		*assign_rooms(t_main *g)
 {
-	t_ants_list	*head;
-	t_rooms_list	*tmp;
+	t_ants	*head;
+	t_rooms	*tmp;
 	int		i;
 
 	tmp = g->rooms;
