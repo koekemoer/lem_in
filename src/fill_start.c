@@ -6,13 +6,13 @@
 /*   By: lkoekemo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/18 11:11:57 by lkoekemo          #+#    #+#             */
-/*   Updated: 2017/05/18 11:12:01 by lkoekemo         ###   ########.fr       */
+/*   Updated: 2017/05/19 14:15:23 by lkoekemo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/lem_in.h"
 
-void		fill_start_room(t_main *g/*, t_rooms *r*/)
+void		fill_start_room(t_main *g)
 {
 	t_rooms		*tmp;
 
@@ -28,8 +28,9 @@ void		fill_start_room(t_main *g/*, t_rooms *r*/)
 
 char		*get_link(t_main *g, char *str)
 {
-	char	*ret = NULL;
+	char	*ret;
 
+	ret = NULL;
 	while (g->links->next && ret == NULL)
 	{
 		if (ft_strcmp(str, g->links->arr[0]) == 0)
@@ -45,8 +46,8 @@ char		**links(t_main *g, char *test)
 {
 	char		**arr;
 	char		*tmp;
-	t_links	*head;
-	int		i;
+	t_links		*head;
+	int			i;
 
 	tmp = NULL;
 	i = 0;
@@ -55,7 +56,7 @@ char		**links(t_main *g, char *test)
 		i++;
 	g->links = head;
 	if (!(arr = (char **)malloc(sizeof(*arr) * i + 1)))
-		return NULL;
+		return (NULL);
 	i = 0;
 	while ((tmp = get_link(g, test)))
 	{

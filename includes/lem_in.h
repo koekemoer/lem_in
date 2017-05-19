@@ -6,7 +6,7 @@
 /*   By: lkoekemo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 13:57:32 by lkoekemo          #+#    #+#             */
-/*   Updated: 2017/05/18 13:17:20 by lkoekemo         ###   ########.fr       */
+/*   Updated: 2017/05/19 14:12:26 by lkoekemo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,6 @@
 
 # include "../libft/libft.h"
 # include <fcntl.h>
-
-/*
-   STILL HAVE TO CHECK FOR 'L' AND '#'
-   */
 
 typedef	struct			s_input_list
 {
@@ -79,10 +75,12 @@ t_rooms					*go_to_start(t_main *g, t_rooms *r);
 t_rooms					*go_to_room(t_main *g, char *str);
 void					test_end(t_main *g, t_ants *a, t_rooms *r, char **arr);
 int						ants_in_room(t_main *g, t_rooms *r, char *str);
-t_rooms			        *move_from_to(t_main *g, t_rooms *r, char *from, char *to);
+t_rooms					*move_from_to(t_main *g, t_rooms *r, char *from,
+						char *to);
 char					**links(t_main *g, char *test);
 void					find_path(t_main *g);
-int						all_the_ifs(t_main *g, t_rooms *r, t_ants *a, char **arr);
+int						all_the_ifs(t_main *g, t_rooms *r, t_ants *a,
+						char **arr);
 int						is_room_valid(t_main *g, t_rooms *r, char *str);
 
 #endif
