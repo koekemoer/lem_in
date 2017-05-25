@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lkoekemo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jerasmus <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/05/15 15:05:21 by lkoekemo          #+#    #+#             */
-/*   Updated: 2017/05/19 14:20:21 by lkoekemo         ###   ########.fr       */
+/*   Created: 2017/05/25 17:18:11 by jerasmus          #+#    #+#             */
+/*   Updated: 2017/05/25 17:18:14 by jerasmus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,14 @@ void	init(t_main *g)
 	g->start_flag = 0;
 	g->end_flag = 0;
 	g->nr_end = 0;
+}
+
+void	print_name(char *name, char *room)
+{
+	ft_putstr(name);
+	ft_putchar('-');
+	ft_putstr(room);
+	ft_putchar(' ');
 }
 
 int		main(void)

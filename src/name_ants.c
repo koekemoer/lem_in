@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   name_ants.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lkoekemo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jerasmus <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/05/17 13:54:17 by lkoekemo          #+#    #+#             */
-/*   Updated: 2017/05/17 13:54:23 by lkoekemo         ###   ########.fr       */
+/*   Created: 2017/05/25 17:16:49 by jerasmus          #+#    #+#             */
+/*   Updated: 2017/05/25 17:21:12 by jerasmus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/lem_in.h"
 
-t_ants		*save_ants(t_main *g)
+t_ants			*save_ants(t_main *g)
 {
 	t_ants		*head;
 	t_ants		*node;
-	int				i;
+	int			i;
 
 	head = NULL;
 	i = 1;
@@ -40,11 +40,11 @@ t_ants		*save_ants(t_main *g)
 	return (head);
 }
 
-t_ants		*assign_rooms(t_main *g)
+t_ants			*assign_rooms(t_main *g)
 {
-	t_ants	*head;
-	t_rooms	*tmp;
-	int		i;
+	t_ants		*head;
+	t_rooms		*tmp;
+	int			i;
 
 	tmp = g->rooms;
 	head = g->ants;

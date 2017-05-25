@@ -3,28 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   get_map.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lkoekemo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jerasmus <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/05/15 14:31:31 by lkoekemo          #+#    #+#             */
-/*   Updated: 2017/05/18 11:19:45 by lkoekemo         ###   ########.fr       */
+/*   Created: 2017/05/25 17:17:31 by jerasmus          #+#    #+#             */
+/*   Updated: 2017/05/25 18:02:58 by jerasmus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/lem_in.h"
 
-char	*save_room(char *str)
+char				*save_room(char *str)
 {
-	char	**line;
-	char	*room;
+	char			**line;
+	char			*room;
 
 	line = ft_strsplit(str, ' ');
-	room = line[0]; // strdup dalk en free
+	room = line[0];
 	return (room);
 }
 
-t_rooms	*add_room(char *str, t_rooms *node, t_main *g)
+t_rooms				*add_room(char *str, t_rooms *node, t_main *g)
 {
-	t_rooms	*head;
+	t_rooms			*head;
 
 	head = node;
 	if (node == NULL)
@@ -44,9 +44,9 @@ t_rooms	*add_room(char *str, t_rooms *node, t_main *g)
 	return (head);
 }
 
-t_links	*add_link(char *str, t_links *node, t_main *g)
+t_links				*add_link(char *str, t_links *node, t_main *g)
 {
-	t_links	*head;
+	t_links			*head;
 
 	head = node;
 	if (node == NULL)
@@ -67,7 +67,7 @@ t_links	*add_link(char *str, t_links *node, t_main *g)
 	return (head);
 }
 
-void		get_start_end(char* str, t_main *g)
+void				get_start_end(char *str, t_main *g)
 {
 	if (g->start_flag == 1)
 	{
@@ -85,7 +85,7 @@ void		get_start_end(char* str, t_main *g)
 		g->end_flag = 1;
 }
 
-int		get_map(t_main *g)
+int					get_map(t_main *g)
 {
 	t_input_list	*node;
 	t_rooms			*rooms;
@@ -100,7 +100,6 @@ int		get_map(t_main *g)
 		if (g->num_ants == 0)
 			g->num_ants = ft_atoi(node->str);
 		else if (ft_strchr(node->str, ' ') != NULL)
-			//g->num_rooms++;		
 			rooms = add_room(node->str, rooms, g);
 		else if (ft_strchr(node->str, '-') != NULL)
 			links = add_link(node->str, links, g);

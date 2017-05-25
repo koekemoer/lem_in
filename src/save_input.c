@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   save_input.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lkoekemo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jerasmus <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/05/15 15:05:12 by lkoekemo          #+#    #+#             */
-/*   Updated: 2017/05/15 15:05:18 by lkoekemo         ###   ########.fr       */
+/*   Created: 2017/05/25 17:17:53 by jerasmus          #+#    #+#             */
+/*   Updated: 2017/05/25 17:30:25 by jerasmus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ t_input_list			*save_input(t_main *g)
 		if (node->str == NULL || (ft_strcmp(node->str, "\0") == 0))
 			error();
 		node = node->next;
-		ft_putendl(g->gnl); // REMOVE
+		ft_putendl(g->gnl);
 	}
 	node->next = NULL;
 	node = NULL;

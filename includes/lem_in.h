@@ -82,5 +82,6 @@ void					find_path(t_main *g);
 int						all_the_ifs(t_main *g, t_rooms *r, t_ants *a,
 						char **arr);
 int						is_room_valid(t_main *g, t_rooms *r, char *str);
+void					print_name(char *name, char *room);
 
 #endif

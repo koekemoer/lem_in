@@ -3,49 +3,49 @@
 /*                                                        :::      ::::::::   */
 /*   travel.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lkoekemo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jerasmus <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/05/15 15:06:13 by lkoekemo          #+#    #+#             */
-/*   Updated: 2017/05/18 13:05:16 by lkoekemo         ###   ########.fr       */
+/*   Created: 2017/05/25 17:18:28 by jerasmus          #+#    #+#             */
+/*   Updated: 2017/05/25 17:35:54 by jerasmus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/lem_in.h"
-#include <stdio.h>  // REMOVE
+#include <stdio.h>
 
-t_rooms	*go_to_start(t_main *g, t_rooms *r)
+t_rooms			*go_to_start(t_main *g, t_rooms *r)
 {
 	g->rooms = r;
 	while (g->rooms->next)
 	{
 		if (ft_strcmp(g->rooms->name, g->start_room) == 0)
-			break;
+			break ;
 		g->rooms = g->rooms->next;
 	}
 	return (g->rooms);
 }
 
-t_rooms	*go_to_room(t_main *g, char *str)
+t_rooms			*go_to_room(t_main *g, char *str)
 {
 	while (g->rooms->next)
 	{
 		if (ft_strcmp(g->rooms->name, str) == 0)
-			break;
+			break ;
 		g->rooms = g->rooms->next;
 	}
 	return (g->rooms);
 }
 
-t_rooms	*move_from_to(t_main *g, t_rooms *r, char *from, char *to)
+t_rooms			*move_from_to(t_main *g, t_rooms *r, char *from, char *to)
 {
 	g->rooms = r;
 	while (g->rooms->next)
 	{
-		if (ft_strcmp(g->rooms->name, from) == 0 && 
+		if (ft_strcmp(g->rooms->name, from) == 0 &&
 				ft_strcmp(g->rooms->name, g->end_room) != 0)
 		{
 			g->rooms->in_room--;
-			break;
+			break ;
 		}
 		g->rooms = g->rooms->next;
 	}
@@ -55,16 +55,16 @@ t_rooms	*move_from_to(t_main *g, t_rooms *r, char *from, char *to)
 		if (ft_strcmp(g->rooms->name, to) == 0)
 		{
 			g->rooms->in_room++;
-			break;
+			break ;
 		}
 		g->rooms = g->rooms->next;
 	}
 	return (r);
 }
 
-int	ants_in_room(t_main *g, t_rooms *r, char *str)
+int				ants_in_room(t_main *g, t_rooms *r, char *str)
 {
-	int		ret;
+	int			ret;
 
 	g->rooms = r;
 	ret = 0;
@@ -73,7 +73,7 @@ int	ants_in_room(t_main *g, t_rooms *r, char *str)
 		if (ft_strcmp(g->rooms->name, str) == 0)
 		{
 			ret = g->rooms->in_room;
-			break;
+			break ;
 		}
 		g->rooms = g->rooms->next;
 	}
@@ -81,7 +81,7 @@ int	ants_in_room(t_main *g, t_rooms *r, char *str)
 	return (ret);
 }
 
-void		travel(t_main *g)
+void			travel(t_main *g)
 {
 	char		**arr;
 	t_rooms		*r;
@@ -99,6 +99,6 @@ void		travel(t_main *g)
 			test_end(g, a, r, arr);
 			a = a->next;
 		}
-        ft_putchar('\n');
+		ft_putchar('\n');
 	}
 }
