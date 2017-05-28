@@ -6,7 +6,7 @@
 /*   By: jerasmus <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/25 17:17:31 by jerasmus          #+#    #+#             */
-/*   Updated: 2017/05/25 18:02:58 by jerasmus         ###   ########.fr       */
+/*   Updated: 2017/05/28 14:10:41 by lkoekemo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,14 @@
 
 char				*save_room(char *str)
 {
-	char			**line;
 	char			*room;
+	size_t			i;
 
-	line = ft_strsplit(str, ' ');
-	room = line[0];
+	i = 0;
+	while (str[i] != ' ')
+		i++;
+	room = (char *)ft_memalloc(sizeof(char) * (i + 1));
+	ft_strncpy(room, str, i);
 	return (room);
 }
 
@@ -29,12 +32,12 @@ t_rooms				*add_room(char *str, t_rooms *node, t_main *g)
 	head = node;
 	if (node == NULL)
 	{
-		head = (t_rooms *)malloc(sizeof(t_rooms));
+		head = (t_rooms *)ft_memalloc(sizeof(t_rooms));
 		node = head;
 	}
 	while (node->next != NULL)
 		node = node->next;
-	node->next = (t_rooms *)malloc(sizeof(t_rooms));
+	node->next = (t_rooms *)ft_memalloc(sizeof(t_rooms));
 	node->name = save_room(str);
 	g->num_rooms++;
 	node = node->next;
@@ -51,12 +54,12 @@ t_links				*add_link(char *str, t_links *node, t_main *g)
 	head = node;
 	if (node == NULL)
 	{
-		head = (t_links *)malloc(sizeof(t_links));
+		head = (t_links *)ft_memalloc(sizeof(t_links));
 		node = head;
 	}
 	while (node->next != NULL)
 		node = node->next;
-	node->next = (t_links *)malloc(sizeof(t_links));
+	node->next = (t_links *)ft_memalloc(sizeof(t_links));
 	node->link = str;
 	node->arr = ft_strsplit(str, '-');
 	g->num_links++;
@@ -87,7 +90,7 @@ void				get_start_end(char *str, t_main *g)
 
 int					get_map(t_main *g)
 {
-	t_input_list	*node;
+	t_input			*node;
 	t_rooms			*rooms;
 	t_links			*links;
 
@@ -110,6 +113,5 @@ int					get_map(t_main *g)
 	g->ants = save_ants(g);
 	g->ants = assign_rooms(g);
 	g->links = links;
-	free(node);
 	return (0);
 }

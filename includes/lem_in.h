@@ -20,7 +20,7 @@ typedef	struct			s_input_list
 {
 	char				*str;
 	struct s_input_list	*next;
-}						t_input_list;
+}						t_input;
 
 typedef struct			s_rooms_list
 {
@@ -47,7 +47,7 @@ typedef struct			s_ants_list
 
 typedef	struct			s_main
 {
-	t_input_list		*data;
+	t_input				*data;
 	char				*gnl;
 	int					num_ants;
 	int					num_rooms;
@@ -63,7 +63,7 @@ typedef	struct			s_main
 }						t_main;
 
 void					error();
-t_input_list			*save_input(t_main *g);
+t_input					*save_input(t_main *g);
 int						get_map(t_main *g);
 t_ants					*save_ants(t_main *g);
 t_ants					*assign_rooms(t_main *g);
@@ -83,5 +83,6 @@ int						all_the_ifs(t_main *g, t_rooms *r, t_ants *a,
 						char **arr);
 int						is_room_valid(t_main *g, t_rooms *r, char *str);
 void					print_name(char *name, char *room);
+void					free_all(t_links *l, t_rooms *r, t_ants *a, t_input *i);
 
 #endif

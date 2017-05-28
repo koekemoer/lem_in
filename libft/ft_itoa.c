@@ -20,7 +20,7 @@ char			*getstr(char *ptr)
 	i = 0;
 	while (ptr[i] != '\0')
 		i++;
-	if (!(str = (char *)malloc(sizeof(char) * i + 1)))
+	if (!(str = (char *)ft_memalloc(sizeof(char) * (i + 1))))
 		return (NULL);
 	i = 0;
 	while (ptr[i] != '\0')

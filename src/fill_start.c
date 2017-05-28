@@ -35,7 +35,7 @@ char		*get_link(t_main *g, char *str)
 	{
 		if (ft_strcmp(str, g->links->arr[0]) == 0)
 			ret = g->links->arr[1];
-		if (ft_strcmp(str, g->links->arr[1]) == 0)
+		else if (ft_strcmp(str, g->links->arr[1]) == 0)
 			ret = g->links->arr[0];
 		g->links = g->links->next;
 	}
@@ -52,10 +52,10 @@ char		**links(t_main *g, char *test)
 	tmp = NULL;
 	i = 0;
 	head = g->links;
-	while ((tmp = get_link(g, test)))
+	while ((get_link(g, test)) != NULL)
 		i++;
 	g->links = head;
-	if (!(arr = (char **)malloc(sizeof(*arr) * i + 1)))
+	if (!(arr = (char**)malloc(sizeof(char*) * (i + 1))))
 		return (NULL);
 	i = 0;
 	while ((tmp = get_link(g, test)))

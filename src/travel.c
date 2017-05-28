@@ -97,6 +97,7 @@ void			travel(t_main *g)
 		{
 			arr = links(g, a->room);
 			test_end(g, a, r, arr);
+			free(arr);
 			a = a->next;
 		}
 		ft_putchar('\n');

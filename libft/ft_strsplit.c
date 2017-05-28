@@ -6,7 +6,7 @@
 /*   By: lkoekemo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/07/22 22:18:31 by lkoekemo          #+#    #+#             */
-/*   Updated: 2016/11/01 11:42:48 by lkoekemo         ###   ########.fr       */
+/*   Updated: 2017/05/28 11:35:54 by lkoekemo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ char			*new_str(char const *s, char c)
 	i = 0;
 	while (s[i] && s[i] != c)
 		i++;
-	if (!(new = (char *)malloc(sizeof(char) * i + 1)))
+	if (!(new = (char *)malloc(sizeof(char) * (i + 1))))
 		return (NULL);
 	i = 0;
 	while (s[i] && s[i] != c)
@@ -80,7 +80,7 @@ char			**ft_strsplit(char const *s, char c)
 	if (s)
 	{
 		parts = parts_nr(s, c);
-		if (!(arr = (char **)malloc(sizeof(*arr) * parts + 1)))
+		if (!(arr = (char **)malloc(sizeof(char*) * (parts + 1))))
 			return (NULL);
 		while (parts > 0)
 		{
@@ -91,7 +91,7 @@ char			**ft_strsplit(char const *s, char c)
 			i = i + part_len(s, c, i);
 			parts--;
 		}
-		arr[y] = 0;
+		arr[y] = NULL;
 		return (arr);
 	}
 	return (NULL);

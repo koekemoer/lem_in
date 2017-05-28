@@ -6,7 +6,7 @@
 /*   By: jerasmus <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/25 17:18:11 by jerasmus          #+#    #+#             */
-/*   Updated: 2017/05/25 17:18:14 by jerasmus         ###   ########.fr       */
+/*   Updated: 2017/05/28 16:01:44 by lkoekemo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	error(void)
 {
-	ft_putendl("ERROR BOETIE!");
+	ft_putendl("ERROR");
 	exit(1);
 }
 
@@ -40,10 +40,12 @@ int		main(void)
 {
 	t_main		g;
 
+	g.data = NULL;
 	g.data = save_input(&g);
 	init(&g);
 	get_map(&g);
 	ft_putstr("\n");
 	travel(&g);
+	free_all(g.links, g.rooms, g.ants, g.data);
 	return (0);
 }
