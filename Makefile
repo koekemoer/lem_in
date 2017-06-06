@@ -14,7 +14,7 @@ NAME = lem_in
 
 CC = gcc
 
-CFLAGS = -Wall -Wextra -g -g3
+CFLAGS = -Wall -Werror -Wextra -g -g3
 
 SRC_DIR = ./src/
 

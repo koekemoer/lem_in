@@ -36,7 +36,7 @@ void		test_end(t_main *g, t_ants *a, t_rooms *r, char **arr)
 	{
 		while (*arr)
 		{
-			if (all_the_ifs(g, r, a, arr) == 1)
+			if (all_the_ifs(g, r, a, *arr) == 1)
 			{
 				g->rooms = move_from_to(g, r, a->room, *arr);
 				a->last = a->room;
@@ -78,13 +78,13 @@ void		find_path(t_main *g)
 	}
 }
 
-int			all_the_ifs(t_main *g, t_rooms *r, t_ants *a, char **arr)
+int			all_the_ifs(t_main *g, t_rooms *r, t_ants *a, char *str)
 {
-	if ((ft_strcmp(*arr, g->end_room) == 0 || ants_in_room(g, r, *arr) == 0) &&
+	if ((ft_strcmp(str, g->end_room) == 0 || ants_in_room(g, r, str) == 0) &&
 			ft_strcmp(g->end_room, a->room) != 0 &&
-			ft_strcmp(a->last, *arr) != 0 &&
-			ft_strcmp(*arr, g->start_room) != 0 &&
-			is_room_valid(g, r, *arr) == 0)
+			ft_strcmp(a->last, str) != 0 &&
+			ft_strcmp(str, g->start_room) != 0 &&
+			is_room_valid(g, r, str) == 0)
 		return (1);
 	return (0);
 }

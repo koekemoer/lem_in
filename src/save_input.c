@@ -22,11 +22,11 @@ t_input			*save_input(t_main *g)
 	{
 		if (head == NULL)
 		{
-			head = (t_input *)malloc(sizeof(t_input));
+			head = (t_input *)ft_memalloc(sizeof(t_input));
 			node = head;
 		}
 		node->str = ft_strdup(g->gnl);
-		node->next = (t_input *)malloc(sizeof(t_input));
+		node->next = (t_input *)ft_memalloc(sizeof(t_input));
 		if (node->str == NULL || (ft_strcmp(node->str, "\0") == 0))
 			error();
 		node = node->next;

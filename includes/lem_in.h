@@ -80,7 +80,7 @@ t_rooms					*move_from_to(t_main *g, t_rooms *r, char *from,
 char					**links(t_main *g, char *test);
 void					find_path(t_main *g);
 int						all_the_ifs(t_main *g, t_rooms *r, t_ants *a,
-						char **arr);
+						char *str);
 int						is_room_valid(t_main *g, t_rooms *r, char *str);
 void					print_name(char *name, char *room);
 void					free_all(t_links *l, t_rooms *r, t_ants *a, t_input *i);

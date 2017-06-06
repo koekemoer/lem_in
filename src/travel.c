@@ -96,6 +96,12 @@ void			travel(t_main *g)
 		while (a->next)
 		{
 			arr = links(g, a->room);
+//			int i = 0;
+		/*	while (arr[i])
+			{
+				ft_debug("ARR", arr[i]);
+				i++;
+			}*/
 			test_end(g, a, r, arr);
 			free(arr);
 			a = a->next;

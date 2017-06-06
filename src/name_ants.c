@@ -24,11 +24,11 @@ t_ants			*save_ants(t_main *g)
 	{
 		if (head == NULL)
 		{
-			head = (t_ants *)malloc(sizeof(t_ants));
+			head = (t_ants *)ft_memalloc(sizeof(t_ants));
 			node = head;
 		}
 		node->name = ft_strjoin("L", ft_itoa(i));
-		node->next = (t_ants *)malloc(sizeof(t_ants));
+		node->next = (t_ants *)ft_memalloc(sizeof(t_ants));
 		if (node->name == NULL || ft_strcmp("\0", node->name) == 0)
 			error();
 		i++;

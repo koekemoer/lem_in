@@ -24,6 +24,6 @@ void	free_args(char **arr)
 		free(arr[i]);
 		i++;
 	}
-	free(arr[i]);
+	//free(arr[i]);
 	free(arr);
 }
