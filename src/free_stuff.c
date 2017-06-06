@@ -43,7 +43,7 @@ void	free_ants(t_ants *a)
 {
 	t_ants	*tmp_a;
 
-	while (a != NULL)
+	while (a->next != NULL)
 	{
 		tmp_a = a;
 		a = a->next;
