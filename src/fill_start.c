@@ -58,13 +58,19 @@ char		**links(t_main *g, char *test)
 	if (!(arr = (char**)ft_memalloc(sizeof(char*) * (i + 1))))
 		return (NULL);
 	i = 0;
-	while ((tmp = get_link(g, test)))
+	/*while ((tmp = get_link(g, test)))
 	{
 		//ft_strcpy(arr[i], tmp);
-		arr[i] = tmp;
-//		free(tmp);
+		if (tmp != NULL)
+		{
+			arr[i] = ft_strdup(tmp);
+			free(tmp);
+			i++;
+		}
+		//i++;
+	}*/
+	while ((arr[i] = get_link(g, test)))
 		i++;
-	}
 	arr[i] = 0;
 	g->links = head;
 	return (arr);

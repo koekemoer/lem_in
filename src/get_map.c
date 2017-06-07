@@ -42,8 +42,8 @@ t_rooms				*add_room(char *str, t_rooms *node, t_main *g)
 	g->num_rooms++;
 	node = node->next;
 	node->next = NULL;
-	node = NULL;
-	free(node);
+	//node = NULL;
+	//free(node);
 	return (head);
 }
 
@@ -65,8 +65,8 @@ t_links				*add_link(char *str, t_links *node, t_main *g)
 	g->num_links++;
 	node = node->next;
 	node->next = NULL;
-	node = NULL;
-	free(node);
+	//node = NULL;
+	//free(node);
 	return (head);
 }
 

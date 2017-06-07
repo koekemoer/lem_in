@@ -16,6 +16,7 @@ t_input			*save_input(t_main *g)
 {
 	t_input		*head;
 	t_input		*node;
+	char 		*tmp;
 
 	head = NULL;
 	while (get_next_line(0, &g->gnl))
@@ -33,8 +34,8 @@ t_input			*save_input(t_main *g)
 		ft_putendl(g->gnl);
 		free(g->gnl);
 	}
-	node->next = NULL;
-	node = NULL;
-	free(node);
+	//node->next = NULL;
+	//node = NULL;
+	//free(node);
 	return (head);
 }
