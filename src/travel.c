@@ -95,15 +95,20 @@ void			travel(t_main *g)
 		a = g->ants;
 		while (a->next)
 		{
-			arr = links(g, a->room);
-//			int i = 0;
-		/*	while (arr[i])
-			{
-				ft_debug("ARR", arr[i]);
-				i++;
-			}*/
-			test_end(g, a, r, arr);
-			free(arr);
+            if (ft_strcmp(a->room, g->end_room) != 0)
+            {
+                ft_debug("TESTING FOR ANT", a->name);
+                ft_debug("IN ROOM", a->room);
+			    arr = links(g, a->room);
+			    //int i = 0;
+			    /*while (arr[i])
+			    {
+				    ft_debug("ARR TRAVEL", arr[i]);
+				    i++;
+			    }*/
+			    test_end(g, a, r, arr);
+			    free(arr);
+            }
 			a = a->next;
 		}
 		ft_putchar('\n');

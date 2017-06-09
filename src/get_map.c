@@ -40,8 +40,8 @@ t_rooms				*add_room(char *str, t_rooms *node, t_main *g)
 	node->next = (t_rooms *)ft_memalloc(sizeof(t_rooms));
 	node->name = save_room(str);
 	g->num_rooms++;
-	node = node->next;
-	node->next = NULL;
+	//node = node->next;
+	//node->next = NULL;
 	//node = NULL;
 	//free(node);
 	return (head);
@@ -63,8 +63,8 @@ t_links				*add_link(char *str, t_links *node, t_main *g)
 	node->link = str;
 	node->arr = ft_strsplit(str, '-');
 	g->num_links++;
-	node = node->next;
-	node->next = NULL;
+	//node = node->next;
+	//node->next = NULL;
 	//node = NULL;
 	//free(node);
 	return (head);

@@ -54,6 +54,7 @@ char		**links(t_main *g, char *test)
 	head = g->links;
 	while ((get_link(g, test)) != NULL)
 		i++;
+    ft_debug("I", ft_itoa(i));
 	g->links = head;
 	if (!(arr = (char**)ft_memalloc(sizeof(char*) * (i + 1))))
 		return (NULL);
@@ -70,7 +71,10 @@ char		**links(t_main *g, char *test)
 		//i++;
 	}*/
 	while ((arr[i] = get_link(g, test)))
+    {
+		ft_debug("ARR[i]", arr[i]);
 		i++;
+	}
 	arr[i] = 0;
 	g->links = head;
 	return (arr);
