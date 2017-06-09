@@ -1,0 +1,55 @@
+2,416 bytes in 88 blocks are definitely lost in loss record 64 of 67
+==8149==    at 0x10000CA11: malloc (in /nfs/zfs-student-6/users/lkoekemo/.brew/Cellar/valgrind/3.12.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==8149==    by 0x1000023D3: ft_memalloc (ft_memalloc.c:21)
+==8149==    by 0x100001140: links (fill_start.c:59)
+==8149==    by 0x100001A29: find_path (travel_functions.c:64)
+==8149==    by 0x1000014AC: travel (travel.c:92)
+==8149==    by 0x100000A7D: main (main.c:48)
+
+LEAK SUMMARY:
+==8149==    definitely lost: 2,464 bytes in 106 blocks
+==8149==    indirectly lost: 0 bytes in 0 blocks
+==8149==      possibly lost: 2,064 bytes in 1 blocks
+==8149==    still reachable: 1 bytes in 1 blocks
+==8149==         suppressed: 20,105 bytes in 185 blocks
+==8149== Reachable blocks (those to which a pointer was found) are not shown.
+==8149== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+
+25
+##start
+START 1 1
+A 1 1
+B 1 1
+D 1 1
+C 1 1
+E 1 1
+F 1 1
+G 1 1
+H 1 1
+I 1 1
+J 1 1
+Z 1 1
+X 1 1
+Y 1 1
+W 1 1
+##end
+END 1 1
+START-A
+START-D
+START-B
+A-C
+D-Z
+Z-X
+X-Y
+Y-W
+B-E
+B-H
+B-G
+C-E
+E-F
+F-H
+F-G
+G-END
+H-END
+H-I
+END-J

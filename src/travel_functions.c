@@ -55,26 +55,30 @@ void		find_path(t_main *g)
 	t_rooms			*head;
 	char			**arr;
 	int				i;
+    int             j;
 
+    //j = 0;
 	r = g->rooms;
 	head = g->rooms;
 	while (r->next)
 	{
 		i = 0;
 		arr = links(g, r->name);
-		while (*arr)
+		j = 0;
+		while (arr[j])
 		{
-			if (is_room_valid(g, r, *arr) == 0)
+			if (is_room_valid(g, r, arr[j]) == 0)
 				i++;
-			arr++;
+			j++;
 		}
-        //free(arr);
+        free(arr);
 		if (i == 1 && ft_strcmp(r->name, g->start_room) != 0 &&
 				ft_strcmp(r->name, g->end_room) != 0 && r->valid == 0)
 		{
 			r->valid = -1;
 			r = head;
 		}
+        //free_args(arr);
 		r = r->next;
 	}
 }
