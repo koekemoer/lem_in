@@ -84,5 +84,7 @@ int						all_the_ifs(t_main *g, t_rooms *r, t_ants *a,
 int						is_room_valid(t_main *g, t_rooms *r, char *str);
 void					print_name(char *name, char *room);
 void					free_all(t_links *l, t_rooms *r, t_ants *a, t_input *i);
+void                    print_map(t_main *g);
+void	                print_arr(char **arr);
 
 #endif

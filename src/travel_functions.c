@@ -68,6 +68,7 @@ void		find_path(t_main *g)
 				i++;
 			arr++;
 		}
+        //free(arr);
 		if (i == 1 && ft_strcmp(r->name, g->start_room) != 0 &&
 				ft_strcmp(r->name, g->end_room) != 0 && r->valid == 0)
 		{

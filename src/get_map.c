@@ -39,11 +39,9 @@ t_rooms				*add_room(char *str, t_rooms *node, t_main *g)
 		node = node->next;
 	node->next = (t_rooms *)ft_memalloc(sizeof(t_rooms));
 	node->name = save_room(str);
+    if (str[0] != '#')
+	    ft_putendl(str);
 	g->num_rooms++;
-	//node = node->next;
-	//node->next = NULL;
-	//node = NULL;
-	//free(node);
 	return (head);
 }
 
@@ -62,11 +60,9 @@ t_links				*add_link(char *str, t_links *node, t_main *g)
 	node->next = (t_links *)ft_memalloc(sizeof(t_links));
 	node->link = str;
 	node->arr = ft_strsplit(str, '-');
+    if (str[0] != '#')
+        print_arr(node->arr);
 	g->num_links++;
-	//node = node->next;
-	//node->next = NULL;
-	//node = NULL;
-	//free(node);
 	return (head);
 }
 
@@ -83,9 +79,15 @@ void				get_start_end(char *str, t_main *g)
 		g->end_flag = 0;
 	}
 	else if (ft_strcmp("##start", str) == 0)
-		g->start_flag = 1;
+    {
+        g->start_flag = 1;
+        ft_putendl(str);
+    }
 	else if (ft_strcmp("##end", str) == 0)
-		g->end_flag = 1;
+    {
+        g->end_flag = 1;
+        ft_putendl(str);
+    }
 }
 
 int					get_map(t_main *g)
@@ -100,9 +102,10 @@ int					get_map(t_main *g)
 	while (node->next)
 	{
 		get_start_end(node->str, g);
-		if (g->num_ants == 0)
-			g->num_ants = ft_atoi(node->str);
-		else if (ft_strchr(node->str, ' ') != NULL)
+		/*if (g->num_ants == 0)
+			g->num_ants = ft_atoi(node->str);*/
+		print_map(g);
+		if (ft_strchr(node->str, ' ') != NULL)
 			rooms = add_room(node->str, rooms, g);
 		else if (ft_strchr(node->str, '-') != NULL)
 			links = add_link(node->str, links, g);

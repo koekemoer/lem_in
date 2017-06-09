@@ -25,12 +25,13 @@ t_input			*save_input(t_main *g)
 			head = (t_input *)ft_memalloc(sizeof(t_input));
 			node = head;
 		}
+        //if (node->str[0] == '#' && node->str[1] != '#')
 		node->str = /*ft_strdup(*/g->gnl;//);
 		node->next = (t_input *)ft_memalloc(sizeof(t_input));
 		if (node->str == NULL || (ft_strcmp(node->str, "\0") == 0))
 			error();
 		node = node->next;
-		ft_putendl(g->gnl);
+		//ft_putendl(g->gnl);
 		//free(g->gnl);
 	}
 	//node->next = NULL;
