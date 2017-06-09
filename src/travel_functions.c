@@ -57,7 +57,6 @@ void		find_path(t_main *g)
 	int				i;
     int             j;
 
-    //j = 0;
 	r = g->rooms;
 	head = g->rooms;
 	while (r->next)
@@ -65,11 +64,10 @@ void		find_path(t_main *g)
 		i = 0;
 		arr = links(g, r->name);
 		j = 0;
-		while (arr[j])
+		while (arr[j++])
 		{
 			if (is_room_valid(g, r, arr[j]) == 0)
 				i++;
-			j++;
 		}
         free(arr);
 		if (i == 1 && ft_strcmp(r->name, g->start_room) != 0 &&
@@ -78,7 +76,6 @@ void		find_path(t_main *g)
 			r->valid = -1;
 			r = head;
 		}
-        //free_args(arr);
 		r = r->next;
 	}
 }

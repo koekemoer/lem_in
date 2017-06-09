@@ -61,5 +61,7 @@ int		main(void)
 	ft_putstr("\n");
 	travel(&g);
 	free_all(g.links, g.rooms, g.ants, g.data);
+    free(g.end_room);
+    free(g.start_room);
 	return (0);
 }

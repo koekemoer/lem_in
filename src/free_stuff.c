@@ -33,6 +33,7 @@ void	free_rooms(t_rooms *r)
 	while (r != NULL)
 	{
 		tmp_r = r;
+		free(r->name);
 		r = r->next;
 		free(tmp_r);
 	}
