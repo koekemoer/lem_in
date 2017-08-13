@@ -14,7 +14,7 @@
 
 void	error(void)
 {
-	ft_putendl("ERROR");
+	ft_putendl("INPUT ERROR");
 	exit(1);
 }
 
@@ -56,12 +56,11 @@ int		main(void)
 	g.data = save_input(&g);
 	init(&g);
 	get_map(&g);
-    if (g.num_ants == 0 || g.num_links == 0 || g.num_rooms == 0)
-        error();
+    check_error(&g);
 	ft_putstr("\n");
 	travel(&g);
 	free_all(g.links, g.rooms, g.ants, g.data);
     free(g.end_room);
-    free(g.start_room);
+	free(g.start_room);
 	return (0);
 }

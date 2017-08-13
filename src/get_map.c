@@ -71,19 +71,19 @@ void				get_start_end(char *str, t_main *g)
 	if (g->start_flag == 1)
 	{
 		g->start_room = save_room(str);
-		g->start_flag = 0;
+		g->start_flag = -1;
 	}
 	else if (g->end_flag == 1)
 	{
 		g->end_room = save_room(str);
-		g->end_flag = 0;
+		g->end_flag = -1;
 	}
-	else if (ft_strcmp("##start", str) == 0)
+	else if (ft_strcmp("##start", str) == 0 && g->start_flag != -1)
     {
         g->start_flag = 1;
         ft_putendl(str);
     }
-	else if (ft_strcmp("##end", str) == 0)
+	else if (ft_strcmp("##end", str) == 0 && g->end_flag != -1)
     {
         g->end_flag = 1;
         ft_putendl(str);
@@ -102,8 +102,6 @@ int					get_map(t_main *g)
 	while (node->next)
 	{
 		get_start_end(node->str, g);
-		/*if (g->num_ants == 0)
-			g->num_ants = ft_atoi(node->str);*/
 		print_map(g);
 		if (ft_strchr(node->str, ' ') != NULL)
 			rooms = add_room(node->str, rooms, g);

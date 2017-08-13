@@ -45,36 +45,19 @@ char		*get_link(t_main *g, char *str)
 char		**links(t_main *g, char *test)
 {
 	char		**arr;
-	char		*tmp;
 	t_links		*head;
 	int			i;
 
-	tmp = NULL;
 	i = 0;
 	head = g->links;
 	while ((get_link(g, test)) != NULL)
 		i++;
-    //ft_debug("I", ft_itoa(i));
 	g->links = head;
 	if (!(arr = (char**)ft_memalloc(sizeof(char*) * (i + 1))))
 		return (NULL);
 	i = 0;
-	/*while ((tmp = get_link(g, test)))
-	{
-		//ft_strcpy(arr[i], tmp);
-		if (tmp != NULL)
-		{
-			arr[i] = ft_strdup(tmp);
-			//free(tmp);
-			i++;
-		}
-		//i++;
-	}*/
 	while ((arr[i] = get_link(g, test)))
-    {
-		ft_debug("ARR[i]", arr[i]);
 		i++;
-	}
 	arr[i] = 0;
 	g->links = head;
 	return (arr);

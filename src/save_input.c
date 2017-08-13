@@ -31,5 +31,16 @@ t_input			*save_input(t_main *g)
 			error();
 		node = node->next;
 	}
+	node->next = NULL;
 	return (head);
+}
+
+void			check_error(t_main *g)
+{
+	if (g->num_ants == 0 || g->num_links == 0 || g->num_rooms == 0)
+		error();
+	if (g->start_room == NULL || g->end_room == NULL)
+		error();
+	if (g->ants == NULL || g->rooms == NULL || g->links == NULL)
+		error();
 }

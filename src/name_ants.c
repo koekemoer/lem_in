@@ -37,9 +37,7 @@ t_ants			*save_ants(t_main *g)
 		i++;
 		node = node->next;
 	}
-	//node->next = NULL;
-	//node = NULL;
-	//free(node);
+	node->next = NULL;
 	return (head);
 }
 
